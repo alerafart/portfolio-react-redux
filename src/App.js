@@ -1,7 +1,7 @@
 import React from 'react';
 // import logo from './logo.svg';
 import Header from './components/Header';
-import Timeline from './components/Timeline';
+import AlternateTimeline from './components/AlternateTimeline';
 // import { Counter } from './features/counter/Counter';
 import './App.scss';
 
@@ -10,7 +10,7 @@ function App() {
     
     <div className="App">
       <Header />
-      <Timeline />
+      <AlternateTimeline />
 
       {/* <header className="App-header">
       
