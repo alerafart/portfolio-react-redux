@@ -1,10 +1,14 @@
 import React from 'react';
 import Header from './components/Header';
+import Me from './components/Me';
+import Skills from './components/Skills';
+import Projects from './components/Projects';
+import Contact from './components/Contact';
 import AlternateTimeline from './components/AlternateTimeline';
 import Footer from './components/Footer';
 // import { Counter } from './features/counter/Counter';
-import CssBaseline from '@mui/material/CssBaseline';
-import Container from '@mui/material/Container';
+//import CssBaseline from '@mui/material/CssBaseline';
+//import Container from '@mui/material/Container';
 import  './styles/_reset.scss';
 import './App.scss';
 
@@ -13,7 +17,7 @@ function App() {
     
     <div className="App">
 
-    <React.Fragment>
+    {/* <React.Fragment>
       <CssBaseline />
       <Container maxWidth="false">
 
@@ -22,7 +26,15 @@ function App() {
         <Footer />
         
       </Container>
-    </React.Fragment>
+    </React.Fragment> */}
+
+        <Header />
+        <Me />
+        <Skills />
+        <Projects />
+        <Contact />
+        <AlternateTimeline />
+        <Footer />
         
 
       {/* <header className="App-header">

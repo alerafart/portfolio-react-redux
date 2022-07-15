@@ -12,10 +12,11 @@ import SchoolRoundedIcon from '@mui/icons-material/SchoolRounded';
 import Typography from '@mui/material/Typography';
 import EmojiEventsRoundedIcon from '@mui/icons-material/EmojiEventsRounded';
 
+import './timeline.scss';
 
 function AlternateTimeline() {
   return (
-    <div className='timeline'>
+    <div id='timeline'>
       <Timeline position="alternate">
         
         <TimelineItem>
