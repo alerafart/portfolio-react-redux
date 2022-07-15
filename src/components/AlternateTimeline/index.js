@@ -15,125 +15,128 @@ import EmojiEventsRoundedIcon from '@mui/icons-material/EmojiEventsRounded';
 
 function AlternateTimeline() {
   return (
-    <Timeline position="alternate">
-      <TimelineItem>
+    <div className='timeline'>
+      <Timeline position="alternate">
+        
+        <TimelineItem>
+            <TimelineOppositeContent
+              sx={{ m: 'auto 0' }}
+              align="right"
+              variant="body2"
+              color="text.secondary"
+              >
+              2022
+            </TimelineOppositeContent>
+            <TimelineSeparator>
+              {/* <TimelineConnector sx={{ bgcolor: 'secondary.main' }} /> */}
+              <TimelineDot color="success">
+                <EmojiEventsRoundedIcon />
+              </TimelineDot>
+              <TimelineConnector />
+            </TimelineSeparator>
+            <TimelineContent sx={{ py: '12px', px: 2 }}>
+              <Typography variant="h6" component="span">
+                Titre Professionnel Développeur Web et Web Mobile
+              </Typography>
+              <Typography>Because this is the life you love!</Typography>
+            </TimelineContent>
+        </TimelineItem>
+
+        <TimelineItem>
+            <TimelineOppositeContent
+              sx={{ m: 'auto 0' }}
+              variant="body2"
+              color="text.secondary"
+            >
+              2021-2022
+            </TimelineOppositeContent>
+            <TimelineSeparator>
+              <TimelineConnector />
+              <TimelineDot color="primary">
+                <LaptopMacIcon />
+              </TimelineDot>
+              <TimelineConnector />
+            </TimelineSeparator>
+            <TimelineContent sx={{ py: '12px', px: 2 }}>
+              <Typography variant="h6" component="span">
+                Formation Développeur Web et Web Mobile
+              </Typography>
+              <Typography>Because it&apos;s awesome!</Typography>
+            </TimelineContent>
+        </TimelineItem>
+
+        <TimelineItem>
           <TimelineOppositeContent
             sx={{ m: 'auto 0' }}
             align="right"
             variant="body2"
             color="text.secondary"
+          >
+            2008-2022
+          </TimelineOppositeContent>
+          <TimelineSeparator>
+            <TimelineConnector />
+            <TimelineDot>
+              <WorkRoundedIcon sx={{color: '#000'}}/>
+            </TimelineDot>
+            <TimelineConnector />
+          </TimelineSeparator>
+          <TimelineContent sx={{ py: '12px', px: 2 }}>
+            <Typography variant="h6" component="span">
+              Photographe responsable studio E-Commerce
+            </Typography>
+            <Typography>Because you need strength</Typography>
+          </TimelineContent>
+        </TimelineItem>
+
+        <TimelineItem>
+            <TimelineOppositeContent
+              sx={{ m: 'auto 0' }}
+              variant="body2"
+              color="text.secondary"
             >
-            2022
-          </TimelineOppositeContent>
-          <TimelineSeparator>
-            {/* <TimelineConnector sx={{ bgcolor: 'secondary.main' }} /> */}
-            <TimelineDot color="primary">
-              <EmojiEventsRoundedIcon />
-            </TimelineDot>
-            <TimelineConnector />
-          </TimelineSeparator>
-          <TimelineContent sx={{ py: '12px', px: 2 }}>
-            <Typography variant="h6" component="span">
-              Titre Professionnel Développeur Web et Web Mobile
-            </Typography>
-            <Typography>Because this is the life you love!</Typography>
-          </TimelineContent>
-      </TimelineItem>
+              2007
+            </TimelineOppositeContent>
+            <TimelineSeparator>
+              <TimelineConnector />
+              <TimelineDot color="success">
+                <EmojiEventsRoundedIcon />
+              </TimelineDot>
+              <TimelineConnector />
+            </TimelineSeparator>
+            <TimelineContent sx={{ py: '12px', px: 2 }}>
+              <Typography variant="h6" component="span">
+                Diplôme d'architecte mention en Urbanisme
+              </Typography>
+              <Typography>Because it&apos;s awesome!</Typography>
+            </TimelineContent>
+        </TimelineItem>
 
-      <TimelineItem>
-          <TimelineOppositeContent
-            sx={{ m: 'auto 0' }}
-            variant="body2"
-            color="text.secondary"
-          >
-            2021-2022
-          </TimelineOppositeContent>
-          <TimelineSeparator>
-            <TimelineConnector />
-            <TimelineDot color="primary">
-              <LaptopMacIcon />
-            </TimelineDot>
-            <TimelineConnector />
-          </TimelineSeparator>
-          <TimelineContent sx={{ py: '12px', px: 2 }}>
-            <Typography variant="h6" component="span">
-              Formation Développeur Web et Web Mobile
-            </Typography>
-            <Typography>Because it&apos;s awesome!</Typography>
-          </TimelineContent>
-      </TimelineItem>
-
-      <TimelineItem>
-        <TimelineOppositeContent
-          sx={{ m: 'auto 0' }}
-          align="right"
-          variant="body2"
-          color="text.secondary"
-        >
-          2008-2022
-        </TimelineOppositeContent>
-        <TimelineSeparator>
-          <TimelineConnector />
-          <TimelineDot>
-            <WorkRoundedIcon />
-          </TimelineDot>
-          <TimelineConnector />
-        </TimelineSeparator>
-        <TimelineContent sx={{ py: '12px', px: 2 }}>
-          <Typography variant="h6" component="span">
-            Photographe responsable studio E-Commerce
-          </Typography>
-          <Typography>Because you need strength</Typography>
-        </TimelineContent>
-      </TimelineItem>
-
-      <TimelineItem>
-          <TimelineOppositeContent
-            sx={{ m: 'auto 0' }}
-            variant="body2"
-            color="text.secondary"
-          >
-            2007
-          </TimelineOppositeContent>
-          <TimelineSeparator>
-            <TimelineConnector />
-            <TimelineDot color="primary">
-              <EmojiEventsRoundedIcon />
-            </TimelineDot>
-            <TimelineConnector />
-          </TimelineSeparator>
-          <TimelineContent sx={{ py: '12px', px: 2 }}>
-            <Typography variant="h6" component="span">
-              Diplôme d'architecte mention en Urbanisme
-            </Typography>
-            <Typography>Because it&apos;s awesome!</Typography>
-          </TimelineContent>
-      </TimelineItem>
-
-      <TimelineItem>
-          <TimelineOppositeContent
-            sx={{ m: 'auto 0' }}
-            variant="body2"
-            color="text.secondary"
-          >
-            1999-2006
-          </TimelineOppositeContent>
-          <TimelineSeparator>
-            <TimelineConnector />
-            <TimelineDot color="primary">
-              <SchoolRoundedIcon />
-            </TimelineDot>
-            <TimelineConnector />
-          </TimelineSeparator>
-          <TimelineContent sx={{ py: '12px', px: 2 }}>
-            <Typography variant="h6" component="span">
-              Etudes en Architecture
-            </Typography>
-            <Typography>Because it&apos;s awesome!</Typography>
-          </TimelineContent>
-      </TimelineItem>
-      
-  </Timeline>
+        <TimelineItem>
+            <TimelineOppositeContent
+              sx={{ m: 'auto 0' }}
+              variant="body2"
+              color="text.secondary"
+            >
+              1999-2006
+            </TimelineOppositeContent>
+            <TimelineSeparator>
+              <TimelineConnector />
+              <TimelineDot color="primary">
+                <SchoolRoundedIcon />
+              </TimelineDot>
+              <TimelineConnector />
+            </TimelineSeparator>
+            <TimelineContent sx={{ py: '12px', px: 2 }}>
+              <Typography variant="h6" component="span">
+                Etudes en Architecture
+              </Typography>
+              <Typography>Because it&apos;s awesome!</Typography>
+            </TimelineContent>
+        </TimelineItem>
+        
+      </Timeline>
+    </div>
   );
 }
 
