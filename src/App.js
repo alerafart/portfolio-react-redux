@@ -1,16 +1,29 @@
 import React from 'react';
-// import logo from './logo.svg';
 import Header from './components/Header';
 import AlternateTimeline from './components/AlternateTimeline';
+import Footer from './components/Footer';
 // import { Counter } from './features/counter/Counter';
+import CssBaseline from '@mui/material/CssBaseline';
+import Container from '@mui/material/Container';
+import  './styles/_reset.scss';
 import './App.scss';
 
 function App() {
   return (
     
     <div className="App">
-      <Header />
-      <AlternateTimeline />
+
+    <React.Fragment>
+      <CssBaseline />
+      <Container maxWidth="false">
+
+        <Header />
+        <AlternateTimeline />
+        <Footer />
+        
+      </Container>
+    </React.Fragment>
+        
 
       {/* <header className="App-header">
       
