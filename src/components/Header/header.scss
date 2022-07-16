@@ -10,16 +10,20 @@
   align-items: center;
   border: 1px solid grey;
   
+  &__themeSwitch {
+    display:flex;
+    margin-left: 1rem;
+  }
   &__nav{
     display:flex;
     width: 100%;
     height: 100%;
-    justify-content: space-around;
     align-items: center;
 
     @media (max-width: 800px) {
       flex-direction: column;
       height: min-content;
+      
       }
 
     &--link{
@@ -28,8 +32,6 @@
     }
   }
 
-  &__me{
-    height: 200px;
-  }
+  
 }
 

@@ -1,5 +1,5 @@
 // import BlaguesAPI from 'blagues-api';
-import { DARK_MODE,
+import { DARK_MODE, BURGER_MENU_OPEN
   
 } from '../actions';
 // import { SET_JOKES } from '../actions';
@@ -9,6 +9,7 @@ const initialState = {
 
   settings: {
     darkMode: false,
+    burgerMenuOpen: false,
   },
 
 };
@@ -23,6 +24,15 @@ function Reducer(state = initialState, action = {}) {
         settings: {
           ...state.settings,
           darkMode: !state.settings.darkMode,
+        },
+      };
+
+      case BURGER_MENU_OPEN:
+      return {
+        ...state,
+        settings: {
+          ...state.navigation,
+          burgerMenuOpen: !state.settings.burgerMenuOpen,
         },
       };
 
