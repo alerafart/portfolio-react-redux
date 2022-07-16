@@ -7,20 +7,21 @@
   align-items: center;
   border: 1px solid grey;
 
-    @media (max-width: 750px){
+    @media (max-width: 800px){
     flex-direction: column;
     height: min-content;
     }
 
   &__desc {
     margin: 1rem;
+    padding: 2%;
     width: 40%;
     border: 1px solid black;
     display: flex;
     flex-direction: column;
     align-self: stretch;
     align-items: center;
-    justify-content: space-between;
+    justify-content: center;
 
     &--name {
       font-size: 2rem;
@@ -28,24 +29,33 @@
 
     &--pic {
       object-fit:cover;
-      width: 300px;
-      height: 350px;
+      width: 280px;
+      height: 320px;
       text-align: center;
+      margin: 7% 0;
     }
 
     &--title {
       font-size: 1.7rem;
     }
     
-    @media (max-width: 750px) {
+    @media (max-width: 800px) {
       width: 90%;
       height: min-content;
       
+      &--pic {
+        object-fit:cover;
+        width: 200px;
+        height: 250px;
+        text-align: center;
+        margin: 2% 0;
+      }
+
       }
   }
 
   &--about {
-    font-size: 1.2rem;
+    font-size: 1.4rem;
     width: 60%;
     text-align: justify;
     margin: 1rem ;
@@ -58,11 +68,18 @@
 
     &--resume {
       // margin: auto;
-      padding: 0rem 6rem;
+      padding: 5%;
       
     }
-    @media (max-width: 750px) {
+    @media (max-width: 800px) {
       width: 90%;
+
+      &--resume {
+        // margin: auto;
+        padding: 5%;
+        
+      }
+
     }
   }
 

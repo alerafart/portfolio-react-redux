@@ -17,7 +17,7 @@
     justify-content: space-around;
     align-items: center;
 
-    @media (max-width: 750px) {
+    @media (max-width: 800px) {
       flex-direction: column;
       height: min-content;
       }
