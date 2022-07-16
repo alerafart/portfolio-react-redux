@@ -1,5 +1,5 @@
 // import BlaguesAPI from 'blagues-api';
-import {
+import { DARK_MODE,
   
 } from '../actions';
 // import { SET_JOKES } from '../actions';
@@ -15,26 +15,7 @@ const initialState = {
 
 function Reducer(state = initialState, action = {}) {
   switch (action.type) {
-    /* case TOGGLE_BLAGUE:
-      return {
-        ...state,
-        settings: {
-          ...state.settings,
-          // isOpen: !state.settings.isOpen,
-          isOpen: true,
-        },
-      };
-
-    case SET_JOKES:
-      return {
-        ...state,
-        jokes: {
-          id: action.id,
-          type: action.type,
-          joke: action.joke,
-          answer: action.answer,
-        },
-      };
+    
 
     case DARK_MODE:
       return {
@@ -45,22 +26,6 @@ function Reducer(state = initialState, action = {}) {
         },
       };
 
-    case SHOW_ANSWER:
-      return {
-        ...state,
-        settings: {
-          ...state.settings,
-          isAnswerShown: !state.settings.isAnswerShown,
-        },
-      };
-    case HIDE_ANSWER:
-      return {
-        ...state,
-        settings: {
-          ...state.settings,
-          isAnswerShown: false,
-        },
-      }; */
     default:
       return state;
   }
