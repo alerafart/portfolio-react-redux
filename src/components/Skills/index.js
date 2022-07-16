@@ -6,7 +6,7 @@ import "./skills.scss"
 function Skills() {
   return (
     <div id="skills" className="skills">
-      skils component
+      skills component
     </div>
   );
 }
