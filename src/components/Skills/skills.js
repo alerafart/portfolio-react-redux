@@ -1,3 +1,4 @@
+
 const skills =  [
         {
           name: "HTML5",
@@ -43,6 +44,10 @@ const skills =  [
         {
           "name": "GitHub",
           "class": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg"
+        },
+        {
+          "name": "Lumen Laravel",
+          "class": "https://cdn.worldvectorlogo.com/logos/lumen-1.svg"
         }
       ]
       export default skills

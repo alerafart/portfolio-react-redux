@@ -12,6 +12,8 @@ import Footer from './components/Footer';
 import  './styles/_reset.scss';
 import './App.scss';
 
+import HeaderMui from './components/HeaderMui';
+
 function App() {
   return (
     
@@ -29,6 +31,7 @@ function App() {
     </React.Fragment> */}
 
         <Header />
+        <HeaderMui />
         <Me />
         <Skills />
         <Projects />

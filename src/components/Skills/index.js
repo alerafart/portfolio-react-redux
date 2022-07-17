@@ -6,26 +6,25 @@ import "./skills.scss";
 
 function Skills() {
 
-  /* const skillsList = skillsList.map((skills)=> (
-    
-      {skillsList.name},
-    
-
-  ),) */
-  console.log(skillsList);
+  //console.log(skillsList);
   return (
 
     <div id="skills" className="skills">
         <div className="skills__icons">
-
-        
-        {skillsList.map((skill) => (
-          
-            <img src= {skill.class}  key={skill.name} alt= {skill.name}/>
-          
-        ))}
-      
-
+ 
+          {skillsList.map((skill) => (
+            <div className="skills__icons--icon">                
+                <img 
+                  src= {skill.class}
+                  key={skill.name}
+                  alt= {skill.name}
+                />
+                <p >  
+                  {skill.name}
+                </p>
+            </div>
+            
+          ))}
           
         </div>
     </div>

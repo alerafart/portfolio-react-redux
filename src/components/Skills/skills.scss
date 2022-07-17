@@ -1,27 +1,50 @@
 .skills {
   width: 100%;
-  height: 10rem;
+  height: auto;
   background-color: rgb(240, 236, 236);
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 1rem;
+  
+  //width:90%;
   border: 1px solid black;
+  
+  
+
+  &__icons {
+    display: flex;
+    //width:auto;
+    width: 100%;
+    height: fit-content;
+    flex-wrap: wrap;
+    justify-content: center;
+    //align-items: center;
+    //align-self: stretch;
+    border: 1px solid black;
+    margin: 2rem;
+    
+    padding: 2%;
+    //padding: 2%;
+
+    @media (max-width: 800px)
+    {
+      //width: 110%;
+      display: flex;
+      align-items: center;
+      //margin-left: 1rem;
+    // margin-right: 2rem;
+    }
+
+    &--icon {
+    flex-direction: column;
+    margin-bottom: 1rem;
+    //margin: auto;
+
+    }
+  }
 }
 
 img {
-  height: 7rem;
-  //color: black;
-  // background-color: black;
+  width: 6rem;
+  height: 6rem;
 }
-svg {
-  height: 5rem;
-  
-
-  &--dark {
-    fill:#fff;
-  }
-}
-/* .plain-wordmark.colored {
-  color: black;
-} */

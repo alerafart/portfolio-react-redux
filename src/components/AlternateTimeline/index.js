@@ -1,4 +1,6 @@
 import * as React from 'react';
+import { useSelector } from 'react-redux';
+
 import Timeline from '@mui/lab/Timeline';
 import TimelineItem from '@mui/lab/TimelineItem';
 import TimelineSeparator from '@mui/lab/TimelineSeparator';
@@ -15,8 +17,11 @@ import EmojiEventsRoundedIcon from '@mui/icons-material/EmojiEventsRounded';
 import './timeline.scss';
 
 function AlternateTimeline() {
+
+  const isDarkMode = useSelector((state) => state.settings.darkMode);
+
   return (
-    <div id='timeline'>
+    <div id='timeline' className={isDarkMode ? 'timeline ' : 'timeline light'}>
       <Timeline position="alternate">
         
         <TimelineItem>
