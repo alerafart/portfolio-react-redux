@@ -1,8 +1,27 @@
 .skills {
   width: 100%;
-  height: 100px;
+  height: 10rem;
   background-color: rgb(240, 236, 236);
   display: flex;
   justify-content: center;
   align-items: center;
+  padding: 1rem;
+  border: 1px solid black;
 }
+
+img {
+  height: 7rem;
+  //color: black;
+  // background-color: black;
+}
+svg {
+  height: 5rem;
+  
+
+  &--dark {
+    fill:#fff;
+  }
+}
+/* .plain-wordmark.colored {
+  color: black;
+} */
