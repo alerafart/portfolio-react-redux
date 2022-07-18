@@ -13,10 +13,9 @@ function Skills() {
         <div className="skills__icons">
  
           {skillsList.map((skill) => (
-            <div className="skills__icons--icon">                
+            <div className="skills__icons--icon" key={skill.name}>                
                 <img 
                   src= {skill.class}
-                  key={skill.name}
                   alt= {skill.name}
                 />
                 <p >  

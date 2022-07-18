@@ -1,5 +1,5 @@
 .projects{
-  width: 100%;
+  // width: 90%;
   height: max-content;
   background-color: rgb(240, 236, 236);
   display: flex;
@@ -17,32 +17,48 @@
   &__project {
     display: flex;
     flex-wrap: wrap;
-    width: 30%;
+    width: 100%;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 2%;
-    border: 1px solid black;
+    border: 1px solid rgb(36, 14, 203);
+    overflow-wrap: break-word;
+    word-wrap: break-word;
 
     &--img {
       margin: 1rem;
     }
     @media (max-width: 800px)
     {
-      width: min-content;
-      height: width;
+      width: 90%;
       display: flex;
-      //flex-direction: column;
+      padding: 8px;
       align-items: center;
     }
+
+    &__box {
+      padding-bottom: 10px;
+
+      &--link {
+        color: rgb(255, 132, 0);
+        padding-bottom: 20px;}
+
+        :hover {
+          animation: 2s ease-in;
+          //transition: 2s;
+          color: aqua;
+          transition: 2s;
+          zoom: 120%;
+        }
+    }
+
+    /* 
+      
+    } */
   }
 
-  /* &--link {
-    display: flex;
-    flex-wrap: wrap;
-  } */
 }
 
-a {
-  color: blue;
+p {
+  padding-bottom: 0;
 }
