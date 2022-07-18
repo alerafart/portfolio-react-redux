@@ -27,6 +27,8 @@
 
     &--img {
       margin: 1rem;
+      height: 8rem;
+      width: 7rem;
     }
     @media (max-width: 800px)
     {
@@ -37,19 +39,21 @@
     }
 
     &__box {
-      padding-bottom: 10px;
+      //padding-bottom: 10px;
+      padding: 10px;
 
       &--link {
-        color: rgb(255, 132, 0);
-        padding-bottom: 20px;}
-
-        :hover {
-          animation: 2s ease-in;
-          //transition: 2s;
-          color: aqua;
-          transition: 2s;
+        color: blue;
+        //padding-bottom: 20px;
+        padding: 10px;      
+        &:hover {
+          color: black;
+          font-weight: bold;
           zoom: 120%;
+          //transition: 1s;
         }
+      }
+
     }
 
     /* 
@@ -61,4 +65,9 @@
 
 p {
   padding-bottom: 0;
+}
+
+.projects__project__box--link :hover{
+  color: aqua;
+          transition: 1s;
 }

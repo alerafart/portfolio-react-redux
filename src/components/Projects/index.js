@@ -19,21 +19,21 @@ function Projects() {
               sx={{
                 width: '80%',
                 height: '100%',
-                backgroundColor: 'primary.dark',
+                backgroundColor: '#e0e0e0',
                 '&:hover': {
-                  backgroundColor: 'primary.main',
-                  opacity: [0.9, 0.8, 0.7],
+                  backgroundColor: '#bdbdbd',
+                  //opacity: [0.9, 0.8, 0.7],
                 },
               }}>      
                 <img 
                   src= {project.img}
                   alt= {project.name}
-                  className="projects__project__box--img"
+                  className="projects__project--img"
                 />
-                <p className="projects__project__box--p">  
+                <p >  
                   {project.name}
                 </p>
-                <p className="projects__project__box--p">  
+                <p >  
                   {project.languages}
                 </p>
                 
