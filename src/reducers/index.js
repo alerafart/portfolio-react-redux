@@ -1,5 +1,5 @@
 // import BlaguesAPI from 'blagues-api';
-import { DARK_MODE, BURGER_MENU_OPEN
+import { DARK_MODE, SEND_MESSAGE, BURGER_MENU_OPEN
   
 } from '../actions';
 // import { SET_JOKES } from '../actions';
@@ -11,6 +11,15 @@ const initialState = {
     darkMode: false,
     burgerMenuOpen: false,
   },
+
+  contactForm: {
+    firstName: "",
+    lastName:"",
+    phone:0,
+    email: "",
+    subject:"",
+    message:"",
+  }
 
 };
 
@@ -27,6 +36,16 @@ function Reducer(state = initialState, action = {}) {
         },
       };
 
+      case SEND_MESSAGE: {
+        return {
+          ...state,
+          contactForm: {
+            ...state.contactForm,
+            [action.name]: action.value,
+          },
+        };
+      }
+      
       case BURGER_MENU_OPEN:
       return {
         ...state,

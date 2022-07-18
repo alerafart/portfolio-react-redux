@@ -1,8 +1,31 @@
 .contact{
+  border: 1px solid black;
   width: 100%;
   height: max-content;
   background-color: rgb(240, 236, 236);
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  justify-content: space-around;
   align-items: center;
+
+  &__fields {
+    width: 50%;
+    border: 1px solid rgb(209, 24, 24);
+    :focus{
+      //background-color: rgb(36, 199, 199);
+    }
+    &__field {
+      // border: 1px solid blue;
+      :focus {
+        border: 1px solid rgb(209, 24, 24);
+      }
+      
+    }
+    
+  }
+
+  &__message {
+    width: 50%;
+    border: 1px solid black;
+  }
 }
