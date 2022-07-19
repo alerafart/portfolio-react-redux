@@ -16,6 +16,15 @@ export const sendMessage = (value, name) => ({
   name,
 });
 
+// ACTION TYPE CONFIRM_MAIL
+export const CONFIRM_MAIL = 'CONFIRM_MAIL';
+
+// ACTION CREATOR confirm_mail
+export const confirm_mail = () => ({
+  type: CONFIRM_MAIL,
+  
+});
+
 
 // ACTION TYPE BURGER_MENU_OPEN
 export const BURGER_MENU_OPEN = 'BURGER_MENU_OPEN';

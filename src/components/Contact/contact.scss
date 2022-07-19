@@ -1,4 +1,4 @@
-.contact{
+.contact {
   border: 1px solid black;
   width: 100%;
   height: max-content;
@@ -27,5 +27,10 @@
   &__message {
     width: 50%;
     border: 1px solid black;
+
+    &--submit {
+      width: 50%;
+      margin: 1rem 0;
+    }
   }
 }

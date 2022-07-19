@@ -1,11 +1,13 @@
 import React from "react";
-//import emailjs from 'emailjs-com';
 import emailjs from '@emailjs/browser';
 import { useSelector, useDispatch } from 'react-redux';
 import { sendMessage } from "../../actions";
 import Box from '@mui/material/Box';
 import TextField from '@mui/material/TextField';
 import Button from '@mui/material/Button'
+import Stack from '@mui/material/Stack';
+// import Snackbar from '@mui/material/Snackbar';
+import MuiAlert from '@mui/material/Alert';
 // styles
 import "./contact.scss"
 //import serviceKeys from "./serviceKeys.js";
@@ -13,12 +15,9 @@ import "./contact.scss"
 
 function Contact() {
 
-  /* const firstName = useSelector((state)=> state.contactForm.firstName);
-  const lastName = useSelector((state)=> state.contactForm.lastName);
-  const phone = useSelector((state)=> state.contactForm.phone);
-  const email = useSelector((state)=> state.contactForm.email);
-  const subject = useSelector((state)=> state.contactForm.subject);
-  const message = useSelector((state)=> state.contactForm.message); */
+  const Alert = React.forwardRef(function Alert(props, ref) {
+    return <MuiAlert elevation={6} ref={ref} variant="filled" {...props} />;
+  });
 
   /* const isValidEmail = email => {
     const regex = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
@@ -27,7 +26,7 @@ function Contact() {
 
   const contactForm = useSelector((state)=> state.contactForm);
   const dispatch = useDispatch();
-
+  console.log(contactForm);
   // function to change value of the state formContact
   function handleChange(e) {
     const { value } = e.target;
@@ -37,58 +36,39 @@ function Contact() {
     dispatch(sendMessage(value, name));
   }
 
-      const handleSubmit = (e) => {
-        e.preventDefault();
-        const firstName = contactForm.firstName;
-        const lastName = contactForm.lastName;
-        // const email = isValidEmail(contactForm.email) ;
-        const email = contactForm.email;
-        const message = contactForm.message;
-        // if (contactForm.firstName && contactForm.lastName && isValidEmail && contactForm.message) {
-        if (contactForm.firstName && contactForm.lastName && contactForm.email && contactForm.message) {
-            
-          
-            const serviceId = `${process.env.REACT_APP_SERVICE_ID}`;
-            const templateId = `${process.env.REACT_APP_TEMPLATE_ID}`;
-            const userId = `${process.env.REACT_APP_USER_ID}`;
-            console.log(userId);
-            //const userId = 'AvolL9IJiOvdChCMC';
-            /* const serviceId = 'service_4sfkqi4';
-            const templateId = 'template_d6supa6';
-            const userId = 'AvolL9IJiOvdChCMC'; */
-            /* SERVICE_ID = 'service_4sfkqi4';
-            TEMPLATE_ID = 'template_d6supa6';
-            USER_ID = 'AvolL9IJiOvdChCMC'; */
-
-            const templateParams = {
-                firstName,
-                lastName,
-                email,
-                message
-            };
-
-            emailjs.send(serviceId, templateId, templateParams, userId)
-                .then(response => console.log(response))
-                .then(error => console.log(error));
-
-            /* setName('');
-            setEmail('');
-            setMessage('');
-            setEmailSent(true); */
-        } else {
-            alert('Please fill in all fields.');
-        }
-    }
-    
-  /* const handleSubmit= (e) => {
-    e.preventDefault;
+  const handleSubmit = (e) => {
+    e.preventDefault();
     console.log("submit fired");
-  } */
+    const firstname = contactForm.firstName;
+    const lastname = contactForm.lastName;
+    // const email = isValidEmail(contactForm.email) ;
+    const email = contactForm.email;
+    const subject = contactForm.subject;
+    const message = contactForm.message;
+    // if (contactForm.firstName && contactForm.lastName && isValidEmail && contactForm.message) {
+      /* if (firstname && lastname && email && message) {
 
-  /* const [value, setValue] = React.useState('Controlled');
-  const handleChange = (event) => {
-    setValue(event.target.value);
-  }; */
+          const serviceId = `${process.env.REACT_APP_SERVICE_ID}`;
+          const templateId = `${process.env.REACT_APP_TEMPLATE_ID}`;
+          const userId = `${process.env.REACT_APP_USER_ID}`;
+
+          const templateParams = {
+              firstname,
+              lastname,
+              email,
+              subject,
+              message
+          };
+          console.log(templateParams);
+
+          emailjs.send(serviceId, templateId, templateParams, userId)
+              .then(response => console.log(response))
+              .then(error => console.log(error));
+      } else {
+          alert('Please fill in all fields.');
+      } */
+  }
+
   return (
     <div id="contact" >
 
@@ -107,7 +87,7 @@ function Contact() {
               required
               id="filled-required"
               name="firstName"
-              value = {contactForm.firstName}
+              value = {contactForm.firstname}
               label="Prénom"
               placeholder="Prénom"
               autoComplete="off"
@@ -180,9 +160,14 @@ function Contact() {
               //defaultValue="Default Value"
             />
           </div>
-          <Button type="submit" variant="contained">Submit</Button>
-          <span className={contactForm.emailSent ? 'visible' : null}>Thank you for your message, we will be in touch in no time!</span>
-  
+          <Button className="contact__message--submit" type="submit" variant="contained">Submit</Button>
+          
+          
+          
+
+            <Stack>
+              <Alert severity="success"><span className={contactForm.emailSent ? 'visible' : null}>Thank you for your message, we will be in touch in no time!</span></Alert>
+            </Stack>  
       </Box>
     </div>
   );
