@@ -1,6 +1,10 @@
 import React from "react";
+//import emailjs from 'emailjs-com';
+import emailjs from '@emailjs/browser';
 import { useSelector, useDispatch } from 'react-redux';
 import { sendMessage } from "../../actions";
+//import serviceKeys from "./serviceKeys.js";
+
 import Box from '@mui/material/Box';
 import TextField from '@mui/material/TextField';
 import Button from '@mui/material/Button'
@@ -16,6 +20,11 @@ function Contact() {
   const subject = useSelector((state)=> state.contactForm.subject);
   const message = useSelector((state)=> state.contactForm.message); */
 
+  const isValidEmail = email => {
+    const regex = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+    return regex.test(String(email).toLowerCase());
+  };
+
   const contactForm = useSelector((state)=> state.contactForm);
   const dispatch = useDispatch();
 
@@ -27,16 +36,49 @@ function Contact() {
     console.log({name, value});
     dispatch(sendMessage(value, name));
   }
-  const handleSubmit= (e) => {
-    //e.preventDefault;
-    console.log("submit fired");
-  }
-  /* const handleFormSubmit = function(()=> {
-    console.log("submit fired");
-  }) */
-  // const [value, setValue] = React.useState('Controlled');
 
-  /* const handleChange = (event) => {
+  /* function handleSubmit(evt) {
+    //evt.preventDefault;
+  } */
+//test
+      const handleSubmit = () => {
+        const firstName = contactForm.firstName;
+        const lastName = contactForm.lastName;
+        const email = isValidEmail(contactForm.email) ;
+          const message = contactForm.message;
+        if (contactForm.firstName && contactForm.lastName && contactForm.email && contactForm.message) {
+            
+          
+            const serviceId = 'process.env.SERVICE_ID';
+            const templateId = 'tprocess.env.SERVICE_ID';
+            const userId = 'process.env.SERVICE_ID';
+            const templateParams = {
+                firstName,
+                lastName,
+                email,
+                message
+            };
+
+            emailjs.send(serviceId, templateId, templateParams, userId)
+                .then(response => console.log(response))
+                .then(error => console.log(error));
+
+            /* setName('');
+            setEmail('');
+            setMessage('');
+            setEmailSent(true); */
+        } else {
+            alert('Please fill in all fields.');
+        }
+    }
+    
+  /* const handleSubmit= (e) => {
+    e.preventDefault;
+    console.log("submit fired");
+  } */
+
+  /* const [value, setValue] = React.useState('Controlled');
+  const handleChange = (event) => {
     setValue(event.target.value);
   }; */
   return (
@@ -131,10 +173,12 @@ function Contact() {
             />
           </div>
           <Button type="submit" variant="contained">Submit</Button>
-          
+          <span className={contactForm.emailSent ? 'visible' : null}>Thank you for your message, we will be in touch in no time!</span>
+  
       </Box>
     </div>
   );
-}
 
+
+}
 export default Contact;
