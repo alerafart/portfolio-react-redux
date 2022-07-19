@@ -3,13 +3,13 @@ import React from "react";
 import emailjs from '@emailjs/browser';
 import { useSelector, useDispatch } from 'react-redux';
 import { sendMessage } from "../../actions";
-//import serviceKeys from "./serviceKeys.js";
-
 import Box from '@mui/material/Box';
 import TextField from '@mui/material/TextField';
 import Button from '@mui/material/Button'
 // styles
 import "./contact.scss"
+//import serviceKeys from "./serviceKeys.js";
+
 
 function Contact() {
 
@@ -20,10 +20,10 @@ function Contact() {
   const subject = useSelector((state)=> state.contactForm.subject);
   const message = useSelector((state)=> state.contactForm.message); */
 
-  const isValidEmail = email => {
+  /* const isValidEmail = email => {
     const regex = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
     return regex.test(String(email).toLowerCase());
-  };
+  }; */
 
   const contactForm = useSelector((state)=> state.contactForm);
   const dispatch = useDispatch();
@@ -37,21 +37,29 @@ function Contact() {
     dispatch(sendMessage(value, name));
   }
 
-  /* function handleSubmit(evt) {
-    //evt.preventDefault;
-  } */
-//test
-      const handleSubmit = () => {
+      const handleSubmit = (e) => {
+        e.preventDefault();
         const firstName = contactForm.firstName;
         const lastName = contactForm.lastName;
-        const email = isValidEmail(contactForm.email) ;
-          const message = contactForm.message;
+        // const email = isValidEmail(contactForm.email) ;
+        const email = contactForm.email;
+        const message = contactForm.message;
+        // if (contactForm.firstName && contactForm.lastName && isValidEmail && contactForm.message) {
         if (contactForm.firstName && contactForm.lastName && contactForm.email && contactForm.message) {
             
           
-            const serviceId = 'process.env.SERVICE_ID';
-            const templateId = 'tprocess.env.SERVICE_ID';
-            const userId = 'process.env.SERVICE_ID';
+            const serviceId = `${process.env.REACT_APP_SERVICE_ID}`;
+            const templateId = `${process.env.REACT_APP_TEMPLATE_ID}`;
+            const userId = `${process.env.REACT_APP_USER_ID}`;
+            console.log(userId);
+            //const userId = 'AvolL9IJiOvdChCMC';
+            /* const serviceId = 'service_4sfkqi4';
+            const templateId = 'template_d6supa6';
+            const userId = 'AvolL9IJiOvdChCMC'; */
+            /* SERVICE_ID = 'service_4sfkqi4';
+            TEMPLATE_ID = 'template_d6supa6';
+            USER_ID = 'AvolL9IJiOvdChCMC'; */
+
             const templateParams = {
                 firstName,
                 lastName,
@@ -86,7 +94,7 @@ function Contact() {
 
       <Box className="contact"
         component="form"
-        action="mailto:maalejandrarafart@gmail.com"
+        //action="mailto:maalejandrarafart@gmail.com"
         onSubmit={handleSubmit}
         sx={{
           '& .MuiTextField-root': { m: 1, width: '25ch' },
