@@ -19,8 +19,8 @@ export const sendMessage = (value, name) => ({
 // ACTION TYPE CONFIRM_MAIL
 export const CONFIRM_MAIL = 'CONFIRM_MAIL';
 
-// ACTION CREATOR confirm_mail
-export const confirm_mail = () => ({
+// ACTION CREATOR cconfirmMail
+export const confirmMail = () => ({
   type: CONFIRM_MAIL,
   
 });

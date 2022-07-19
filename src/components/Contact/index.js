@@ -1,7 +1,7 @@
 import React from "react";
 import emailjs from '@emailjs/browser';
 import { useSelector, useDispatch } from 'react-redux';
-import { sendMessage } from "../../actions";
+import { sendMessage, confirmMail } from "../../actions";
 import Box from '@mui/material/Box';
 import TextField from '@mui/material/TextField';
 import Button from '@mui/material/Button'
@@ -45,6 +45,7 @@ function Contact() {
     const email = contactForm.email;
     const subject = contactForm.subject;
     const message = contactForm.message;
+    dispatch(confirmMail());
     // if (contactForm.firstName && contactForm.lastName && isValidEmail && contactForm.message) {
       /* if (firstname && lastname && email && message) {
 
