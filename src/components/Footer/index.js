@@ -7,10 +7,10 @@ import "./footer.scss"
 
 function Footer() {
 
-  //const isDarkMode = useSelector((state) => state.settings.darkMode);
+const isDarkMode = useSelector((state) => state.settings.darkMode);
   return (
-    <div className="footer">
-   {/*  <div className={isDarkMode ? 'footer' : 'footer light'}></div> */}
+
+<div className={isDarkMode ? 'footer' : 'footer light'}>
       Footer component
       <p>Mentions légales</p>
       <p className="footer--p">Développé par <strong>Alejandra Rafart</strong>

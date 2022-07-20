@@ -1,7 +1,7 @@
 .projects{
   // width: 90%;
   height: max-content;
-  background-color: rgb(240, 236, 236);
+  // background-color: rgb(240, 236, 236);
   display: flex;
   justify-content: center;
   padding: 2%;
@@ -70,4 +70,9 @@ p {
 .projects__project__box--link :hover{
   color: aqua;
           transition: 1s;
+}
+
+light {
+  color: black;
+  background-color: rgb(240, 236, 236);
 }

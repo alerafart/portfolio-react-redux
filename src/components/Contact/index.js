@@ -25,6 +25,7 @@ function Contact() {
   }; */
 
   const contactForm = useSelector((state)=> state.contactForm);
+  const isDarkMode = useSelector((state)=> state.settings.darkMode);
   const dispatch = useDispatch();
   console.log(contactForm);
   // function to change value of the state formContact
@@ -73,18 +74,18 @@ function Contact() {
   return (
     <div id="contact" >
 
-      <Box className="contact"
+      <Box className={isDarkMode ? 'contact' : 'contact light'}
         component="form"
         //action="mailto:maalejandrarafart@gmail.com"
         onSubmit={handleSubmit}
         sx={{
-          '& .MuiTextField-root': { m: 1, width: '25ch' },
+          '& .MuiTextField-root': { m: 1, mb: 1, width: '25ch' },
         }}
         noValidate
         autoComplete="off"
         >
-          <div className="contact__fields">            
-            <TextField className="contact__fields__field"
+          <div className={isDarkMode ? 'contact__fields' : 'contact__fields light'}>            
+            <TextField className= {isDarkMode ? 'contact__fields__field' : 'contact__fields__field light'}
               required
               id="filled-required"
               name="firstName"
@@ -108,6 +109,13 @@ function Contact() {
               variant="filled"
               onChange= {handleChange}
             />
+            
+                    
+          </div>
+          
+          <div className="contact__fields">            
+            
+            
             <TextField className="contact__fields__field"
               required
               id="filled-required"
@@ -136,19 +144,19 @@ function Contact() {
           </div>
 
           <div className="contact__message">
-            <TextField
+            <TextField className="contact__message__field"
               id="filled-helperText"
               name="subject"
               label=""
-              placeholder="Objet"
+              placeholder="Objet de votre demande"
               value = {contactForm.subject}
               // defaultValue="Default Value"
-              helperText="Objet de votre demande"
+              //helperText="Objet de votre demande"
               variant="filled"
               onChange= {handleChange}
             />
           </div>
-          <div className="contact__message">  
+          <div className="contact__message__field">  
             <TextField
               required
               id="outlined-multiline-static"
@@ -161,7 +169,10 @@ function Contact() {
               //defaultValue="Default Value"
             />
           </div>
-          <Button className="contact__message--submit" type="submit" variant="contained">Submit</Button>
+          <Button sx={{
+          'margin': '5px',
+        }}
+        className="contact__message--submit" type="submit" variant="contained">Submit</Button>
           
           
           

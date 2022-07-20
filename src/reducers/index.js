@@ -8,7 +8,7 @@ const initialState = {
 
 
   settings: {
-    darkMode: false,
+    darkMode: true,
     burgerMenuOpen: false,
   },
 

@@ -1,4 +1,5 @@
-import React from "react";
+
+import { useSelector } from 'react-redux';
 
 //librairies
 import Box from '@mui/material/Box';
@@ -7,10 +8,11 @@ import projects from "./projects.js";
 import "./projects.scss"
 
 function Projects() {
+  const isDarkMode = useSelector((state) => state.settings.darkMode);
   return (
     <div id="projects" >
 
-      <div className="projects">
+      <div className={isDarkMode ? 'projects' : 'projects light'}>
  
           {projects.map((project) => (
             <div className="projects__project" key={project.id}>

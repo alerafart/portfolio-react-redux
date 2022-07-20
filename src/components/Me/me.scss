@@ -1,7 +1,8 @@
 .me {
   // width: 100%;
   height: max-content;
-  background-color: rgb(240, 236, 236);
+  color: rgb(240, 236, 236);
+  //background-color: rgb(240, 236, 236);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -89,4 +90,9 @@
   }
 
   
+}
+
+light {
+  color: black;
+  background-color: rgb(240, 236, 236);
 }

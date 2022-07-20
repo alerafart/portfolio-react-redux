@@ -10,8 +10,9 @@
 .footer {
   display: flex;
   flex-direction: column;
-  background-color: rgb(240, 236, 236);
+  //background-color: rgb(240, 236, 236);
   align-items: center;
+  color: rgb(240, 236, 236);
   //color: vars.$light-color;
   width: 100%;
   height: max-content;
@@ -42,7 +43,6 @@
 
 .light {
   transition: 0.2s;
-  //color: vars.$dark-color;
-  //background-color: vars.$light-color;
-
+  color: black;
+  background-color: rgb(240, 236, 236);
 }

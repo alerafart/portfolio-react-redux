@@ -1,15 +1,16 @@
 import React from "react";
-//import skills from "./skills.js";
+import { useSelector } from "react-redux";
 import skillsList from "./skills.js";
 // styles
 import "./skills.scss";
 
 function Skills() {
 
-  //console.log(skillsList);
+const isDarkMode = useSelector((state) => state.settings.darkMode);
+
   return (
 
-    <div id="skills" className="skills">
+    <div id="skills" className={isDarkMode ? 'skills' : 'skills light'}>
         <div className="skills__icons">
  
           {skillsList.map((skill) => (
