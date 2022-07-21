@@ -49,9 +49,10 @@ body{
 }
 .home {
   position: fixed;
-  bottom: 50px;
+  //bottom: vh;
+  bottom: 0;
   right:1rem;
-  height: 0;
+  //height: 0;
   color: #fff;
   background-color:  rgb(18, 18, 18);
   //float: right;

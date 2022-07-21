@@ -20,7 +20,7 @@ function App() {
     
     <div className="App">
 {/* sx={{ color: 'red', fontSize: 40 }} */}
-      <a className="home" href="./#header" ><HomeIcon className="home--icon" sx={{ color:'primary.main', fontSize: 40 }} /></a>
+      <a className="home" href="./#header" ><HomeIcon className="home--icon" sx={{ color:'primary.main', fontSize: 50 }} /></a>
     {/* <React.Fragment>
       <CssBaseline />
       <Container maxWidth="false">
