@@ -147,8 +147,8 @@ function Contact() {
             <TextField className="contact__message__field"
               id="filled-helperText"
               name="subject"
-              label=""
-              placeholder="Objet de votre demande"
+              label="Objet de votre demande"
+              //placeholder="Objet de votre demande"
               value = {contactForm.subject}
               // defaultValue="Default Value"
               //helperText="Objet de votre demande"
@@ -156,14 +156,15 @@ function Contact() {
               onChange= {handleChange}
             />
           </div>
-          <div className="contact__message__field">  
-            <TextField
+          <div className="contact__message">  
+            <TextField className="contact__message__field"
               required
               id="outlined-multiline-static"
               name="message"
               value = {contactForm.message}
               label="Message"
               multiline
+              variant="filled"
               onChange= {handleChange}
               //rows={10}
               //defaultValue="Default Value"

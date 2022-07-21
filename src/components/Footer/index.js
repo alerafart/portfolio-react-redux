@@ -14,12 +14,12 @@ const isDarkMode = useSelector((state) => state.settings.darkMode);
     <div className={isDarkMode ? 'footer' : 'footer light'}>
 
       <p>Mentions légales</p>
-      <p className="footer--p">Développé par <strong>Alejandra Rafart</strong>
-        <a href="https://github.com/alerafart" className="footer--p"><img className="footer--img" src={github} alt="github icon" /></a>
-        <a href="https://www.linkedin.com/in/rafart-alejandra/" className="footer--p"><img className="footer--img" src={linkedin} alt="github icon" /></a>
+      <p className="footer--p">Développé par <strong>Alejandra Rafart</strong></p>
+        <a href="https://github.com/alerafart" className="footer--link"><img className="footer--img" src={github} alt="github icon" /></a>
+        <a href="https://www.linkedin.com/in/rafart-alejandra/" className="footer--link"><img className="footer--img" src={linkedin} alt="github icon" /></a>
+      
+      <p className="footer--small">Copyright 
       </p>
-      {/* <p className="footer--small">* lorem 20 
-      </p> */}
       {/* <a id="footer--home" href="./#header" ><HomeIcon id="footer--home--icon" sx={{ color:'#fff', fontSize: 40 }} /></a> */}
     </div>
   );

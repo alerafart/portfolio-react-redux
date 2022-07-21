@@ -13,7 +13,7 @@ import HomeIcon from '@mui/icons-material/Home';
 import  './styles/_reset.scss';
 import './App.scss';
 
-import HeaderMui from './components/HeaderMui';
+// import HeaderMui from './components/HeaderMui';
 
 function App() {
   return (

@@ -12,10 +12,10 @@ import AppBar from '@mui/material/AppBar';
 import MaterialUISwitch from './MaterialUISwitch';
 import FormGroup from '@mui/material/FormGroup';
 import FormControlLabel from '@mui/material/FormControlLabel';
-import AdbIcon from '@mui/icons-material/Adb';
-import IconButton from '@mui/material/IconButton';
+//import AdbIcon from '@mui/icons-material/Adb';
+//import IconButton from '@mui/material/IconButton';
 // import HomeIcon from '@mui/icons-material/Home';
-import Button from '@mui/material/Button';
+//import Button from '@mui/material/Button';
 import "./header.scss"
 import { color } from "@mui/system";
 
@@ -31,10 +31,15 @@ function Header() {
 
   return (
     <div >
-
-
-      
-      <AppBar position="static" id="header" className={isDarkMode ? 'header' : 'header light'}>
+      <AppBar 
+      sx={{
+            backgroundColor: 'primary.main',
+            '&:hover': {
+              backgroundColor: 'primary.dark',
+              
+            },
+          }} 
+      enableColorOnDark position="fixed" id="header" className={isDarkMode ? 'header' : 'header light'}>
         {/* <IconButton className="home" size="large">
           <HomeIcon className="home"/>
         </IconButton> */}

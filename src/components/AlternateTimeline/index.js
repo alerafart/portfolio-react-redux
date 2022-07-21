@@ -24,12 +24,12 @@ function AlternateTimeline() {
     <div id='timeline' className={isDarkMode ? 'timeline ' : 'timeline light'}>
       <Timeline position="alternate" className={isDarkMode ? 'timeline ' : 'timeline light'}>
         
-        <TimelineItem>
-            <TimelineOppositeContent
+        <TimelineItem className={isDarkMode ? 'timeline ' : 'timeline light'}>
+            <TimelineOppositeContent className={isDarkMode ? 'timeline ' : 'timeline light'}
               sx={{ m: 'auto 0' }}
               align="right"
               variant="body2"
-              color="text.secondary"
+              //color="text.secondary"
               >
               2022
             </TimelineOppositeContent>
@@ -52,7 +52,7 @@ function AlternateTimeline() {
             <TimelineOppositeContent
               sx={{ m: 'auto 0' }}
               variant="body2"
-              color="text.secondary"
+              //color="text.secondary"
             >
               2021-2022
             </TimelineOppositeContent>
@@ -76,7 +76,7 @@ function AlternateTimeline() {
             sx={{ m: 'auto 0' }}
             align="right"
             variant="body2"
-            color="text.secondary"
+            // color="text.secondary"
           >
             2008-2022
           </TimelineOppositeContent>
@@ -99,7 +99,7 @@ function AlternateTimeline() {
             <TimelineOppositeContent
               sx={{ m: 'auto 0' }}
               variant="body2"
-              color="text.secondary"
+              // color="text.secondary"
             >
               2007
             </TimelineOppositeContent>
@@ -122,7 +122,7 @@ function AlternateTimeline() {
             <TimelineOppositeContent
               sx={{ m: 'auto 0' }}
               variant="body2"
-              color="text.secondary"
+              // color="text.secondary"
             >
               1999-2006
             </TimelineOppositeContent>
