@@ -9,9 +9,17 @@
   align-items: center;
   border: 1px solid grey;
   
+  @media (max-width: 800px) {
+    text-align: left;
+    }
+
   &__themeSwitch {
     display:flex;
     margin-left: 1rem;
+
+    @media (max-width: 800px) {
+      margin-left: 0;
+      }
   }
   &__nav{
     width: 100%;
@@ -21,7 +29,10 @@
 
     @media (max-width: 800px) {
       flex-direction: column;
+      // justify-content: flex-start;
+      align-items: flex-start;
       height: min-content;
+      width: min-content;
       
       }
 
@@ -29,14 +40,11 @@
       color: white;
       text-transform: uppercase;
       width: 100%;
+      // justify-content: flex-start;
+      //align-content: flex-start;
       
     }
 
-    &--but {
-      position: sticky;
-  top: 1rem;
-  left: 2rem;
-    }
   }
   
 }

@@ -176,10 +176,12 @@ function Contact() {
           
           
           
-
-            <Stack>
-              <Alert severity="success"><span className={contactForm.emailSent ? 'visible' : null}>Thank you for your message, we will be in touch in no time!</span></Alert>
-            </Stack>  
+        <div className={contactForm.emailSent ? 'visible' : 'hide'}>
+        <Stack >
+              <Alert  severity="success"><span >Thank you for your message, we will be in touch in no time!</span></Alert>
+        </Stack>
+        </div>
+              
       </Box>
     </div>
   );
