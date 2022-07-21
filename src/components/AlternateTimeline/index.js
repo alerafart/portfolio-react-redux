@@ -22,7 +22,7 @@ function AlternateTimeline() {
 
   return (
     <div id='timeline' className={isDarkMode ? 'timeline ' : 'timeline light'}>
-      <Timeline position="alternate">
+      <Timeline position="alternate" className={isDarkMode ? 'timeline ' : 'timeline light'}>
         
         <TimelineItem>
             <TimelineOppositeContent
@@ -41,14 +41,14 @@ function AlternateTimeline() {
               <TimelineConnector />
             </TimelineSeparator>
             <TimelineContent sx={{ py: '12px', px: 2 }}>
-              <Typography variant="h6" component="span">
+              <Typography variant="h6" component="span" >
                 Titre Professionnel Développeur Web et Web Mobile
               </Typography>
-              <Typography>Because this is the life you love!</Typography>
+              <Typography >Because this is the life you love!</Typography>
             </TimelineContent>
         </TimelineItem>
 
-        <TimelineItem>
+        <TimelineItem >
             <TimelineOppositeContent
               sx={{ m: 'auto 0' }}
               variant="body2"
@@ -64,10 +64,10 @@ function AlternateTimeline() {
               <TimelineConnector />
             </TimelineSeparator>
             <TimelineContent sx={{ py: '12px', px: 2 }}>
-              <Typography variant="h6" component="span">
+              <Typography variant="h6" component="span" >
                 Formation Développeur Web et Web Mobile
               </Typography>
-              <Typography>Because it&apos;s awesome!</Typography>
+              <Typography className={isDarkMode ? 'timeline ' : 'timeline light'}>Because it&apos;s awesome!</Typography>
             </TimelineContent>
         </TimelineItem>
 

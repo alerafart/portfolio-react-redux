@@ -9,6 +9,7 @@ import Footer from './components/Footer';
 // import { Counter } from './features/counter/Counter';
 //import CssBaseline from '@mui/material/CssBaseline';
 //import Container from '@mui/material/Container';
+import HomeIcon from '@mui/icons-material/Home';
 import  './styles/_reset.scss';
 import './App.scss';
 
@@ -18,7 +19,8 @@ function App() {
   return (
     
     <div className="App">
-
+{/* sx={{ color: 'red', fontSize: 40 }} */}
+      <a className="home" href="./#header" ><HomeIcon className="home--icon" sx={{ color:'primary.main', fontSize: 40 }} /></a>
     {/* <React.Fragment>
       <CssBaseline />
       <Container maxWidth="false">
@@ -31,7 +33,7 @@ function App() {
     </React.Fragment> */}
 
         <Header />
-        <HeaderMui />
+        {/* <HeaderMui /> */}
         <Me />
         <Skills />
         <Projects />
