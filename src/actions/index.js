@@ -26,9 +26,11 @@ export const confirmMail = () => ({
 });
 
 
-// ACTION TYPE BURGER_MENU_OPEN
-export const BURGER_MENU_OPEN = 'BURGER_MENU_OPEN';
-// ACTION CREATOR burgerMenuOpen
-export const burgerMenuOpen = () => ({
-  type: BURGER_MENU_OPEN,
+// ACTION TYPE IS_TOGGLE_OPEN
+export const TOGGLE_OPEN = 'IS_TOGGLE_OPEN';
+
+// ACTION CREATOR is_toggle_open
+export const toggleOpen = () => ({
+  type: TOGGLE_OPEN,
+  
 });

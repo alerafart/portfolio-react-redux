@@ -1,6 +1,7 @@
 import React from "react";
 import { useSelector, useDispatch } from 'react-redux';
 import { darkMode } from '../../actions';
+import Toggle from '../Toggle';
 // import Box from '@mui/material/Box';
 /* import BottomNavigation from '@mui/material/BottomNavigation';
 import BottomNavigationAction from '@mui/material/BottomNavigationAction';
@@ -31,7 +32,7 @@ function Header() {
 
   return (
     <div >
-      <AppBar 
+      <AppBar enableColorOnDark position="fixed" id="header" className={isDarkMode ? 'header' : 'header light'}
       sx={{
             backgroundColor: 'primary.main',
             '&:hover': {
@@ -39,17 +40,10 @@ function Header() {
               
             },
           }} 
-      enableColorOnDark position="fixed" id="header" className={isDarkMode ? 'header' : 'header light'}>
-        {/* <IconButton className="home" size="large">
-          <HomeIcon className="home"/>
-        </IconButton> */}
-        {/* <Button className="home" href="./#header" >HOME<HomeIcon  sx={{ color: '#000' }} /></Button> */}
-        {/* <HomeIcon sx={{ color: '#000' }} /> */}
+      >
+        
         <nav className="header__nav">
-        {/* <Button className="header__nav--but" href="./#header" >HOME<HomeIcon  sx={{ color: '#000' }} /></Button> */}
-        {/* <Button className="home" href="./#header" >HOME<HomeIcon  sx={{ color: '#000' }} /></Button> */}
-        {/* <button className="homebis" href="./#header" >HOME<HomeIcon className="home" /></button> */}
-        {/* <Button className="home__button" href="./#header" >HOME<HomeIcon className="home--icon" ></HomeIcon> </Button> */}
+        
             <FormGroup className="header__themeSwitch">
               <FormControlLabel
                 control={<MaterialUISwitch sx={{ m: 1 }} defaultChecked />}
@@ -58,12 +52,18 @@ function Header() {
                 }}
               />
             </FormGroup>
-            {/* <a className="header__nav--link" href="./#home" ><HomeIcon  sx={{ color: '#000' }} />Home</a> */}
+            
+            <Toggle className="header__nav--toggle"/>
+            
             <a className="header__nav--link" href="./#skills" >Skills</a>
             <a className="header__nav--link" href="./#projects">Projets</a>
             <a className="header__nav--link" href="./#timeline">Parcours</a>
             <a className="header__nav--link" href="./#contact">Contact</a>
           
+            <a className="header__nav--link--mobile" href="./#skills" >Skills</a>
+            <a className="header__nav--link--mobile" href="./#projects">Projets</a>
+            <a className="header__nav--link--mobile" href="./#timeline">Parcours</a>
+            <a className="header__nav--link--mobile" href="./#contact">Contact</a>
         </nav>
       </AppBar>
     </div>

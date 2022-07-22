@@ -167,7 +167,7 @@ function Contact() {
               variant="filled"
               onChange= {handleChange}
               //rows={10}
-              //defaultValue="Default Value"
+              defaultValue="Default Value"
             />
           </div>
           <Button sx={{

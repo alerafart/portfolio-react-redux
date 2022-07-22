@@ -21,9 +21,9 @@ function Projects() {
               sx={{
                 width: '80%',
                 height: '100%',
-                backgroundColor: '#e0e0e0',
+                backgroundColor: '#bdbdbd',
                 '&:hover': {
-                  backgroundColor: '#bdbdbd',
+                  backgroundColor: '#cddc39',
                   //opacity: [0.9, 0.8, 0.7],
                 },
               }}>      

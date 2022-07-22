@@ -1,5 +1,5 @@
 // import BlaguesAPI from 'blagues-api';
-import { DARK_MODE, SEND_MESSAGE, CONFIRM_MAIL, BURGER_MENU_OPEN
+import { DARK_MODE, SEND_MESSAGE, CONFIRM_MAIL, TOGGLE_OPEN
   
 } from '../actions';
 // import { SET_JOKES } from '../actions';
@@ -9,7 +9,7 @@ const initialState = {
 
   settings: {
     darkMode: true,
-    burgerMenuOpen: false,
+    toggleOpen: false,
   },
 
   contactForm: {
@@ -61,12 +61,12 @@ function Reducer(state = initialState, action = {}) {
           }
         }
       }
-      case BURGER_MENU_OPEN:
+      case TOGGLE_OPEN:
       return {
         ...state,
         settings: {
           ...state.navigation,
-          burgerMenuOpen: !state.settings.burgerMenuOpen,
+          toggleOpen: !state.settings.toggleOpen,
         },
       };
 
