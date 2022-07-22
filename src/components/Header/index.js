@@ -50,6 +50,7 @@ function Header() {
       >
         <nav className="header__nav">
         
+        <div className="header__nav_buttons">
             <FormGroup className="header__themeSwitch">
               <FormControlLabel
                 control={<MaterialUISwitch sx={{ m: 1 }} defaultChecked />}
@@ -57,16 +58,15 @@ function Header() {
                   handleDarkModeClick();
                 }}
               />
-
             </FormGroup>
             <button                  
               className={isToggleOpen ? 'toggle toggle--open' : 'toggle '}
               type="button"
               onClick={handleToggle}
             >
-              X
+              =
             </button>
-            
+          </div>
 
             <a className="header__nav--link" href="./#skills" >Skills</a>
             <a className="header__nav--link" href="./#projects">Projets</a>

@@ -14,7 +14,7 @@ const isDarkMode = useSelector((state) => state.settings.darkMode);
         <div className="skills__icons">
  
           {skillsList.map((skill) => (
-            <div className="skills__icons--icon" key={skill.name}>                
+            <div className={isDarkMode ? 'skills__icons--icon' : 'skills__icons--icon light'} key={skill.name}>                
                 <img 
                   src= {skill.class}
                   alt= {skill.name}
