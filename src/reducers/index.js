@@ -65,7 +65,7 @@ function Reducer(state = initialState, action = {}) {
       return {
         ...state,
         settings: {
-          ...state.navigation,
+          ...state.settings,
           toggleOpen: !state.settings.toggleOpen,
         },
       };

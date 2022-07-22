@@ -1,6 +1,6 @@
 import React from "react";
 import { useSelector, useDispatch } from 'react-redux';
-import { darkMode } from '../../actions';
+import { darkMode , toggleOpen } from '../../actions';
 import Burger from "../Burger";
 // import Box from '@mui/material/Box';
 /* import BottomNavigation from '@mui/material/BottomNavigation';
@@ -33,7 +33,7 @@ function Header() {
   const isToggleOpen = useSelector((state)=> state.settings.isToggleOpen);
   function handleToggle() {
     console.log('click toggle');
-    //dispatch(toggleOpen());
+    dispatch(toggleOpen());
     
   }
   return (
