@@ -26,10 +26,10 @@ export const confirmMail = () => ({
 });
 
 
-// ACTION TYPE IS_TOGGLE_OPEN
-export const TOGGLE_OPEN = 'IS_TOGGLE_OPEN';
+// ACTION TYPE TOGGLE_OPEN
+export const TOGGLE_OPEN = 'TOGGLE_OPEN';
 
-// ACTION CREATOR is_toggle_open
+// ACTION CREATOR toggle_open
 export const toggleOpen = () => ({
   type: TOGGLE_OPEN,
   

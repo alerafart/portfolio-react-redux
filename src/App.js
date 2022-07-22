@@ -1,5 +1,7 @@
 import React from 'react';
 import Header from './components/Header';
+import HeaderMobile from './components/Header/HeaderMobile';
+import HeaderDesktop from './components/Header/HeaderDesktop';
 import Me from './components/Me';
 import Skills from './components/Skills';
 import Projects from './components/Projects';
@@ -34,6 +36,9 @@ function App() {
 
         <Header />
         {/* <HeaderMui /> */}
+        
+        {/* <HeaderDesktop />
+        <HeaderMobile /> */}
         <Me />
         <Skills />
         <Projects />

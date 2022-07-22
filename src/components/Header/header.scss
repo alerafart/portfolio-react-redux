@@ -1,15 +1,36 @@
 @use '../../styles/vars';
+#header{
+  position: fixed;
+  left : 0;
+  transition: 0.2s;
+  font-size: 1.5rem;
+  background-color: vars.$mainColor;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  border: 1px solid grey;
+  
+  @media (max-width: 800px) {
+    // display: none;
+    top: 30px;
+    text-align: left;
+    width: max-content;
+    background-color: #1976d289;
+    }
+}
 
 .header {
   //height: 150px;
   //width: 100%;
+  //
+
+  /* position: fixed;
   transition: 0.2s;
   font-size: 1.5rem;
-  background-color: vars.$mainColor;
-  //display: flex;
+  background-color: vars.$mainColor; 
   justify-content: space-around;
   align-items: center;
-  border: 1px solid grey;
+  border: 1px solid grey;*/
   
   /* &--light {
     background-color: vars.$mainColor;
@@ -17,7 +38,7 @@
   @media (max-width: 800px) {
     //display: none;
     text-align: left;
-    //width: 20%;
+    //width: min-content;
     }
 
   &__themeSwitch {
@@ -31,20 +52,18 @@
   &__nav {
     width: 100%;
     display:flex;
-    height: 100%;
+    //height: 100%;
     align-items: center;
 
-    @media (max-width: 800px) {
-      flex-direction: column;
-      margin-right: auto;
-      margin-left: 1rem;
-      align-items: flex-start;
-      height: min-content;
-      width: min-content;
-      
-      }
-
-    
+      @media (max-width: 800px) {
+        flex-direction: column;
+        margin-right: auto;
+        margin-left: 1rem;
+        align-items: flex-start;
+        height: min-content;
+        width: min-content;
+        }
+ 
 
     &--link{
       color: white;
@@ -81,11 +100,41 @@
 
 /* <Button className="home" href="./#header" >HOME<HomeIcon className="home--icon" ></HomeIcon> </Button> */
 
-.toggle {
+/* .toggle {
   display: none;
   
   @media (max-width:800px){
     display: block;
 
+  }
+} */
+
+.toggle {
+  display: none;
+  @media (max-width:800px){
+    display: block;
+    width: auto;
+    height: auto;
+    border-radius: 50%;
+    border: 3px solid black;
+    background-color: white;
+    font-size: 200%;
+    color: vars.$mainColor;
+  }
+  
+  // on veut remonter le bouton pour qu'il soit sur le Header
+  //margin-top: -25px;
+
+  // au hover on inverse les couleurs
+  &:hover {
+    border: 3px solid white;
+    color: white;
+    background-color:vars.$mainColor;
+  }
+
+  // on applique une rotation sur le bouton si les devises sont visibles
+  // .toggle.toggle--open
+  &.toggle--open {
+    transform: rotate(90deg);
   }
 }

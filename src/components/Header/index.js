@@ -1,7 +1,7 @@
 import React from "react";
 import { useSelector, useDispatch } from 'react-redux';
 import { darkMode } from '../../actions';
-import Toggle from '../Toggle';
+import Burger from "../Burger";
 // import Box from '@mui/material/Box';
 /* import BottomNavigation from '@mui/material/BottomNavigation';
 import BottomNavigationAction from '@mui/material/BottomNavigationAction';
@@ -18,7 +18,7 @@ import FormControlLabel from '@mui/material/FormControlLabel';
 // import HomeIcon from '@mui/icons-material/Home';
 //import Button from '@mui/material/Button';
 import "./header.scss"
-import { color } from "@mui/system";
+// import { color } from "@mui/system";
 
 function Header() {
   // const [value, setValue] = React.useState(0);
@@ -30,9 +30,16 @@ function Header() {
     dispatch(darkMode());
   }
 
+  const isToggleOpen = useSelector((state)=> state.settings.isToggleOpen);
+  function handleToggle() {
+    console.log('click toggle');
+    //dispatch(toggleOpen());
+    
+  }
   return (
     <div >
-      <AppBar enableColorOnDark position="fixed" id="header" className={isDarkMode ? 'header' : 'header light'}
+      <AppBar enableColorOnDark //position="fixed" 
+      id="header" className={isDarkMode ? 'header' : 'header light'}
       sx={{
             backgroundColor: 'primary.main',
             '&:hover': {
@@ -41,7 +48,6 @@ function Header() {
             },
           }} 
       >
-        
         <nav className="header__nav">
         
             <FormGroup className="header__themeSwitch">
@@ -51,14 +57,22 @@ function Header() {
                   handleDarkModeClick();
                 }}
               />
+
             </FormGroup>
+            <button                  
+              className={isToggleOpen ? 'toggle toggle--open' : 'toggle '}
+              type="button"
+              onClick={handleToggle}
+            >
+              X
+            </button>
             
-            <Toggle className="header__nav--toggle"/>
-            
+
             <a className="header__nav--link" href="./#skills" >Skills</a>
             <a className="header__nav--link" href="./#projects">Projets</a>
             <a className="header__nav--link" href="./#timeline">Parcours</a>
             <a className="header__nav--link" href="./#contact">Contact</a>
+          
           
             <a className="header__nav--link--mobile" href="./#skills" >Skills</a>
             <a className="header__nav--link--mobile" href="./#projects">Projets</a>
@@ -66,6 +80,12 @@ function Header() {
             <a className="header__nav--link--mobile" href="./#contact">Contact</a>
         </nav>
       </AppBar>
+      {/* <nav className="header__nav">        
+            <a className="header__nav--link--mobile" href="./#skills" >Skills</a>
+            <a className="header__nav--link--mobile" href="./#projects">Projets</a>
+            <a className="header__nav--link--mobile" href="./#timeline">Parcours</a>
+            <a className="header__nav--link--mobile" href="./#contact">Contact</a>
+      </nav> */}
     </div>
 
     

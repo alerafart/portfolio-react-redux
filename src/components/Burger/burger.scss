@@ -1,0 +1,129 @@
+@use '../../styles/vars';
+
+.header {
+  //height: 150px;
+  //width: 100%;
+  transition: 0.2s;
+  font-size: 1.5rem;
+  background-color: vars.$mainColor;
+  //display: flex;
+  justify-content: space-around;
+  align-items: center;
+  border: 1px solid grey;
+  
+  /* &--light {
+    background-color: vars.$mainColor;
+  } */
+  @media (max-width: 800px) {
+    //display: none;
+    text-align: left;
+    //width: 20%;
+    }
+
+  &__themeSwitch {
+    display:flex;
+    margin-left: 1rem;
+
+    @media (max-width: 800px) {
+      margin-left: 0;
+      }
+  }
+  &__nav {
+    width: 100%;
+    display:flex;
+    height: 100%;
+    align-items: center;
+
+    @media (max-width: 800px) {
+      flex-direction: column;
+      margin-right: auto;
+      margin-left: 1rem;
+      align-items: flex-start;
+      height: min-content;
+      width: min-content;
+      
+      }
+
+    
+
+    &--link{
+      color: white;
+      text-transform: uppercase;
+      width: 100%;
+      
+      @media (max-width:800px){
+        display: none;
+      }
+    }
+
+    &--link--mobile {
+      display: none;
+      
+      @media (max-width:800px){
+        display: block;
+        color: white;
+        text-transform: uppercase;
+        width: 100%;
+
+      }
+
+            
+    }
+
+  }
+  
+}
+
+.light {
+  background-color: vars.$mainLightGrey;
+  color: rgb(0, 0, 0);
+}
+
+/* <Button className="home" href="./#header" >HOME<HomeIcon className="home--icon" ></HomeIcon> </Button> */
+
+.toggle {
+  //display: none;
+  
+  @media (max-width:800px){
+    display: block;
+
+  }
+}
+
+.toggle {
+  position: fixed;
+  top: 0;
+  right: 0;
+  margin-top: vars.$gutter;
+  padding: vars.$gutter;
+  border-radius: 0.5rem 0 0 0.5rem;
+  display: flex;
+  background-color: rgba(0, 0, 0, 0.3);
+  transition: all 0.9s ease-in;
+
+  &__toggle {
+    width: 5rem;
+    height: 5rem;
+    border: none;
+    background-color: vars.$color-light;
+    border-radius: 1rem;
+    color: vars.$color-alt2;
+    font-size: 1.3rem;
+    // j'applique une transformation de type rotation d'angle 45deg
+    transform: rotate(45deg);
+    // on indique que les transition pour la propriété transform
+    // vont être mise en place, dureront 0,3 secondes et suivront une fonction
+    // de timing de type ease-in
+    transition: transform 0.3s ease-in;
+  }
+
+
+  &--closed {
+    .settings__toggle {
+      transform: rotate(0deg);
+    }
+
+    // ici on applique une transition de 13 caratères sur la droite (positif en X).
+    transform: translateX(13rem);
+  }
+}
