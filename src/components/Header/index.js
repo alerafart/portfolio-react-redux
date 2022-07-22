@@ -30,7 +30,7 @@ function Header() {
     dispatch(darkMode());
   }
 
-  const isToggleOpen = useSelector((state)=> state.settings.isToggleOpen);
+  const isToggleOpen = useSelector((state)=> state.settings.toggleOpen);
   function handleToggle() {
     console.log('click toggle');
     dispatch(toggleOpen());
@@ -50,7 +50,7 @@ function Header() {
       >
         <nav className="header__nav">
         
-        <div className="header__nav_buttons">
+        <div className="header__nav--buttons">
             <FormGroup className="header__themeSwitch">
               <FormControlLabel
                 control={<MaterialUISwitch sx={{ m: 1 }} defaultChecked />}
@@ -60,14 +60,14 @@ function Header() {
               />
             </FormGroup>
             <button                  
-              className={isToggleOpen ? 'toggle toggle--open' : 'toggle '}
+              className={isToggleOpen ? 'toggle toggle--open' : 'toggle'}
               type="button"
               onClick={handleToggle}
             >
               =
             </button>
-          </div>
-
+        </div>
+        
             <a className="header__nav--link" href="./#skills" >Skills</a>
             <a className="header__nav--link" href="./#projects">Projets</a>
             <a className="header__nav--link" href="./#timeline">Parcours</a>
