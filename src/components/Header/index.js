@@ -1,7 +1,7 @@
 import React from "react";
 import { useSelector, useDispatch } from 'react-redux';
 import { darkMode , toggleOpen } from '../../actions';
-import Burger from "../Burger";
+// import Burger from "../Burger";
 // import Box from '@mui/material/Box';
 /* import BottomNavigation from '@mui/material/BottomNavigation';
 import BottomNavigationAction from '@mui/material/BottomNavigationAction';
@@ -39,34 +39,29 @@ function Header() {
   return (
     <div >
       <AppBar enableColorOnDark //position="fixed" 
-      id="header" className={isDarkMode ? 'header' : 'header light'}
-      sx={{
-            backgroundColor: 'primary.main',
-            '&:hover': {
-              backgroundColor: 'primary.dark',
-              
-            },
-          }} 
+      id="header" //className =({ 'header light': !isDarkMode }, 'header', {'hide': !isToggleOpen});
+      className = {isDarkMode ? 'header' : 'header light'} {...isToggleOpen ? '' : 'hide'}
+      
       >
         <nav className="header__nav">
         
-        <div className="header__nav--buttons">
-            <FormGroup className="header__themeSwitch">
-              <FormControlLabel
-                control={<MaterialUISwitch sx={{ m: 1 }} defaultChecked />}
-                onClick={() => {
-                  handleDarkModeClick();
-                }}
-              />
-            </FormGroup>
-            <button                  
-              className={isToggleOpen ? 'toggle toggle--open' : 'toggle'}
-              type="button"
-              onClick={handleToggle}
-            >
-              =
-            </button>
-        </div>
+          <div className="header__nav--buttons">
+              <FormGroup className="header__themeSwitch">
+                <FormControlLabel
+                  control={<MaterialUISwitch sx={{ m: 1 }} defaultChecked />}
+                  onClick={() => {
+                    handleDarkModeClick();
+                  }}
+                />
+              </FormGroup>
+              <button                  
+                className={isToggleOpen ? 'toggle toggle--open' : 'toggle'}
+                type="button"
+                onClick={handleToggle}
+              >
+                =
+              </button>
+          </div>
         
             <a className="header__nav--link" href="./#skills" >Skills</a>
             <a className="header__nav--link" href="./#projects">Projets</a>
@@ -74,10 +69,10 @@ function Header() {
             <a className="header__nav--link" href="./#contact">Contact</a>
           
           
-            <a className="header__nav--link--mobile" href="./#skills" >Skills</a>
-            <a className="header__nav--link--mobile" href="./#projects">Projets</a>
-            <a className="header__nav--link--mobile" href="./#timeline">Parcours</a>
-            <a className="header__nav--link--mobile" href="./#contact">Contact</a>
+            <a className={isToggleOpen ? 'header__nav--link--mobile' : 'header__nav--link--mobile hide'} href="./#skills" >Skills</a>
+            <a className={isToggleOpen ? 'header__nav--link--mobile' : 'header__nav--link--mobile hide'} href="./#projects">Projets</a>
+            <a className={isToggleOpen ? 'header__nav--link--mobile' : 'header__nav--link--mobile hide'} href="./#timeline">Parcours</a>
+            <a className={isToggleOpen ? 'header__nav--link--mobile' : 'header__nav--link--mobile hide'} href="./#contact">Contact</a>
         </nav>
       </AppBar>
       {/* <nav className="header__nav">        

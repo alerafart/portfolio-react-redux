@@ -9,16 +9,29 @@
   justify-content: space-around;
   align-items: center;
   border: 1px solid grey;
-  
+  border-top-right-radius: 1rem;
+  border-bottom-right-radius: 1rem;
   @media (max-width: 800px) {
     // display: none;
+    position: fixed;
+  /* top: 0;
+  left: 0;
     top: 30px;
+    transition: all 0.5s ease-in; */
     text-align: left;
-    width: 14rem;
+    width: max-content;
     background-color: #1976d289;
+    //background-color: rgba(0, 0, 0, 0);
+    
+    
     }
+    
 }
 
+.hide {
+  background-color: none;
+  display: none;
+}
 .header {
   //height: 150px;
   //width: 100%;
@@ -67,8 +80,9 @@
     &--buttons {
       @media (max-width:800px){
         display: flex;
+        flex-direction: column;
         justify-content: space-between;
-        //width: 100%;
+        margin-bottom: vars.$gutter;
       }
     }
  
@@ -89,7 +103,22 @@
         display: block;
         color: white;
         text-transform: uppercase;
-        width: 100%;
+        padding: 1rem;
+        transition-timing-function: ease-in;
+
+  /* Quick on the way out */
+  transition: 0.2s;
+
+  /* Hide thing by pushing it outside by default */
+  //transform: translateX(130%);
+
+        //transition: all 0.3s ease-in;
+      
+        &.hide {
+          transition: all 0.3s ease-in;
+          background-color: none;
+          display: none;
+        }
 
       }
     }
@@ -102,9 +131,12 @@
   color: rgb(0, 0, 0);
 }
 
+//button
 .toggle {
   display: none;
   @media (max-width:800px){
+    //position: relative;
+    //left: 2rem;
     display: block;
     width: 1.5em;
     height: 1.5em;
