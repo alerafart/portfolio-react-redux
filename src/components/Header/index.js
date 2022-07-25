@@ -41,11 +41,11 @@ function Header() {
       <AppBar enableColorOnDark //position="fixed" 
       id="header" className={isDarkMode ? 'header' : 'header light'} //className = {isDarkMode ? 'header' : 'header light'} {...isToggleOpen ? '' : 'hide'}
       sx={{
-            backgroundColor: 'primary.main',
-            '&:hover': {
-              backgroundColor: 'primary.dark',
+            //backgroundColor: 'primary.main',
+            //'&:hover': {
+              //backgroundColor: 'primary.dark',
               
-            },
+            //},
           }} 
       >
         <nav className="header__nav">

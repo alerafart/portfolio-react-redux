@@ -1,3 +1,4 @@
+@use './styles/vars';
 .App {
   text-align: center;
   font-family: "Montserrat","Roboto","Helvetica","Arial",sans-serif;
@@ -45,7 +46,7 @@
 }
 
 body{
-  background-color:  rgb(18, 18, 18);
+  background-color: vars.$darkGrey;
 }
 .home {
   position: fixed;

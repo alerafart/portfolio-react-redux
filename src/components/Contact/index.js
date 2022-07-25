@@ -173,7 +173,7 @@ function Contact() {
           <Button sx={{
           'margin': '5px',
         }}
-        className="contact__message--submit" type="submit" variant="contained">Submit</Button>
+        id="submit" className="contact__message--submit" type="submit" variant="contained">Submit</Button>
           
           
           

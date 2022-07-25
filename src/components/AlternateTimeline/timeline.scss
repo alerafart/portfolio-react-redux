@@ -4,7 +4,7 @@
   transition: 0.2s;
   text-align: center;
   justify-content: center;
-  width: 85%;
+  width: 70%;
   margin: auto;
   color: white;
 
@@ -14,6 +14,6 @@
 
 light {
   transition: 0.2s;
-  color: black;
+  color: vars.$darkGrey;
   background-color: vars.$mainLightGrey;
 }

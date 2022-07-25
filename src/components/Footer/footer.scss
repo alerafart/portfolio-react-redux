@@ -13,9 +13,9 @@
   //display: flex;
   flex-direction: column;
   //background-color: #bdbdbd;
-  background-color: vars.$mainColor;
+  background-color: vars.$middleGreen;
   //align-items: center;
-  color: #fff;
+  color:  vars.$darkGrey;
   //color: vars.$light-color;
   width: 70%;
   margin: auto;
@@ -54,21 +54,15 @@
   //color: black;
   //background-color: #bdbdbd;
 }
-/* 
-#footer--home {
+.home {
+  position: fixed;
+  bottom: 0;
+  right:1rem;
+  color: #fff;
+  //background-color:  rgb(18, 18, 18);
 
-  position: relative;
-  //bottom: 10px;
-  //@at-root: right;
-  top:-50px;
-  margin-left: auto;
-  //margin-right: 1rem;
-  //right: -200px; 
-  
-  color: white;
-  //width: 5rem;
-  
-} 
-#home--icon {
-  //justify-content: flex-end;
-} */
+  &--icon{
+    height: 3rem;
+    width: 10rem;
+  }
+}

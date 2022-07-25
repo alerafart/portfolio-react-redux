@@ -1,37 +1,32 @@
 @use '../../styles/vars';
 #header{
-  position: fixed;
+  //position: fixed;
   left : 0;
   transition: 0.2s;
   font-size: 1.5rem;
-  background-color: vars.$mainColor;
+  background-color: vars.$middleGreen;
   display: flex;
   justify-content: space-around;
   align-items: center;
   border: 1px solid grey;
-  border-top-right-radius: 1rem;
-  border-bottom-right-radius: 1rem;
+  
   @media (max-width: 800px) {
-    // display: none;
-    position: fixed;
-  /* top: 0;
-  left: 0;
-    top: 30px;
-    transition: all 0.5s ease-in; */
+   margin-right: 2rem;
     text-align: left;
     width: max-content;
-    background-color: #1976d289;
-    //background-color: rgba(0, 0, 0, 0);
+    border-top-right-radius: 1rem;
+    border-bottom-right-radius: 1rem;
+    //background-color: #1976d289;
     
     
     }
     
 }
 
-.hide {
+/* .hide {
   background-color: none;
   display: none;
-}
+} */
 .header {
   //height: 150px;
   //width: 100%;
@@ -87,7 +82,7 @@
     }
  
     &--link{
-      color: white;
+      color: vars.$darkGrey;
       text-transform: uppercase;
       width: 100%;
       
@@ -114,11 +109,11 @@
 
         //transition: all 0.3s ease-in;
       
-        &.hide {
+        /* &.hide {
           transition: all 0.3s ease-in;
           background-color: none;
           display: none;
-        }
+        } */
 
       }
     }
@@ -127,7 +122,7 @@
 }
 
 .light {
-  background-color: vars.$mainLightGrey;
+  background-color: vars.$lightGrey;
   color: rgb(0, 0, 0);
 }
 
@@ -152,9 +147,9 @@
 
   // au hover on inverse les couleurs
   &:hover {
-    border: 3px solid white;
-    color: white;
-    background-color:vars.$mainColor;
+    border: 3px solid vars.$darkGrey;
+    color: vars.$darkGrey;
+    background-color:vars.$lightGreen;
   }
 
   // on applique une rotation sur le bouton si les devises sont visibles
