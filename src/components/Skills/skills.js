@@ -43,7 +43,7 @@ const skills =  [
 
         {
           "name": "GitHub",
-          "class": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg"
+          "class": "https://github.githubassets.com/images/modules/logos_page/Octocat.png"
         },
         {
           "name": "Lumen Laravel",

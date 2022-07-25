@@ -39,9 +39,14 @@ function Header() {
   return (
     <div >
       <AppBar enableColorOnDark //position="fixed" 
-      id="header" //className =({ 'header light': !isDarkMode }, 'header', {'hide': !isToggleOpen});
-      className = {isDarkMode ? 'header' : 'header light'} {...isToggleOpen ? '' : 'hide'}
-      
+      id="header" className={isDarkMode ? 'header' : 'header light'} //className = {isDarkMode ? 'header' : 'header light'} {...isToggleOpen ? '' : 'hide'}
+      sx={{
+            backgroundColor: 'primary.main',
+            '&:hover': {
+              backgroundColor: 'primary.dark',
+              
+            },
+          }} 
       >
         <nav className="header__nav">
         
