@@ -24,8 +24,8 @@ function AlternateTimeline() {
     <div id='timeline' className={isDarkMode ? 'timeline ' : 'timeline light'}>
       <Timeline position="alternate" className={isDarkMode ? 'timeline ' : 'timeline light'}>
         
-        <TimelineItem className={isDarkMode ? 'timeline ' : 'timeline light'}>
-            <TimelineOppositeContent className={isDarkMode ? 'timeline ' : 'timeline light'}
+        <TimelineItem className={isDarkMode ? 'timeline__item ' : 'timeline__item light'}>
+            <TimelineOppositeContent className={isDarkMode ? 'timeline__item ' : 'timeline__item light'}
               sx={{ m: 'auto 0' }}
               align="right"
               variant="body2"
@@ -48,8 +48,8 @@ function AlternateTimeline() {
             </TimelineContent>
         </TimelineItem>
 
-        <TimelineItem >
-            <TimelineOppositeContent
+        <TimelineItem className={isDarkMode ? 'timeline__item ' : 'timeline__item light'}>
+            <TimelineOppositeContent className={isDarkMode ? 'timeline__item ' : 'timeline__item light'}
               sx={{ m: 'auto 0' }}
               variant="body2"
               //color="text.secondary"
@@ -63,16 +63,16 @@ function AlternateTimeline() {
               </TimelineDot>
               <TimelineConnector />
             </TimelineSeparator>
-            <TimelineContent sx={{ py: '12px', px: 2 }}>
+            <TimelineContent className={isDarkMode ? 'timeline__item ' : 'timeline__item light'} sx={{ py: '12px', px: 2 }}>
               <Typography variant="h6" component="span" >
                 Formation Développeur Web et Web Mobile
               </Typography>
-              <Typography className={isDarkMode ? 'timeline ' : 'timeline light'}>Because it&apos;s awesome!</Typography>
+              <Typography className={isDarkMode ? 'timeline__item ' : 'timeline__item light'}>Because it&apos;s awesome!</Typography>
             </TimelineContent>
         </TimelineItem>
 
-        <TimelineItem>
-          <TimelineOppositeContent
+        <TimelineItem className={isDarkMode ? 'timeline__item ' : 'timeline__item light'}>
+          <TimelineOppositeContent className={isDarkMode ? 'timeline__item ' : 'timeline__item light'}
             sx={{ m: 'auto 0' }}
             align="right"
             variant="body2"
@@ -87,7 +87,7 @@ function AlternateTimeline() {
             </TimelineDot>
             <TimelineConnector />
           </TimelineSeparator>
-          <TimelineContent sx={{ py: '12px', px: 2 }}>
+          <TimelineContent className={isDarkMode ? 'timeline__item ' : 'timeline__item light'} sx={{ py: '12px', px: 2 }}>
             <Typography variant="h6" component="span">
               Photographe responsable studio E-Commerce
             </Typography>
@@ -95,8 +95,8 @@ function AlternateTimeline() {
           </TimelineContent>
         </TimelineItem>
 
-        <TimelineItem>
-            <TimelineOppositeContent
+        <TimelineItem className={isDarkMode ? 'timeline__item ' : 'timeline__item light'}>
+            <TimelineOppositeContent className={isDarkMode ? 'timeline__item ' : 'timeline__item light'}
               sx={{ m: 'auto 0' }}
               variant="body2"
               // color="text.secondary"
@@ -110,7 +110,7 @@ function AlternateTimeline() {
               </TimelineDot>
               <TimelineConnector />
             </TimelineSeparator>
-            <TimelineContent sx={{ py: '12px', px: 2 }}>
+            <TimelineContent className={isDarkMode ? 'timeline__item ' : 'timeline__item light'} sx={{ py: '12px', px: 2 }}>
               <Typography variant="h6" component="span">
                 Diplôme d'architecte mention en Urbanisme
               </Typography>
@@ -118,7 +118,7 @@ function AlternateTimeline() {
             </TimelineContent>
         </TimelineItem>
 
-        <TimelineItem>
+        <TimelineItem className={isDarkMode ? 'timeline__item ' : 'timeline__item light'}>
             <TimelineOppositeContent
               sx={{ m: 'auto 0' }}
               variant="body2"
@@ -126,14 +126,14 @@ function AlternateTimeline() {
             >
               1999-2006
             </TimelineOppositeContent>
-            <TimelineSeparator>
+            <TimelineSeparator className={isDarkMode ? 'timeline__item ' : 'timeline__item light'}>
               <TimelineConnector />
               <TimelineDot color="primary">
                 <SchoolRoundedIcon />
               </TimelineDot>
               <TimelineConnector />
             </TimelineSeparator>
-            <TimelineContent sx={{ py: '12px', px: 2 }}>
+            <TimelineContent className={isDarkMode ? 'timeline__item ' : 'timeline__item light'} sx={{ py: '12px', px: 2 }}>
               <Typography variant="h6" component="span">
                 Etudes en Architecture
               </Typography>

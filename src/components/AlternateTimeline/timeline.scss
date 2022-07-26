@@ -1,14 +1,20 @@
 @use '../../styles/vars';
 
-#timeline{
+.timeline{
   transition: 0.2s;
   text-align: center;
   justify-content: center;
   width: 70%;
   margin: auto;
   color: white;
+  
 
-
+  &__item {
+    //position: relative;
+    //animation: cd-bounce-2 .6s;
+    //transform: translateX(-100px);
+    //transform: translateX(20px)
+  }
   //margin: 200px;
 }
 

@@ -8,10 +8,7 @@ const skills =  [
           "name": "CSS",
           "class": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg"
         },
-        {
-          "name": "Sass",
-          "class": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/sass/sass-original.svg"
-        },
+        
         {
           "name": "JavaScript",
           "class": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg"
@@ -20,11 +17,6 @@ const skills =  [
         {
           "name": "PHP",
           "class": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/php/php-original.svg"
-        },
-
-        {
-          "name": "Bootstrap",
-          "class": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bootstrap/bootstrap-original.svg"
         },
         
         {
@@ -35,6 +27,18 @@ const skills =  [
         {
           "name": "Redux",
           "class": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/redux/redux-original.svg"
+        },
+        {
+          "name": "Sass",
+          "class": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/sass/sass-original.svg"
+        },
+        {
+          "name": "Material UI",
+          "class": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/materialui/materialui-original.svg"
+        },
+        {
+          "name": "Bootstrap",
+          "class": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bootstrap/bootstrap-original.svg"
         },
         {
           "name": "MySql",

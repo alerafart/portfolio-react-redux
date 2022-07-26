@@ -1,7 +1,8 @@
 @use '../../styles/vars';
 
 .projects{
-  // width: 90%;
+  width: 90%;
+  margin: auto;
   height: max-content;
    // background-color: rgb(240, 236, 236);
   display: flex;
@@ -19,7 +20,7 @@
   &__project {
     display: flex;
     flex-wrap: wrap;
-    width: 100%;
+    width: 33%;
     flex-direction: column;
     justify-content: center;
     align-items: center;

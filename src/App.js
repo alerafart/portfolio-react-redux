@@ -7,8 +7,9 @@ import Skills from './components/Skills';
 import Projects from './components/Projects';
 import Contact from './components/Contact';
 import AlternateTimeline from './components/AlternateTimeline';
+import Timeline from './components/AlternateTimeline/index12'
 import Footer from './components/Footer';
-// import { Counter } from './features/counter/Counter';
+
 //import CssBaseline from '@mui/material/CssBaseline';
 //import Container from '@mui/material/Container';
 import HomeIcon from '@mui/icons-material/Home';
@@ -44,6 +45,7 @@ function App() {
         <Projects />
         <Contact />
         <AlternateTimeline />
+        <Timeline />
         <Footer />
         
 

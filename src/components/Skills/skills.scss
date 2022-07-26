@@ -1,10 +1,12 @@
+@use '../../styles/vars';
+
 .skills {
-  width: 70%;
+  width: 90%;
   margin: auto;
   height: auto;
-  color: rgb(240, 236, 236);
+  color: #fff;
   display: flex;
-  justify-content: center;
+  justify-content: space-around;
   align-items: center;
   border: 1px solid black;
   
@@ -17,10 +19,12 @@
     flex-wrap: wrap;
     justify-content: space-around;
     border: 1px solid black;
-    margin: 2rem;
-    
+    margin: 0.5rem;
     padding: 2%;
+    font-weight: bold;
+    font-size: 1.3rem;
 
+    
     @media (max-width: 800px)
     {
       display: flex;
@@ -29,7 +33,19 @@
 
     &--icon {
     flex-direction: column;
-    margin-bottom: 1rem;
+    width: 7rem;
+    padding: 0.5rem;
+
+    
+      &:hover {
+        background-color: vars.$middleGreen;;
+        color: vars.$darkGrey;
+        zoom: 105%;
+        
+        }
+
+
+      
     }
   }
 }
@@ -37,6 +53,15 @@
 img {
   width: 6rem;
   height: 6rem;
+
+   @media (max-width : 800px) {
+    width: 4rem;
+    height: 4rem;
+   }
+  }
+
+p {
+  margin: 2px 0 ;
 }
 
 light {

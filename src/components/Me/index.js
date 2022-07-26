@@ -1,4 +1,5 @@
 import React from "react";
+
 import { useSelector, useDispatch } from 'react-redux';
 // import Box from '@mui/material/Box';
 //import Container from '@mui/material/Container';
@@ -6,8 +7,31 @@ import { useSelector, useDispatch } from 'react-redux';
 import alex from "./alex.jpg"
 // styles
 import "./me.scss"
+import useState from 'react';
+
+import Box from '@mui/material/Box';
+import Button from '@mui/material/Button';
+import Typography from '@mui/material/Typography';
+import Modal from '@mui/material/Modal';
 
 function Me() {
+
+  const [open, setOpen] = React.useState(false);
+const handleOpen = () => setOpen(true);
+const handleClose = () => setOpen(false);
+
+const style = {
+  position: 'absolute',
+  top: '50%',
+  left: '50%',
+  transform: 'translate(-50%, -50%)',
+  width: '80%',
+  bgcolor: 'background.paper',
+  border: '2px solid #000',
+  boxShadow: 24,
+  p: 4,
+};
+
   const isDarkMode = useSelector((state) => state.settings.darkMode);
   return (
     <div className={isDarkMode ? 'me ' : 'me light'}>
@@ -49,13 +73,37 @@ function Me() {
             },
           }}> */}
 
-      <section className={isDarkMode ? 'me--about ' : 'me--about light'}>
+
+          <Button onClick={handleOpen}>Open modal</Button>
+            <Modal
+              open={open}
+              onClose={handleClose}
+              aria-labelledby="modal-modal-title"
+              aria-describedby="modal-modal-description"
+             >
+              <Box sx={style}>
+                <Typography id="modal-modal-title" variant="h6" component="h2">
+                  Text in a modal
+                </Typography>
+                <Typography id="modal-modal-description" sx={{ mt: 2 }}>
+                <section className={isDarkMode ? 'me--about ' : 'me--about light'}>
+                  <p className={isDarkMode ? 'me--about--resume' : 'me--about--resume light'}>
+                    Titulaire d’un diplôme d’architecte-urbaniste, et forte de 15 ans d'expérience dans la gestion de projets photographique pour le e-commerce, je donne aujourd'hui un tournant à ma vie professionnelle en me tournant vers le développement web.
+                    Entre ma formation initiale et mon expérience, la programmation est apparue comme une évidence. En effet, l'architecture m'a apporté la capacité de concevoir et construire des projets alliant fonctionnalité, design et contraintes techniques, tout en réfléchissant au besoin et à son expérience de son utilisateur final. De plus, l' e-commerce m'a apporté mes premières expériences dans le web, la capacité d'automatiser des tâches, le travail avec les bases de données et la gestion de projets importants en photographie.
+                    Le développement web réunit donc tous ces aspects, et ma forte affinité pour la résolution des problèmes et l'analyse ont fait que ce nouveau métier est devenu une passion.
+                  </p>
+                </section>
+                </Typography>
+              </Box>
+            </Modal>
+
+      {/* <section className={isDarkMode ? 'me--about ' : 'me--about light'}>
         <p className={isDarkMode ? 'me--about--resume' : 'me--about--resume light'}>
           Titulaire d’un diplôme d’architecte-urbaniste, et forte de 15 ans d'expérience dans la gestion de projets photographique pour le e-commerce, je donne aujourd'hui un tournant à ma vie professionnelle en me tournant vers le développement web.
           Entre ma formation initiale et mon expérience, la programmation est apparue comme une évidence. En effet, l'architecture m'a apporté la capacité de concevoir et construire des projets alliant fonctionnalité, design et contraintes techniques, tout en réfléchissant au besoin et à son expérience de son utilisateur final. De plus, l' e-commerce m'a apporté mes premières expériences dans le web, la capacité d'automatiser des tâches, le travail avec les bases de données et la gestion de projets importants en photographie.
           Le développement web réunit donc tous ces aspects, et ma forte affinité pour la résolution des problèmes et l'analyse ont fait que ce nouveau métier est devenu une passion.
         </p>
-      </section>
+      </section> */}
       {/*</Box>*/}
 
 
