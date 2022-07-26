@@ -1,11 +1,13 @@
 @use './styles/vars';
-.App {
+.app {
   text-align: center;
   font-family: "Montserrat","Roboto","Helvetica","Arial",sans-serif;
-  //width: 98%;
+  width: 98%;
   display: flex;
   flex-direction: column;
   margin: auto;
+
+  
 }
 
 .App-logo {
@@ -67,3 +69,7 @@ body{
   height: 1rem;
   background-color: vars.$darkGrey;
 }
+
+/* .light {
+  background-color: vars.$middleGrey;
+} */

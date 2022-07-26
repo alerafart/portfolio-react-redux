@@ -13,10 +13,10 @@
     @media (max-width: 800px){
     flex-direction: column;
     height: min-content;
-    margin-top: 1rem;
     }
 
   &__desc {
+    
     padding: 2px;
     width: 70%;
     border: 1px solid rgb(223, 14, 14);
@@ -28,7 +28,6 @@
     
 
       &--name {
-        align-content: flex-end;
         font-size: 2.8rem;
         margin-top: 15px;
       }

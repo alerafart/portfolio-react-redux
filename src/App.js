@@ -1,7 +1,6 @@
 import React from 'react';
+import { useSelector } from 'react-redux';
 import Header from './components/Header';
-import HeaderMobile from './components/Header/HeaderMobile';
-import HeaderDesktop from './components/Header/HeaderDesktop';
 import Me from './components/Me';
 import Skills from './components/Skills';
 import Projects from './components/Projects';
@@ -10,31 +9,19 @@ import AlternateTimeline from './components/AlternateTimeline';
 import Timeline from './components/AlternateTimeline/index12'
 import Footer from './components/Footer';
 
-//import CssBaseline from '@mui/material/CssBaseline';
-//import Container from '@mui/material/Container';
-import HomeIcon from '@mui/icons-material/Home';
+
 import  './styles/_reset.scss';
 import './App.scss';
 
 // import HeaderMui from './components/HeaderMui';
 
 function App() {
+  const isDarkMode = useSelector((state) => state.settings.darkMode);
   return (
     
-    <div className="App">
+    <div className={isDarkMode ? 'app' : 'app light'}>
 {/* sx={{ color: 'red', fontSize: 40 }} */}
-      {/* <a className="home" href="./#root" ><HomeIcon className="home--icon" sx={{ color:'primary.main', fontSize: 50 }} /></a> */}
-    {/* <React.Fragment>
-      <CssBaseline />
-      <Container maxWidth="false">
-
-        <Header />
-        <AlternateTimeline />
-        <Footer />
-        
-      </Container>
-    </React.Fragment> */}
-
+      
         <Header />
         {/* <HeaderMui /> */}
         

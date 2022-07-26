@@ -46,9 +46,9 @@ const style = {
             },
           }}> */}
 
-        <section className={isDarkMode ? 'me__desc ' : 'me__desc light'} >
+        <section className={isDarkMode ? 'me__desc' : 'me__desc light'} >
           <p className={isDarkMode ? 'me__desc--name ' : 'me__desc--name light'}>
-            Hi! I'm Alejandra Rafart
+            Hi!  I'm Alejandra Rafart
           </p>
 
           <img src={alex} className="me__desc--pic" alt="me"/>
@@ -121,7 +121,7 @@ const style = {
 
     </div>
     <div id="button">
-    <Button sx= {{color:'#fff', fontSize: 32, fontWeight:'bold'}} className='me--about--button'onClick={handleOpen}>More About Me</Button>
+    <Button sx= {{color:'#fff', fontSize: 32, fontWeight:'bold'}} className={isDarkMode ? 'me--about--button' : 'me--about--button light'} onClick={handleOpen}>More About Me</Button>
     </div>
     </>
   );
