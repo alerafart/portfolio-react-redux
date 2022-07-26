@@ -21,6 +21,7 @@ function AlternateTimeline() {
   const isDarkMode = useSelector((state) => state.settings.darkMode);
 
   return (
+    <>
     <div id='timeline' className={isDarkMode ? 'timeline ' : 'timeline light'}>
       <Timeline position="alternate" className={isDarkMode ? 'timeline ' : 'timeline light'}>
         
@@ -143,6 +144,8 @@ function AlternateTimeline() {
         
       </Timeline>
     </div>
+    <div className={isDarkMode ? 'divider' : 'divider light'}></div>
+    </>
   );
 }
 

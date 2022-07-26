@@ -3,11 +3,11 @@
 .me {
   width: 90%;
   height: 33rem;
-  color: rgb(240, 236, 236);
+  color: vars.$lightGrey;
   margin: auto;
   margin-top: 3*vars.$gutter;
   display: flex;
-  justify-content: center;
+  //justify-content: center;
   align-items: center;
   border: 1px solid grey;
   
@@ -17,8 +17,8 @@
     }
 
   &__desc {
-    margin: 1rem;
-    padding: 2%;
+    
+    padding: 2px;
     width: 40%;
     border: 1px solid black;
     display: flex;
@@ -29,7 +29,8 @@
     
 
     &--name {
-      font-size: 2rem;
+      font-size: 2.2rem;
+      margin-top: 15px;
     }
 
     &--pic {
@@ -37,7 +38,7 @@
       width: 280px;
       height: 320px;
       text-align: center;
-      margin: 7% 0;
+      margin: 2% 0;
     }
 
     &--title {
@@ -61,16 +62,39 @@
 
   &--about {
     font-size: 1.4rem;
-    width: 100%;
+    margin: 2px;
+    padding: 2px;
     text-align: justify;
-    //margin: 0.2rem ;
-    //padding-left: 4rem 0;
-    border: 1px solid black;
+    display: flex;
+    flex-direction: column;
+    //align-items: stretch;
+    
+    //background-image: '../../assets/dev_web.jpg';
+    height: 100%;
+    width: 100%;
+    border: 1px solid rgb(231, 35, 35);
     font-size: 1.4em;
     
+    &--pic {
+      object-fit:cover;
+      width: 100%;
+      height: 100%;
+    }
+    &--button {
+      bottom: 60px;
+      
+      text-align: right;
+      width: max-content;
+      font-weight: bolder;
+      font-size: 1.4rem;
+      &:hover {
+        zoom: 110%;
+      }
+    }
     &--resume {
-      padding: 5%;
-      //height: 30rem;
+      padding: 1%;
+      background-color: vars.$lightGreen;
+      
       //overflow-y: scroll;
       
     }
@@ -91,4 +115,10 @@
 light {
   color: black;
   background-color: rgb(240, 236, 236);
+}
+
+#button {
+display: flex;
+width: 90%;
+justify-content:flex-end;
 }

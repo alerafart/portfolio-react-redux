@@ -17,7 +17,7 @@
   //align-items: center;
   color:  vars.$darkGrey;
   //color: vars.$light-color;
-  width: 70%;
+  width: 90%;
   margin: auto;
   //height: max-content;
   // padding-top: 15px;
@@ -55,11 +55,6 @@
   //background-color: #bdbdbd;
 }
 .home {
-  position: fixed;
-  bottom: 0;
-  right:1rem;
-  color: #fff;
-  //background-color:  rgb(18, 18, 18);
 
   &--icon{
     height: 3rem;

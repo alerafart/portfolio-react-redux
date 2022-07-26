@@ -1,6 +1,7 @@
 import React from "react";
 import { useSelector } from "react-redux";
 import skillsList from "./skills.js";
+import Button from '@mui/material/Button';
 // styles
 import "./skills.scss";
 
@@ -9,7 +10,7 @@ function Skills() {
 const isDarkMode = useSelector((state) => state.settings.darkMode);
 
   return (
-
+    <>
     <div id="skills" className={isDarkMode ? 'skills' : 'skills light'}>
         <div className="skills__icons">
  
@@ -27,7 +28,10 @@ const isDarkMode = useSelector((state) => state.settings.darkMode);
           ))}
           
         </div>
+        
     </div>
+    <div className={isDarkMode ? 'divider' : 'divider light'}></div>
+    </>
   );
 }
 

@@ -1,24 +1,23 @@
 import React from "react";
 
 import { useSelector, useDispatch } from 'react-redux';
-// import Box from '@mui/material/Box';
-//import Container from '@mui/material/Container';
-// import { Container } from 'semantic-ui-react';
+
 import alex from "./alex.jpg"
+import dev_web from '../../assets/dev_web.jpg';
 // styles
 import "./me.scss"
-import useState from 'react';
 
 import Box from '@mui/material/Box';
 import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
 import Modal from '@mui/material/Modal';
+import CloseIcon from '@mui/icons-material/Close';
 
 function Me() {
 
   const [open, setOpen] = React.useState(false);
-const handleOpen = () => setOpen(true);
-const handleClose = () => setOpen(false);
+  const handleOpen = () => setOpen(true);
+  const handleClose = () => setOpen(false);
 
 const style = {
   position: 'absolute',
@@ -26,7 +25,7 @@ const style = {
   left: '50%',
   transform: 'translate(-50%, -50%)',
   width: '80%',
-  bgcolor: 'background.paper',
+  bgcolor: '#e4ff54',
   border: '2px solid #000',
   boxShadow: 24,
   p: 4,
@@ -34,6 +33,7 @@ const style = {
 
   const isDarkMode = useSelector((state) => state.settings.darkMode);
   return (
+    <>
     <div className={isDarkMode ? 'me ' : 'me light'}>
       {/* <Box
           sx={{
@@ -48,7 +48,7 @@ const style = {
 
         <section className={isDarkMode ? 'me__desc ' : 'me__desc light'} >
           <p className={isDarkMode ? 'me__desc--name ' : 'me__desc--name light'}>
-            Alejandra Rafart
+            Hi! I'm Alejandra Rafart
           </p>
 
           <img src={alex} className="me__desc--pic" alt="me"/>
@@ -73,20 +73,29 @@ const style = {
             },
           }}> */}
 
-
-          <Button onClick={handleOpen}>Open modal</Button>
+          <section className={isDarkMode ? 'me--about ' : 'me--about light'}
+          >
+            <img className={isDarkMode ? 'me--about--pic ' : 'me--about--pic light'} src= {dev_web} alt='dev_web_pic' />
+            
             <Modal
               open={open}
               onClose={handleClose}
               aria-labelledby="modal-modal-title"
               aria-describedby="modal-modal-description"
              >
+             
               <Box sx={style}>
+              <Button onClick={handleClose}
+              >
+                <CloseIcon sx= {{color:'#102027', fontSize: 50}}></CloseIcon>
+              </Button>
                 <Typography id="modal-modal-title" variant="h6" component="h2">
-                  Text in a modal
+                  Un peu plus sur moi...
                 </Typography>
                 <Typography id="modal-modal-description" sx={{ mt: 2 }}>
-                <section className={isDarkMode ? 'me--about ' : 'me--about light'}>
+                <section
+                className={isDarkMode ? 'me--about ' : 'me--about light'}
+                >
                   <p className={isDarkMode ? 'me--about--resume' : 'me--about--resume light'}>
                     Titulaire d’un diplôme d’architecte-urbaniste, et forte de 15 ans d'expérience dans la gestion de projets photographique pour le e-commerce, je donne aujourd'hui un tournant à ma vie professionnelle en me tournant vers le développement web.
                     Entre ma formation initiale et mon expérience, la programmation est apparue comme une évidence. En effet, l'architecture m'a apporté la capacité de concevoir et construire des projets alliant fonctionnalité, design et contraintes techniques, tout en réfléchissant au besoin et à son expérience de son utilisateur final. De plus, l' e-commerce m'a apporté mes premières expériences dans le web, la capacité d'automatiser des tâches, le travail avec les bases de données et la gestion de projets importants en photographie.
@@ -96,6 +105,8 @@ const style = {
                 </Typography>
               </Box>
             </Modal>
+          </section>
+          
 
       {/* <section className={isDarkMode ? 'me--about ' : 'me--about light'}>
         <p className={isDarkMode ? 'me--about--resume' : 'me--about--resume light'}>
@@ -106,11 +117,13 @@ const style = {
       </section> */}
       {/*</Box>*/}
 
-
-
       
-      
+
     </div>
+    <div id="button">
+    <Button sx= {{color:'#fff', fontSize: 32, fontWeight:'bold'}} className='me--about--button'onClick={handleOpen}>More About Me</Button>
+    </div>
+    </>
   );
 }
 

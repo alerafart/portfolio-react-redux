@@ -10,6 +10,7 @@ import "./projects.scss"
 function Projects() {
   const isDarkMode = useSelector((state) => state.settings.darkMode);
   return (
+    <>
     <div id="projects" >
 
       <div className={isDarkMode ? 'projects' : 'projects light'}>
@@ -47,6 +48,8 @@ function Projects() {
           
         </div>
     </div>
+    <div className={isDarkMode ? 'divider' : 'divider light'}></div>
+    </>
   );
 }
 

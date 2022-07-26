@@ -52,11 +52,18 @@ body{
   position: fixed;
   bottom: 0;
   right:1rem;
-  color: #fff;
+  
+  // color: #fff;
   //background-color:  rgb(18, 18, 18);
 
   &--icon{
     height: 3rem;
     width: 10rem;
+    margin-left: 1rem;
   }
+}
+
+.divider {
+  height: 1rem;
+  background-color: vars.$darkGrey;
 }

@@ -4,7 +4,6 @@
   width: 90%;
   margin: auto;
   height: max-content;
-   // background-color: rgb(240, 236, 236);
   display: flex;
   justify-content: center;
   padding: 2%;
@@ -42,7 +41,6 @@
     }
 
     &__box {
-      //padding-bottom: 10px;
       padding: 10px;
 
       &--link {
@@ -50,8 +48,6 @@
         font-weight: bold;
         padding: 10px;      
         &:hover {
-          
-          
           zoom: 120%;
           //transition: 1s;
         }

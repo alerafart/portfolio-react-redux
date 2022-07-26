@@ -72,6 +72,7 @@ function Contact() {
   }
 
   return (
+    <>
     <div id="contact" >
 
       <Box className={isDarkMode ? 'contact' : 'contact light'}
@@ -185,6 +186,8 @@ function Contact() {
               
       </Box>
     </div>
+    <div className={isDarkMode ? 'divider' : 'divider light'}></div>
+    </>
   );
 
 
