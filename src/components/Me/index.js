@@ -25,7 +25,7 @@ const style = {
   left: '50%',
   transform: 'translate(-50%, -50%)',
   width: '80%',
-  bgcolor: '#e4ff54',
+  bgcolor: '#aeea00',
   border: '2px solid #000',
   boxShadow: 24,
   p: 4,
@@ -48,7 +48,7 @@ const style = {
 
         <section className={isDarkMode ? 'me__desc' : 'me__desc light'} >
           <p className={isDarkMode ? 'me__desc--name ' : 'me__desc--name light'}>
-            Hi!  I'm Alejandra Rafart
+            Hi! <br/> I'm Alejandra
           </p>
 
           <img src={alex} className="me__desc--pic" alt="me"/>
@@ -84,12 +84,13 @@ const style = {
               aria-describedby="modal-modal-description"
              >
              
-              <Box sx={style}>
-              <Button onClick={handleClose}
+              <Box sx={style} className="modal_box">
+              <Button className="modal_box--close"
+              onClick={handleClose}
               >
                 <CloseIcon sx= {{color:'#102027', fontSize: 50}}></CloseIcon>
               </Button>
-                <Typography id="modal-modal-title" variant="h6" component="h2">
+                <Typography className="modal_box--title" id="modal-modal-title" variant="h6" component="h2">
                   Un peu plus sur moi...
                 </Typography>
                 <Typography id="modal-modal-description" sx={{ mt: 2 }}>

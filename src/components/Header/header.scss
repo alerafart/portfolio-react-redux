@@ -42,9 +42,13 @@
   &__themeSwitch {
     display:flex;
     margin-left: 1rem;
+    background-color: vars.$lightGrey;
+    border-radius: 2rem;
 
     @media (max-width: 800px) {
-      margin-left: 0;
+      position: fixed;
+    top:30px;
+    left: 5.5rem;
       }
   }
   &__nav {
@@ -55,11 +59,12 @@
 
       @media (max-width: 800px) {
         flex-direction: column;
+        margin-top: 4rem;
         margin-right: auto;
         margin-left: 1rem;
         align-items: flex-start;
         height: min-content;
-        width: 15rem;
+        width: 11rem;
         //display: flex;
         }
 
@@ -128,6 +133,9 @@
 .toggle {
   display: none;
   @media (max-width:800px){
+    position: fixed;
+    top:30px;
+    left: -0.8rem;
     opacity: 150%;
     margin-left: 5%;
     display: block;
