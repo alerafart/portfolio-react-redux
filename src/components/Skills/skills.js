@@ -52,6 +52,10 @@ const skills =  [
         {
           "name": "Lumen Laravel",
           "class": "https://cdn.worldvectorlogo.com/logos/lumen-1.svg"
+        },
+        {
+          "name": "Linux",
+          "class": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linux/linux-original.svg"
         }
       ]
       export default skills

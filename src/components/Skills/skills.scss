@@ -4,21 +4,17 @@
   width: 90%;
   margin: auto;
   height: auto;
-  //color: #fff;
   background-color: vars.$darkGrey;
   display: flex;
   justify-content: space-around;
   align-items: center;
-  //border: 1px solid black;
-   
-
+  
   &__icons {
     display: flex;
     width: 100%;
     height: fit-content;
     flex-wrap: wrap;
     justify-content: space-around;
-    //border: 1px solid black;
     margin: 0.5rem;
     padding: 2%;
     font-weight: bold;
@@ -62,7 +58,7 @@ p {
   margin: 2px 0 ;
 }
 
-light {
+.light {
   color: vars.$darkGrey;
   background-color: vars.$lightGrey;
 }

@@ -6,11 +6,9 @@ import Box from '@mui/material/Box';
 import TextField from '@mui/material/TextField';
 import Button from '@mui/material/Button'
 import Stack from '@mui/material/Stack';
-// import Snackbar from '@mui/material/Snackbar';
 import MuiAlert from '@mui/material/Alert';
 // styles
 import "./contact.scss"
-//import serviceKeys from "./serviceKeys.js";
 
 
 function Contact() {
@@ -42,14 +40,14 @@ function Contact() {
     console.log("submit fired");
     const firstname = contactForm.firstName;
     const lastname = contactForm.lastName;
-    // const email = isValidEmail(contactForm.email) ;
+    // const validEmail = isValidEmail(contactForm.email) ;
     const email = contactForm.email;
     const subject = contactForm.subject;
     const message = contactForm.message;
-    dispatch(confirmMail());
-    // if (contactForm.firstName && contactForm.lastName && isValidEmail && contactForm.message) {
+    //dispatch(confirmMail());
+    // if (contactForm.firstName && contactForm.lastName && validEmail && contactForm.message) {
       if (firstname && lastname && email && message) {
-
+        
           const serviceId = `${process.env.REACT_APP_SERVICE_ID}`;
           const templateId = `${process.env.REACT_APP_TEMPLATE_ID}`;
           const userId = `${process.env.REACT_APP_USER_ID}`;
@@ -63,12 +61,18 @@ function Contact() {
           };
           console.log(templateParams);
 
-          emailjs.send(serviceId, templateId, templateParams, userId)
+          const emailSucces = emailjs.send(serviceId, templateId, templateParams, userId)
               .then(response => console.log(response))
               .then(error => console.log(error));
+              
+              if (emailSucces) {
+                dispatch(confirmMail());
+              }
+              
       } else {
           alert('Please fill in all fields.');
       }
+      
   }
 
   return (
@@ -115,7 +119,6 @@ function Contact() {
           </div>
           
           <div className="contact__fields">            
-            
             
             <TextField className="contact__fields__field"
               required
@@ -167,7 +170,7 @@ function Contact() {
               multiline
               variant="filled"
               onChange= {handleChange}
-              //rows={10}
+              rows={5}
               defaultValue="Default Value"
             />
           </div>

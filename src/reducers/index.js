@@ -53,7 +53,7 @@ function Reducer(state = initialState, action = {}) {
           contactForm: {
             firstName: "",
             lastName:"",
-            phone:null,
+            phone:"",
             email: "",
             subject:"",
             message:"",
