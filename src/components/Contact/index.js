@@ -14,9 +14,9 @@ import "./contact.scss"
 function Contact() {
 
   const Alert = React.forwardRef(function Alert(props, ref) {
-    return <MuiAlert elevation={6} ref={ref} variant="filled" {...props} />;
+    return <MuiAlert elevation={6} ref={ref} variant="filled" {...props} value="undefined"/>;
   });
-
+  // console.log(MuiAlert);
   /* const isValidEmail = email => {
     const regex = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
     return regex.test(String(email).toLowerCase());
@@ -81,6 +81,7 @@ function Contact() {
 
       <Box className={isDarkMode ? 'contact' : 'contact light'}
         component="form"
+        
         //action="mailto:maalejandrarafart@gmail.com"
         onSubmit={handleSubmit}
         sx={{
@@ -94,7 +95,7 @@ function Contact() {
               required
               id="filled-required"
               name="firstName"
-              value = {contactForm.firstname}
+              value = {contactForm.firstname || ''}
               label="Prénom"
               placeholder="Prénom"
               autoComplete="off"
@@ -107,7 +108,7 @@ function Contact() {
               required
               id="filled-required input"
               name="lastName"
-              value = {contactForm.lastName}
+              value = {contactForm.lastName || ''}
               label="Nom"
               placeholder="Nom"
               variant="filled"
@@ -119,7 +120,7 @@ function Contact() {
               required
               id="filled-required"
               name="email"
-              value = {contactForm.email}
+              value = {contactForm.email || ''}
               label="Email"
               placeholder="Email"
               type= "email"
@@ -132,7 +133,7 @@ function Contact() {
             <TextField className="contact__message__field"
               id="filled-number"
               name="phone"
-              value = {contactForm.phone}
+              value = {contactForm.phone || ''}
               label="Téléphone"
               type="number"
               placeholder="Téléphone"
@@ -149,7 +150,7 @@ function Contact() {
               name="subject"
               label="Objet de votre demande"
               //placeholder="Objet de votre demande"
-              value = {contactForm.subject}
+              value = {contactForm.subject || ''}
               // defaultValue="Default Value"
               //helperText="Objet de votre demande"
               variant="filled"
@@ -161,13 +162,13 @@ function Contact() {
               required
               id="outlined-multiline-static"
               name="message"
-              value = {contactForm.message}
+              value = {contactForm.message || ''}
               label="Message"
               multiline
               variant="filled"
               onChange= {handleChange}
               rows={5}
-              defaultValue="Default Value"
+              //defaultValue="Default Value"
             />
           </div>
           <div className="contact__message">  

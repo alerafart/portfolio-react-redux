@@ -6,8 +6,8 @@
   justify-content: center;
   width: 90%;
   margin: auto;
-  color: white;
-  background-color: vars.$darkGrey;;
+  color: vars.$lightGrey;
+  background-color: vars.$darkGrey;
 
   &__item {
     //position: relative;
@@ -18,7 +18,7 @@
 
 }
 
-light {
+.light {
   transition: 0.2s;
   color: vars.$darkGrey;
   background-color: vars.$lightGrey;
