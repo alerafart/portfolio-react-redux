@@ -89,8 +89,8 @@ function Contact() {
         noValidate
         autoComplete="off"
         >
-          <div className="contact__message">
-            <TextField className="contact__message__field"
+          <div className={isDarkMode ? 'contact__fields' : 'contact__fields light'}>            
+            <TextField className= {isDarkMode ? 'contact__fields__field' : 'contact__fields__field light'}
               required
               id="filled-required"
               name="firstName"
@@ -101,9 +101,10 @@ function Contact() {
               variant="filled"
               onChange= {handleChange}
             />
-          </div>
-          <div className="contact__message">  
-            <TextField className="contact__message__field"
+
+            <TextField className="contact__fields__field"
+              //disabled
+              //id="filled-disabled"
               required
               id="filled-required input"
               name="lastName"
@@ -113,9 +114,13 @@ function Contact() {
               variant="filled"
               onChange= {handleChange}
             />
+            
+                    
           </div>
-          <div className="contact__message">
-            <TextField className="contact__message__field"
+          
+          <div className="contact__fields">            
+            
+            <TextField className="contact__fields__field"
               required
               id="filled-required"
               name="email"
@@ -127,9 +132,7 @@ function Contact() {
               variant="filled"
               onChange= {handleChange}
             />
-          </div>
-          <div className="contact__message">  
-            <TextField className="contact__message__field"
+            <TextField className="contact__fields__field"
               id="filled-number"
               name="phone"
               value = {contactForm.phone}
@@ -141,8 +144,9 @@ function Contact() {
               }}
               variant="filled"
               onChange= {handleChange}
-            />
+            />             
           </div>
+
           <div className="contact__message">
             <TextField className="contact__message__field"
               id="filled-helperText"
@@ -170,25 +174,19 @@ function Contact() {
               defaultValue="Default Value"
             />
           </div>
-          <div className="contact__message">  
-            <Button 
-              sx={{'margin': '5px'}}  
-              id="submit" 
-              className="contact__message--submit" 
-              type="submit" 
-              variant="contained">Submit
-            </Button>
-          </div>
-
+          <Button sx={{
+          'margin': '5px',
+        }}
+        id="submit" className="contact__message--submit" type="submit" variant="contained">Submit</Button>
+          
+          
+          
         <div className={contactForm.emailSent ? 'visible' : 'hide'}>
-          <Stack className="contact__message--confirm">
-              <Alert id="alert" className="contact__message--confirm--alert"
-               severity="success">
-                <span className="contact__message--confirm--alert--text">Thank you for your message, we will be in touch in no time!
-                </span>
-              </Alert>
-          </Stack>
-        </div>  
+        <Stack >
+              <Alert  severity="success"><span >Thank you for your message, we will be in touch in no time!</span></Alert>
+        </Stack>
+        </div>
+              
       </Box>
     </div>
     <div className={isDarkMode ? 'divider' : 'divider light'}></div>

@@ -24,7 +24,7 @@ function Projects() {
                 height: '100%',
                 backgroundColor: '#bdbdbd',
                 '&:hover': {
-                  backgroundColor: '#cddc39',
+                  backgroundColor: '#aeea00',
                   //opacity: [0.9, 0.8, 0.7],
                 },
               }}>      
