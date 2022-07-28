@@ -48,7 +48,7 @@ function Contact() {
     const message = contactForm.message;
     dispatch(confirmMail());
     // if (contactForm.firstName && contactForm.lastName && isValidEmail && contactForm.message) {
-      /* if (firstname && lastname && email && message) {
+      if (firstname && lastname && email && message) {
 
           const serviceId = `${process.env.REACT_APP_SERVICE_ID}`;
           const templateId = `${process.env.REACT_APP_TEMPLATE_ID}`;
@@ -68,7 +68,7 @@ function Contact() {
               .then(error => console.log(error));
       } else {
           alert('Please fill in all fields.');
-      } */
+      }
   }
 
   return (

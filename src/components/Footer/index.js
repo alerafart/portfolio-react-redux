@@ -20,7 +20,10 @@ const isDarkMode = useSelector((state) => state.settings.darkMode);
       
       <p className="footer--small">Copyright 
       </p>
-      <a className="home" href="./#root" ><HomeIcon className="home--icon" sx={{ color:'#79b700', fontSize: 50 }} /></a>
+      <a className="home" href="./#root" >
+        <HomeIcon className="home--icon"
+        sx={{ color:'#aeea00', fontSize: 50 }} />
+      </a>
     </div>
   );
 }

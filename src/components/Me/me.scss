@@ -27,7 +27,6 @@
     align-items: center;
     justify-content: center;
     
-
       &--name {
         align-content: flex-end;
         font-size: 2.8rem;
@@ -73,7 +72,6 @@
     text-align: justify;
     display: flex;
     flex-direction: column;
-    //align-items: stretch;
     height: 100%;
     width: 100%;
     //border: 1px solid rgb(231, 35, 35);
@@ -118,7 +116,6 @@
       &--resume {
         padding: 5%;
       }
-
     }
   }
 
@@ -141,7 +138,6 @@ justify-content:flex-end;
   flex-direction: column;
   border-radius: 2rem;
   background-color: goldenrod;
-  // color: red;
   &--close {  
       align-self: flex-end;
   }
@@ -152,6 +148,6 @@ justify-content:flex-end;
   font-weight: bold;
   color: vars.$darkGrey;
 }
-.MuiSvgIcon-root {
+/* .MuiSvgIcon-root {
   color: red;
-}
+} */

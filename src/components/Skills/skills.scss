@@ -5,13 +5,12 @@
   margin: auto;
   height: auto;
   //color: #fff;
-  background-color: vars.$lightGrey;
+  background-color: vars.$darkGrey;
   display: flex;
   justify-content: space-around;
   align-items: center;
   //border: 1px solid black;
-  
-  
+   
 
   &__icons {
     display: flex;
@@ -36,7 +35,7 @@
     flex-direction: column;
     width: 7rem;
     padding: 0.5rem;
-    color: vars.$darkGrey;
+    color: vars.$lightGrey;
 
     
       &:hover {

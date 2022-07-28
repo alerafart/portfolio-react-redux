@@ -7,7 +7,7 @@
   width: 90%;
   margin: auto;
   color: white;
-  
+  background-color: vars.$darkGrey;;
 
   &__item {
     //position: relative;
@@ -15,11 +15,11 @@
     //transform: translateX(-100px);
     //transform: translateX(20px)
   }
-  //margin: 200px;
+
 }
 
 light {
   transition: 0.2s;
   color: vars.$darkGrey;
-  background-color: vars.$mainLightGrey;
+  background-color: vars.$lightGrey;
 }
