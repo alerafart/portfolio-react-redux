@@ -59,7 +59,7 @@ function Header() {
                 type="button"
                 onClick={handleToggle}
               >
-                =
+                +
               </button>
           </div>
         

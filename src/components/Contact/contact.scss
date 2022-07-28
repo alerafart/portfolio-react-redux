@@ -14,7 +14,7 @@
 
   &__fields {
     width: 80%;
-    border: 1px solid rgb(209, 24, 24);
+    // border: 1px solid rgb(209, 24, 24);
     
     :focus{
       background-color: #fff;
@@ -36,19 +36,22 @@
   &__message {
     width: 80%;
     // margin: 2px;
-    border: 1px solid rgb(235, 8, 8);
+    // border: 1px solid rgb(235, 8, 8);
     //background-color: rgb(240, 236, 236);
     
     &__field {
       background-color: rgb(240, 236, 236);
       width: 100%;
       // background-color: rgb(20, 119, 134);
-      border: 1px solid rgb(235, 8, 8);
+      // border: 1px solid rgb(235, 8, 8);
       margin: 8px;
-      
+      :focus {
+        background-color:#fff;
+      }
       &:hover {
         background-color: vars.$lightGreen;;
       }
+      
     }
 
    
