@@ -8,28 +8,30 @@
   margin-top: 3*vars.$gutter;
   display: flex;
   align-items: center;
-  border: 1px solid grey;
+  //border: 1px solid grey;
   
     @media (max-width: 800px){
     flex-direction: column;
     height: min-content;
+    margin-top: 1rem;
     }
 
   &__desc {
-    
     padding: 2px;
     width: 70%;
-    border: 1px solid rgb(223, 14, 14);
+    background-color: vars.$darkGrey;
+    //border: 1px solid rgb(223, 14, 14);
     display: flex;
     flex-direction: column;
     align-self: stretch;
     align-items: center;
     justify-content: center;
     
-
       &--name {
+        align-content: flex-end;
         font-size: 2.8rem;
         margin-top: 15px;
+        text-transform: uppercase;
       }
 
       &--pic {
@@ -41,6 +43,8 @@
       }
 
       &--title {
+        /* position: relative;
+        left: 10rem; */
         font-size: 1.7rem;
       }
     
@@ -71,16 +75,16 @@
     text-align: justify;
     display: flex;
     flex-direction: column;
-    //align-items: stretch;
     height: 100%;
     width: 100%;
-    border: 1px solid rgb(231, 35, 35);
+    
     font-size: 1.4em;
     
     &--pic {
       object-fit:cover;
       width: 100%;
       height: 100%;
+      opacity: 0.7;
 
       &.light {
         filter:invert(1);
@@ -94,32 +98,64 @@
       font-weight: bolder;
       font-size: 1.4rem;
 
-      &.light {
-        color: vars.$darkGrey;
-      }
-      &:hover {
-        zoom: 110%;
-      }
+        &.light {
+          color: vars.$darkGrey;
+        }
+        &:hover {
+          zoom: 110%;
+        }
     }
     &--resume {
       padding: 1%;
-      background-color: vars.$lightGreen;
-      
-      //overflow-y: scroll;
-      
-    }
-    @media (max-width: 800px) {
-      width: 100%;
-      height: 20rem;
-      overflow-y: scroll;
-
-      &--resume {
-        padding: 5%;
+      color: vars.$darkGrey;
+      background-color: vars.$lightGrey;
+      border-radius: 1rem;
       }
 
-    }
+      @media (max-width: 800px) {
+        width: 100%;
+        height: 20rem;
+        text-align: center;
+        overflow-y: scroll;
+
+        &--resume {
+          padding: 5%;
+        }
+      }
+
   }
 
+}
+
+.me--about--title  {
+  height: 0;
+  
+  
+  text-shadow: 1px 1px 2px vars.$darkGrey, 0 0 1em blue, 0 0 0.2em blue;
+  text-align: left;
+  font-weight: bolder;
+  word-wrap: break-word;
+  font-size: 2.5rem;
+  text-transform: uppercase;
+  color:vars.$lightGrey;
+  
+  
+  @media (max-width: 800px) {
+    bottom: 300px;
+  }
+
+  &.light {
+    color: vars.$darkGrey;
+    background-color: transparent;
+  }
+}
+#title {
+  position: sticky;
+  bottom: 650px;
+  left:29rem;
+  display: flex;
+  width: 40%;
+  justify-content:flex-end;
 }
 
 .light {
@@ -132,4 +168,27 @@ display: flex;
 width: 90%;
 height: 1rem;
 justify-content:flex-end;
+}
+
+.modal_box {
+  display: flex;
+  flex-direction: column;
+  border-radius: 2rem;
+  &--close {  
+      align-self: flex-end;
+  }
+}
+
+#modal-modal-title {  
+  font-size: 2rem;
+  font-weight: bold;
+  color: vars.$darkGrey;
+}
+/* .MuiSvgIcon-root {
+  color: red;
+} */
+#modal-modal-title {  
+  font-size: 2rem;
+  font-weight: bold;
+  color: vars.$darkGrey;
 }

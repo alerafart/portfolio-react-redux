@@ -29,8 +29,10 @@
     
       &--name {
         align-content: flex-end;
-        font-size: 2.8rem;
+        font-size: 3rem;
         margin-top: 15px;
+        text-transform: uppercase;
+        color:vars.$middleGreen;
       }
 
       &--pic {
@@ -42,6 +44,8 @@
       }
 
       &--title {
+        /* position: relative;
+        left: 10rem; */
         font-size: 1.7rem;
       }
     
@@ -66,57 +70,85 @@
   }
 
   &--about {
-    font-size: 1.4rem;
-    margin: 2px;
-    padding: 2px;
-    text-align: justify;
-    display: flex;
-    flex-direction: column;
+    background-image: url("../../assets/dev_web.jpg") ;
+    background-size: cover;
+    //opacity: 0.7;
+    //font-size: 1.4rem;
+    //margin: 2px;
+    //padding: 2px;
+    //text-align: justify;
+    //display: flex;
+    //flex-direction: column;
     height: 100%;
-    width: 100%;
-    //border: 1px solid rgb(231, 35, 35);
-    font-size: 1.4em;
+    width: 100%;  
+    //border: 1px solid red;
     
-    &--pic {
-      object-fit:cover;
-      width: 100%;
-      height: 100%;
+    &.light {
+      filter:invert(1);   
+    }
 
+    &--title  {
+      width: 50%;
+      margin: 1rem;
+      height: 0;
+      text-shadow: 5px 5px 10px black, 0 0 1em black, 0 0 0.2em black;
+      text-align: left;
+      font-weight: bolder;
+      //word-wrap: break-word;
+      font-size: 2.5rem;
+      text-transform: uppercase;
+      color:white;
+      
+     /*  @media (max-width: 800px) {
+        bottom: 300px;
+      } */
+    
       &.light {
-        filter:invert(1);
-        
+        color: vars.$darkGrey;
+        background-color: transparent;
       }
     }
+    /* &--pic {
+      object-fit:cover;
+      width: 100%;
+      height: 100%;    
+    } */
+
     &--button {
       bottom: 60px;
       text-align: right;
       width: max-content;
       font-weight: bolder;
       font-size: 1.4rem;
+      text-shadow: 5px 5px 10px black, 0 0 1em black, 0 0 0.2em black;
 
-      &.light {
-        color: vars.$darkGrey;
-      }
-      &:hover {
-        zoom: 110%;
-      }
+        &.light {
+          color: vars.$darkGrey;
+        }
+        &:hover {
+          zoom: 110%;
+        }
     }
+
+    //modal
     &--resume {
       padding: 1%;
       color: vars.$darkGrey;
       background-color: vars.$lightGrey;
       border-radius: 1rem;
+      
       }
-    @media (max-width: 800px) {
-      width: 100%;
-      height: 20rem;
-      text-align: center;
-      overflow-y: scroll;
 
-      &--resume {
-        padding: 5%;
+      @media (max-width: 800px) {
+        width: 100%;
+        height: 20rem;
+        text-align: center;
+        overflow-y: scroll;
+
+        &--resume {
+          padding: 5%;
+        }
       }
-    }
   }
 
 }
@@ -133,11 +165,11 @@ height: 1rem;
 justify-content:flex-end;
 }
 
-.modal_box{
+.modal_box {
   display: flex;
   flex-direction: column;
   border-radius: 2rem;
-  background-color: goldenrod;
+  
   &--close {  
       align-self: flex-end;
   }
@@ -151,3 +183,8 @@ justify-content:flex-end;
 /* .MuiSvgIcon-root {
   color: red;
 } */
+#modal-modal-title {  
+  font-size: 2rem;
+  font-weight: bold;
+  color: vars.$darkGrey;
+}

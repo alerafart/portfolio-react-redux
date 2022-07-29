@@ -23,53 +23,52 @@ function AlternateTimeline() {
   return (
     <>
     <div id='timeline' className={isDarkMode ? 'timeline ' : 'timeline light'}>
-      <Timeline position="alternate" className={isDarkMode ? 'timeline ' : 'timeline light'}>
-        
-        <TimelineItem className={isDarkMode ? 'timeline__item ' : 'timeline__item light'}>
-            <TimelineOppositeContent className={isDarkMode ? 'timeline__item ' : 'timeline__item light'}
-              sx={{ m: 'auto 0' }}
-              align="right"
-              variant="body2"
-              //color="text.secondary"
-              >
-              2022
-            </TimelineOppositeContent>
-            <TimelineSeparator>
-              {/* <TimelineConnector sx={{ bgcolor: 'secondary.main' }} /> */}
+      <Timeline position="alternate" className={isDarkMode ? 'timeline ' : 'timeline light'}>        
+        <TimelineItem onScroll={Animation} className={isDarkMode ? 'timeline__item ' : 'timeline__item light'}>
+          <TimelineOppositeContent className={isDarkMode ? 'timeline__item ' : 'timeline__item light'}
+            sx={{ m: 'auto 0' }}
+            align="right"
+            variant="body2"
+            //color="text.secondary"
+            >
+            2022
+          </TimelineOppositeContent>
+          <TimelineSeparator>
+            <TimelineConnector sx={{ }} />
               <TimelineDot color="success">
                 <EmojiEventsRoundedIcon />
               </TimelineDot>
-              <TimelineConnector />
-            </TimelineSeparator>
-            <TimelineContent sx={{ py: '12px', px: 2 }}>
-              <Typography variant="h6" component="span" >
-                Titre Professionnel Développeur Web et Web Mobile
-              </Typography>
-              <Typography >Because this is the life you love!</Typography>
-            </TimelineContent>
+            <TimelineConnector />
+          </TimelineSeparator>
+          <TimelineContent id="timeline content" sx={{ py: '22px', px: 2 }}>
+            <Typography variant="h6" component="span" >
+              Titre Professionnel Développeur Web et Web Mobile
+            </Typography>
+            {/* <Typography >Because this is the life you love!</Typography> */}
+          </TimelineContent>
         </TimelineItem>
 
         <TimelineItem className={isDarkMode ? 'timeline__item ' : 'timeline__item light'}>
-            <TimelineOppositeContent className={isDarkMode ? 'timeline__item ' : 'timeline__item light'}
+          <TimelineOppositeContent className={isDarkMode ? 'timeline__item ' : 'timeline__item light'}
               sx={{ m: 'auto 0' }}
               variant="body2"
               //color="text.secondary"
             >
-              2021-2022
-            </TimelineOppositeContent>
-            <TimelineSeparator>
-              <TimelineConnector />
-              <TimelineDot color="primary">
+            2021-2022
+          </TimelineOppositeContent>
+          <TimelineSeparator>
+            <TimelineConnector />
+            <TimelineDot color="primary">
                 <LaptopMacIcon />
               </TimelineDot>
               <TimelineConnector />
-            </TimelineSeparator>
-            <TimelineContent className={isDarkMode ? 'timeline__item ' : 'timeline__item light'} sx={{ py: '12px', px: 2 }}>
-              <Typography variant="h6" component="span" >
-                Formation Développeur Web et Web Mobile
-              </Typography>
-              <Typography className={isDarkMode ? 'timeline__item ' : 'timeline__item light'}>Because it&apos;s awesome!</Typography>
-            </TimelineContent>
+          </TimelineSeparator>
+          <TimelineContent className={isDarkMode ? 'timeline__item ' : 'timeline__item light'} sx={{ py: '12px', px: 2 }}>
+            <Typography variant="h6" component="span" >
+              Formation Développeur Web et Web Mobile
+            </Typography>
+            {/* <Typography className={isDarkMode ? 'timeline__item ' : 'timeline__item light'}>Because it&apos;s awesome!</Typography> */}
+          </TimelineContent>
         </TimelineItem>
 
         <TimelineItem className={isDarkMode ? 'timeline__item ' : 'timeline__item light'}>
@@ -78,7 +77,7 @@ function AlternateTimeline() {
             align="right"
             variant="body2"
             // color="text.secondary"
-          >
+            >
             2008-2022
           </TimelineOppositeContent>
           <TimelineSeparator>
@@ -92,58 +91,58 @@ function AlternateTimeline() {
             <Typography variant="h6" component="span">
               Photographe responsable studio E-Commerce
             </Typography>
-            <Typography>Because you need strength</Typography>
+            {/* <Typography>Because you need strength</Typography> */}
           </TimelineContent>
         </TimelineItem>
 
         <TimelineItem className={isDarkMode ? 'timeline__item ' : 'timeline__item light'}>
-            <TimelineOppositeContent className={isDarkMode ? 'timeline__item ' : 'timeline__item light'}
-              sx={{ m: 'auto 0' }}
-              variant="body2"
-              // color="text.secondary"
+          <TimelineOppositeContent className={isDarkMode ? 'timeline__item ' : 'timeline__item light'}
+            sx={{ m: 'auto 0' }}
+            variant="body2"
+            // color="text.secondary"
             >
-              2007
-            </TimelineOppositeContent>
-            <TimelineSeparator>
-              <TimelineConnector />
-              <TimelineDot color="success">
-                <EmojiEventsRoundedIcon />
-              </TimelineDot>
-              <TimelineConnector />
-            </TimelineSeparator>
-            <TimelineContent className={isDarkMode ? 'timeline__item ' : 'timeline__item light'} sx={{ py: '12px', px: 2 }}>
-              <Typography variant="h6" component="span">
-                Diplôme d'architecte mention en Urbanisme
-              </Typography>
-              <Typography>Because it&apos;s awesome!</Typography>
-            </TimelineContent>
+            2007
+          </TimelineOppositeContent>
+          <TimelineSeparator>
+            <TimelineConnector />
+            <TimelineDot color="success">
+              <EmojiEventsRoundedIcon />
+            </TimelineDot>
+            <TimelineConnector />
+          </TimelineSeparator>
+          <TimelineContent className={isDarkMode ? 'timeline__item ' : 'timeline__item light'} sx={{ py: '12px', px: 2 }}>
+            <Typography variant="h6" component="span">
+              Diplôme d'architecte mention en Urbanisme
+            </Typography>
+            {/* <Typography>Because it&apos;s awesome!</Typography> */}
+          </TimelineContent>
         </TimelineItem>
 
         <TimelineItem className={isDarkMode ? 'timeline__item ' : 'timeline__item light'}>
-            <TimelineOppositeContent
-              sx={{ m: 'auto 0' }}
-              variant="body2"
-              // color="text.secondary"
-            >
-              1999-2006
-            </TimelineOppositeContent>
-            <TimelineSeparator className={isDarkMode ? 'timeline__item ' : 'timeline__item light'}>
-              <TimelineConnector />
-              <TimelineDot color="primary">
-                <SchoolRoundedIcon />
-              </TimelineDot>
-              <TimelineConnector />
-            </TimelineSeparator>
-            <TimelineContent className={isDarkMode ? 'timeline__item ' : 'timeline__item light'} sx={{ py: '12px', px: 2 }}>
-              <Typography variant="h6" component="span">
-                Etudes en Architecture
-              </Typography>
-              <Typography>Because it&apos;s awesome!</Typography>
-            </TimelineContent>
+          <TimelineOppositeContent
+            sx={{ m: 'auto 0' }}
+            variant="body2"
+            // color="text.secondary"
+          >
+            1999-2006
+          </TimelineOppositeContent>
+          <TimelineSeparator className={isDarkMode ? 'timeline__item ' : 'timeline__item light'}>
+            <TimelineConnector />
+            <TimelineDot color="primary">
+              <SchoolRoundedIcon />
+            </TimelineDot>
+            <TimelineConnector />
+          </TimelineSeparator>
+          <TimelineContent className={isDarkMode ? 'timeline__item ' : 'timeline__item light'} sx={{ py: '12px', px: 2 }}>
+            <Typography variant="h6" component="span">
+              Etudes en Architecture
+            </Typography>
+          {/*   <Typography>Because it&apos;s awesome!</Typography> */}
+          </TimelineContent>
         </TimelineItem>
-        
       </Timeline>
     </div>
+    
     <div className={isDarkMode ? 'divider' : 'divider light'}></div>
     </>
   );

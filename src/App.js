@@ -6,7 +6,7 @@ import Skills from './components/Skills';
 import Projects from './components/Projects';
 import Contact from './components/Contact';
 import AlternateTimeline from './components/AlternateTimeline';
-// import Timeline from './components/AlternateTimeline/index12'
+import Timeline from './components/AlternateTimeline/index12'
 import Footer from './components/Footer';
 
 
@@ -31,7 +31,7 @@ function App() {
         <Projects />
         <Contact />
         <AlternateTimeline />
-        {/* <Timeline /> */}
+        <Timeline />
         <Footer />
       
     </div>

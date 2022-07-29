@@ -10,8 +10,10 @@
   background-color: vars.$darkGrey;
 
   &__item {
+    //transition : all 0.2s ease 0s;
     //position: relative;
-    //animation: cd-bounce-2 .6s;
+    
+    animation: 0.6s ease 0s 1 normal none running cd-bounce-2;
     //transform: translateX(-100px);
     //transform: translateX(20px)
   }

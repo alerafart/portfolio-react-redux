@@ -38,11 +38,9 @@ const style = {
     <div className={isDarkMode ? 'me ' : 'me light'}>
       <section className={isDarkMode ? 'me__desc' : 'me__desc light'} >
         <p className={isDarkMode ? 'me__desc--name ' : 'me__desc--name light'}>
-          Hi! I'm
+          Hi! <br/> I'm Alejandra
         </p>
-        <p className={isDarkMode ? 'me__desc--name ' : 'me__desc--name light'}>
-          Alejandra
-        </p>
+
         <img src={alex} className="me__desc--pic" alt="me"/>
 
         {/* <p className={isDarkMode ? 'me__desc--title ' : 'me__desc--title light'}>
@@ -55,13 +53,8 @@ const style = {
         
       <section className={isDarkMode ? 'me--about ' : 'me--about light'}
       >
-        {/* <img className={isDarkMode ? 'me--about--pic ' : 'me--about--pic light'} src= {dev_web} alt='dev_web_pic' /> */}
+        <img className={isDarkMode ? 'me--about--pic ' : 'me--about--pic light'} src= {dev_web} alt='dev_web_pic' />
         
-        <h1 className=" me--about--title"
-        //</section>className={isDarkMode ? 'me--about--title' : 'me--about--title light'} 
-
-        >Développeuse Web Passionnée</h1>
-
         <Modal
           open={open}
           onClose={handleClose}
@@ -95,9 +88,9 @@ const style = {
       </section>
     </div>
     
-    {/* <div id="title">
+    <div id="title">
       <h1 className={isDarkMode ? 'me--about--title' : 'me--about--title light'} >Développeuse Web Passionnée</h1>
-    </div> */}
+    </div>
     
     <div id="button">
       <Button sx= {{color:'#fff', fontSize: 32, fontWeight:'bold'}} className={isDarkMode ? 'me--about--button' : 'me--about--button light'} onClick={handleOpen}>More About Me</Button>

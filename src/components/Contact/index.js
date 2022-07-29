@@ -14,9 +14,8 @@ import "./contact.scss"
 function Contact() {
 
   const Alert = React.forwardRef(function Alert(props, ref) {
-    return <MuiAlert elevation={6} ref={ref} variant="filled" {...props} value="undefined"/>;
+    return <MuiAlert elevation={6} ref={ref} variant="filled" {...props}/>;
   });
-  // console.log(MuiAlert);
   /* const isValidEmail = email => {
     const regex = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
     return regex.test(String(email).toLowerCase());
@@ -25,7 +24,7 @@ function Contact() {
   const contactForm = useSelector((state)=> state.contactForm);
   const isDarkMode = useSelector((state)=> state.settings.darkMode);
   const dispatch = useDispatch();
-  console.log(contactForm);
+  
   // function to change value of the state formContact
   function handleChange(e) {
     const { value } = e.target;
