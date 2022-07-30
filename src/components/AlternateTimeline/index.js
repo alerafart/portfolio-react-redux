@@ -22,7 +22,7 @@ function AlternateTimeline() {
 
   return (
     <>
-    
+    <h2 className={isDarkMode ? 'contact' : 'contact light'}>Parcours</h2>
     <div id='timeline' className={isDarkMode ? 'timeline ' : 'timeline light'}>
       
       <Timeline position="alternate" className={isDarkMode ? 'timeline ' : 'timeline light'}>        

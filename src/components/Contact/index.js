@@ -77,7 +77,7 @@ function Contact() {
   return (
     <>
     <div id="contact" >
-
+    <h2 className={isDarkMode ? 'contact' : 'contact light'}>Contact</h2>
       <Box className={isDarkMode ? 'contact' : 'contact light'}
         component="form"
         
