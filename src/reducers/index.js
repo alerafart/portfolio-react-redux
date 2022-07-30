@@ -19,7 +19,7 @@ const initialState = {
     email: "",
     subject:"",
     message:"",
-    emailSent: true,
+    emailSent: false,
   }
 
 };
