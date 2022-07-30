@@ -74,4 +74,8 @@ h2 {
   text-align: left;
   font-weight: bold;
   margin: 1rem 0 0 1rem;
+
+  @media (max-width:400px) {
+    font-size: 2rem;
+  }
 }

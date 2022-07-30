@@ -1,9 +1,6 @@
 import React from "react";
-
 import { useSelector} from 'react-redux';
-
 import alex from "./alex.jpg"
-import dev_web from '../../assets/dev_web.jpg';
 // styles
 import "./me.scss"
 
@@ -12,8 +9,6 @@ import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
 import Modal from '@mui/material/Modal';
 import CloseIcon from '@mui/icons-material/Close';
-import { red } from "@mui/material/colors";
-import { borderRadius } from "@mui/system";
 
 function Me() {
 
@@ -36,7 +31,6 @@ const style = {
   const isDarkMode = useSelector((state) => state.settings.darkMode);
   return (
     <>
-
     <div className={isDarkMode ? 'me ' : 'me light'}>
       <section className={isDarkMode ? 'me__desc' : 'me__desc light'} >
         <p className={isDarkMode ? 'me__desc--name ' : 'me__desc--name light'}>
@@ -102,7 +96,7 @@ const style = {
     </div> */}
     
     <div id="button">
-      <Button sx= {{color:'#fff', fontSize: 32, fontWeight:'bold'}} className={isDarkMode ? 'me--about--button' : 'me--about--button light'} onClick={handleOpen}>More About Me</Button>
+      <Button sx= {{color:'#fff', fontSize: 29, fontWeight:'bold'}} className={isDarkMode ? 'me--about--button' : 'me--about--button light'} onClick={handleOpen}>More About Me</Button>
     </div>
     
     </>

@@ -5,7 +5,7 @@ const projects =  [
           "name": "Portfolio",
           "languages": "React, Redux, Sass",
           link: "https://www.alerafart.com",
-          "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcREiuFGjx3jiX93n25VvIJo3X23XuKrYz8nuw&usqp=CAU"
+          "img": "/static/media/portfolio_alex.133f293c0bcece654318.png"
         },
         {
           "id": 2,
@@ -20,7 +20,7 @@ const projects =  [
           "languages": "React, Redux, Sass",
           "link": "http://www.meetdev.alerafart.com/",
           "img": "http://www.meetdev.alerafart.com/static/media/rocket.038bac4ae2b0c287f145.png"
-        },
+        }
         
       ]
       export default projects

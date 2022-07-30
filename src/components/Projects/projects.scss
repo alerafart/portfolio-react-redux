@@ -44,8 +44,8 @@
 
     &--img {
       margin: 1rem;
-      height: 8rem;
-      width: 7rem;
+      height: 9rem;
+      width: 8rem;
     }
     @media (max-width: 800px)
     {
@@ -56,9 +56,9 @@
     }
 
     &__box {
-      padding: 10px;
+      //padding: 10px;
       margin: 0.5rem;
-      height: 20rem;
+      //height: 20rem;
       width:32%;
       display: flex;
       flex-direction: column;

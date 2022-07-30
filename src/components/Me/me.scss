@@ -26,12 +26,23 @@
     justify-content: center;
     
       &--name {
-        align-content: flex-end;
         font-size: 3rem;
         font-weight: bold;
         margin-top: 15px;
         text-transform: uppercase;
         color:vars.$middleGreen;
+        display: flex;
+
+        @media (max-width:800px) {
+          width: 60%;
+          font-size: 2.3rem;
+          justify-content: center;
+        }
+        @media (max-width:400px) {
+          justify-content: flex-end;
+          font-size: 1.8rem;
+          margin-top: 1rem;
+        }
       }
 
       &--pic {
@@ -44,6 +55,7 @@
 
       &--title {
         font-size: 1.7rem;
+        
       }
     
     @media (max-width: 800px) {
@@ -58,11 +70,6 @@
         margin: 2% 0;
       }
 
-      &--name {
-        @media (max-width: 800px) {
-          text-align: right;
-        }
-      }
     }
   }
 
@@ -84,15 +91,25 @@
 
     &--title  {
       width: 50%;
-      margin: 1rem;
+      margin: 4rem;
       height: 0;
       text-shadow: 5px 5px 10px black, 0 0 1em black, 0 0 0.2em black;
       text-align: left;
       font-weight: bolder;
-      font-size: 2.5rem;
+      font-size: 3rem;
       text-transform: uppercase;
       color:white;
  
+      @media (max-width:800px) {
+        margin: 3rem;
+        font-size: 2.2rem;
+      }
+
+      @media (max-width:400px) {
+        margin: 1rem;
+        font-size: 2rem;
+      }
+
       &.light {
         color: vars.$darkGrey;
         background-color: transparent;
@@ -104,9 +121,9 @@
       text-align: right;
       width: max-content;
       font-weight: bolder;
-      font-size: 1.4rem;
       text-shadow: 5px 5px 10px black, 0 0 1em black, 0 0 0.2em black;
 
+      
         &.light {
           color: vars.$darkGrey;
           text-shadow: 5px 5px 10px white, 0 0 1em white, 0 0 0.2em white;
