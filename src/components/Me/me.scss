@@ -26,12 +26,23 @@
     justify-content: center;
     
       &--name {
-        align-content: flex-end;
         font-size: 3rem;
         font-weight: bold;
         margin-top: 15px;
         text-transform: uppercase;
         color:vars.$middleGreen;
+        display: flex;
+
+        @media (max-width:800px) {
+          width: 60%;
+          font-size: 2.3rem;
+          justify-content: center;
+        }
+        @media (max-width:400px) {
+          justify-content: flex-end;
+          font-size: 1.8rem;
+          margin-top: 1rem;
+        }
       }
 
       &--pic {
@@ -44,6 +55,7 @@
 
       &--title {
         font-size: 1.7rem;
+        
       }
     
     @media (max-width: 800px) {
@@ -58,11 +70,11 @@
         margin: 2% 0;
       }
 
-      &--name {
+      /* &--name {
         @media (max-width: 800px) {
           text-align: right;
         }
-      }
+      } */
     }
   }
 
@@ -93,6 +105,10 @@
       text-transform: uppercase;
       color:white;
  
+      @media (max-width:400px) {
+        font-size: 1.8rem;
+      }
+
       &.light {
         color: vars.$darkGrey;
         background-color: transparent;
