@@ -8,7 +8,6 @@
   margin-top: 3*vars.$gutter;
   display: flex;
   align-items: center;
-  //border: 1px solid grey;
   
     @media (max-width: 800px){
     flex-direction: column;
@@ -20,7 +19,6 @@
     padding: 2px;
     width: 70%;
     background-color: vars.$darkGrey;
-    //border: 1px solid rgb(223, 14, 14);
     display: flex;
     flex-direction: column;
     align-self: stretch;
@@ -73,8 +71,6 @@
     background-size: cover;
     height: 100%;
     width: 100%;  
-    //border: 1px solid red;
-    
     
     @media (max-width: 800px) {
       width: 100%;
@@ -96,8 +92,7 @@
       font-size: 2.5rem;
       text-transform: uppercase;
       color:white;
-
-    
+ 
       &.light {
         color: vars.$darkGrey;
         background-color: transparent;
@@ -130,12 +125,10 @@
       @media (max-width: 800px) {
         background-color: vars.$lightGrey;
       }
-      }
+    }
   }
 
 }
-
-
 
 #button {
 display: flex;
@@ -173,7 +166,10 @@ justify-content:flex-end;
   color: vars.$darkGrey;
 }
 #modal-modal-description{
-  overflow-y: scroll;
+  @media (max-width: 800px) {
+    overflow-y: scroll;
+  }
+  
 }
 
 .light {
