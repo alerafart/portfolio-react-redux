@@ -1,5 +1,13 @@
-.App {
+@use './styles/vars';
+.app {
   text-align: center;
+  font-family: "Montserrat","Roboto","Helvetica","Arial",sans-serif;
+  width: 98%;
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+  background-color: vars.$middleGrey;
+  
 }
 
 .App-logo {
@@ -23,7 +31,8 @@
 }
 
 .App-link {
-  color: rgb(112, 76, 182);
+  //color: rgb(112, 76, 182);
+  
 }
 
 @keyframes App-logo-float {
@@ -36,4 +45,24 @@
   100% {
     transform: translateY(0px);
   }
+}
+
+body{
+  background-color: vars.$darkGrey;
+}
+.home {
+  position: fixed;
+  bottom: 0.5rem;
+  right:1.5rem;
+  border-radius: 20%;
+  background-color: vars.$darkGrey;
+
+  &--icon{
+    margin: 0.2rem;
+  }
+}
+
+.divider {
+  height: 1rem;
+  background-color: vars.$middleGrey;
 }

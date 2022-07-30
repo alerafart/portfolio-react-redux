@@ -1,0 +1,182 @@
+@use '../../styles/vars';
+
+.me {
+  width: 90%;
+  height: 33rem;
+  color: vars.$lightGrey;
+  margin: auto;
+  margin-top: 3*vars.$gutter;
+  display: flex;
+  align-items: center;
+  //border: 1px solid grey;
+  
+    @media (max-width: 800px){
+    flex-direction: column;
+    height: min-content;
+    margin-top: 1rem;
+    }
+
+  &__desc {
+    padding: 2px;
+    width: 70%;
+    background-color: vars.$darkGrey;
+    //border: 1px solid rgb(223, 14, 14);
+    display: flex;
+    flex-direction: column;
+    align-self: stretch;
+    align-items: center;
+    justify-content: center;
+    
+      &--name {
+        align-content: flex-end;
+        font-size: 3rem;
+        font-weight: bold;
+        margin-top: 15px;
+        text-transform: uppercase;
+        color:vars.$middleGreen;
+      }
+
+      &--pic {
+        object-fit:cover;
+        width: 280px;
+        height: 320px;
+        text-align: center;
+        margin: 2% 0;
+      }
+
+      &--title {
+        font-size: 1.7rem;
+      }
+    
+    @media (max-width: 800px) {
+      width: 100%;
+      height: min-content;
+      
+      &--pic {
+        object-fit:cover;
+        width: 200px;
+        height: 250px;
+        text-align: center;
+        margin: 2% 0;
+      }
+
+      &--name {
+        @media (max-width: 800px) {
+          text-align: right;
+        }
+      }
+    }
+  }
+
+  &--about {
+    background-image: url("../../assets/dev_web.jpg") ;
+    background-size: cover;
+    height: 100%;
+    width: 100%;  
+    //border: 1px solid red;
+    
+    
+    @media (max-width: 800px) {
+      width: 100%;
+      height: 20rem;
+      text-align: center;
+    }
+
+    &.light {
+      filter:invert(1);   
+    }
+
+    &--title  {
+      width: 50%;
+      margin: 1rem;
+      height: 0;
+      text-shadow: 5px 5px 10px black, 0 0 1em black, 0 0 0.2em black;
+      text-align: left;
+      font-weight: bolder;
+      font-size: 2.5rem;
+      text-transform: uppercase;
+      color:white;
+
+    
+      &.light {
+        color: vars.$darkGrey;
+        background-color: transparent;
+      }
+    }
+
+    &--button {
+      bottom: 60px;
+      text-align: right;
+      width: max-content;
+      font-weight: bolder;
+      font-size: 1.4rem;
+      text-shadow: 5px 5px 10px black, 0 0 1em black, 0 0 0.2em black;
+
+        &.light {
+          color: vars.$darkGrey;
+          text-shadow: 5px 5px 10px white, 0 0 1em white, 0 0 0.2em white;
+        }
+        &:hover {
+          zoom: 110%;
+        }
+    }
+
+    //modal
+    &--resume {
+      padding: 5%;
+      color: vars.$darkGrey;
+      background-color: vars.$lightGrey;
+      
+      @media (max-width: 800px) {
+        background-color: vars.$lightGrey;
+      }
+      }
+  }
+
+}
+
+
+
+#button {
+display: flex;
+width: 90%;
+height: 1rem;
+justify-content:flex-end;
+  
+&.light {
+    color: vars.$darkGrey;
+    background-color: vars.$lightGrey;
+  }
+
+}
+
+.modal_box {
+  display: flex;
+  flex-direction: column;
+  border-radius: 2rem;
+  background-image: none;
+  width: 60%;
+  
+  @media (max-width: 800px) {
+    width: 80%;
+    
+  }
+  
+  &--close {  
+      align-self: flex-end;
+  }
+}
+
+#modal-modal-title {  
+  font-size: 2rem;
+  font-weight: bold;
+  color: vars.$darkGrey;
+}
+#modal-modal-description{
+  overflow-y: scroll;
+}
+
+.light {
+  color: vars.$darkGrey;
+  background-color: vars.$lightGrey;
+}

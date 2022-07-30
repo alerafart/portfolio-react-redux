@@ -1,0 +1,83 @@
+@use '../../styles/vars';
+
+.contact {
+  transition: 0.2s;
+  background-color: vars.$darkGrey;;
+  width: 90%;
+  margin: auto;
+  padding: 1rem;
+  height: max-content;
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
+  
+  &__message {
+    padding: 0.5rem;
+    width: 70%;
+    align-self: center;
+    display: flex;
+    // border: 1px solid rgb(235, 8, 8);
+    
+    //text area
+    &__field {
+      background-color: rgb(240, 236, 236);
+      border: vars.$darkGrey;
+      width: 100%;
+      padding: 0;
+      margin: auto;
+      
+      :focus {
+        background-color:#fff;
+      }
+      &:hover {
+        background-color: vars.$lightGreen;;
+      }
+    }
+
+    &--confirm {
+      width: 70%;
+      margin: auto;
+      padding: 1rem;
+       
+
+      &--alert {
+        display: flex;
+        justify-content: center;
+        // border:1px solid red;
+      }
+     /* &--text {
+      border:1px solid red;
+      } */
+    }
+  }
+}
+
+/* .MuiAlert-message {
+  border:1px solid red;
+}
+.MuiAlert-icon {
+  border:1px solid red;
+  margin:0;
+}  */
+.light {
+  transition: 0.2s;
+  color: vars.$darkGrey;
+  background-color: vars.$lightGrey;
+}
+
+.hide {
+  display: none;
+}
+
+#submit {
+  margin: auto;
+  width: 50%;
+  color: vars.$darkGrey;
+  background-color: vars.$middleGreen;
+  font-weight: bolder;
+  font-size: 1.1rem;
+
+  &:hover {
+    zoom: 120%;
+  }
+}

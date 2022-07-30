@@ -1,0 +1,163 @@
+@use '../../styles/vars';
+#header{
+  width: 98%;
+  margin: auto;
+  left : 0;
+  transition: 0.2s;
+  font-size: 1.5rem;
+  background-color: vars.$middleGreen;
+  
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  border: 1px solid grey;
+  
+  @media (max-width: 800px) {
+    //position:fixed;
+    left: -170px;
+    margin: 0;
+    
+    opacity: 80%;
+    text-align: left;
+    width: max-content;
+    border-top-right-radius: 1rem;
+    border-bottom-right-radius: 1rem;
+    text-align: left;
+    
+     &:hover {
+      left: 0px;	
+	    transition: .5s ease-in-out;
+     }
+    
+    }
+    
+}
+
+/* .hide {
+  background-color: none;
+  display: none;
+} */
+.header {
+  
+  &__themeSwitch {
+    display:flex;
+    margin-left: 1rem;
+    background-color: vars.$lightGrey;
+    border-radius: 2rem;
+
+    @media (max-width: 800px) {
+      position: fixed;
+    top:30px;
+    left: 5.5rem;
+      }
+  }
+  &__nav {
+    width: 100%;
+    display:flex;
+    //height: 100%;
+    align-items: center;
+
+      @media (max-width: 800px) {
+        flex-direction: column;
+        margin-top: 4rem;
+        margin-right: auto;
+        margin-left: 1rem;
+        align-items: flex-start;
+        height: min-content;
+        width: 11rem;
+        //display: flex;
+        }
+
+    &--buttons {
+      @media (max-width:800px){
+        //display: flex;
+        //flex-direction: column;
+        //align-content: flex-end;
+        //align-items: flex-end;
+        align-self:flex-end;
+        margin-bottom: vars.$gutter;
+      }
+    }
+ 
+    &--link{
+      color: vars.$darkGrey;
+      text-transform: uppercase;
+      width: 100%;
+      
+      @media (max-width:800px){
+        display: none;
+      }
+    }
+
+    &--link--mobile {
+      display: none;
+      
+      @media (max-width:800px){
+        display: block;
+        //color: rgb(255, 255, 255);
+        color: vars.$darkGrey;
+        font-weight: bold;
+        //opacity: 100%;
+        text-transform: uppercase;
+        padding: 1rem;
+        transition-timing-function: ease-in;
+  /* Quick on the way out */
+        transition: 0.2s;
+
+        &.light {
+          color: vars.$darkGrey;
+        }
+  /* Hide thing by pushing it outside by default */
+  //transform: translateX(130%);
+
+        //transition: all 0.3s ease-in;
+      
+        /* &.hide {
+          transition: all 0.3s ease-in;
+          background-color: none;
+          display: none;
+        } */
+
+      }
+    }
+  }
+  
+}
+
+.light {
+  background-color: vars.$lightGrey;
+  color: rgb(0, 0, 0);
+}
+
+//button
+.toggle {
+  display: none;
+  @media (max-width:800px){
+    position: fixed;
+    top:30px;
+    left: -0.8rem;
+    opacity: 150%;
+    margin-left: 5%;
+    display: block;
+    width: 1.5em;
+    height: 1.5em;
+    border-radius: 50%;
+    border: 3px solid black;
+    background-color: white;
+    font-size: 1.5em;
+    color: vars.$darkGrey;
+  }
+  
+  // au hover on inverse les couleurs
+  &:hover {
+    border: 3px solid vars.$darkGreen;
+    background-color: vars.$darkGrey;
+    color:vars.$lightGreen;
+  }
+
+  //rotation sur le bouton
+  // .toggle.toggle--open
+  &.toggle--open {
+    transform: rotate(45deg);
+  }
+}

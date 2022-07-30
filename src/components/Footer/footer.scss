@@ -1,0 +1,49 @@
+ @use '../../styles/vars';
+
+.footer {
+  //display: flex;
+  flex-direction: column;
+  background-color: vars.$middleGreen;
+  color:  vars.$darkGrey;
+  width: 100%;
+  padding: 0.5rem;
+  
+  strong{
+    font-weight: bold;
+  }
+  &--p {
+    vertical-align : middle;
+    text-align: center;
+    align-self: center;
+  }
+  &--small{
+    margin-top: 15px;
+    font-size: 12px;
+  }
+  &--img{
+    height: 4rem;
+    width: 4rem;
+  }
+
+  &--em {
+    font-style: italic;
+  }
+  &--link {
+    margin: 2rem;
+    margin-top: 2rem;
+  }
+  
+}
+
+.light {
+  transition: 0.2s;
+  //color: black;
+  //background-color: #bdbdbd;
+}
+.home {
+
+  &--icon{
+    height: 3rem;
+    width: 10rem;
+  }
+}

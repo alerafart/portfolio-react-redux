@@ -1,0 +1,64 @@
+@use '../../styles/vars';
+
+.skills {
+  width: 90%;
+  margin: auto;
+  height: auto;
+  background-color: vars.$darkGrey;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  
+  &__icons {
+    display: flex;
+    width: 100%;
+    height: fit-content;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin: 0.5rem;
+    padding: 2%;
+    font-weight: bold;
+    font-size: 1.3rem;
+
+    
+    @media (max-width: 800px)
+    {
+      display: flex;
+      align-items: center;
+    }
+
+    &--icon {
+    flex-direction: column;
+    width: 7rem;
+    padding: 0.5rem;
+    color: vars.$lightGrey;
+
+    
+      &:hover {
+        background-color: vars.$middleGreen;;
+        color: vars.$darkGrey;
+        zoom: 105%;
+        
+        }
+    }
+  }
+}
+
+img {
+  width: 6rem;
+  height: 6rem;
+
+   @media (max-width : 800px) {
+    width: 4rem;
+    height: 4rem;
+   }
+  }
+
+p {
+  margin: 2px 0 ;
+}
+
+.light {
+  color: vars.$darkGrey;
+  background-color: vars.$lightGrey;
+}
