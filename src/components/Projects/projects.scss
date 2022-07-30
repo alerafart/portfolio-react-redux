@@ -6,7 +6,7 @@
   height: max-content;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  //justify-content: center;
   // padding: 2%;
   background-color: vars.$darkGrey;
   //flex-wrap: nowrap;
@@ -15,21 +15,30 @@
     {
       display: flex;
       //flex-wrap: wrap;
-      align-items: center;
+      //align-items: center;
+      
     }
 
+    &__title {
+      @media (max-width:800px) {
+        justify-content: flex-start;
+      }
+    }
+  
   &__project {
     display: flex;
     flex-wrap: nowrap;
+    
     height: 100%;
     flex-direction: row;
     justify-content: center;
-    align-items: center;
+    //align-items: center;
     padding: 1%;
     
 
     @media (max-width: 800px)
     {
+      margin: auto;
       flex-direction: column;
     }
 
