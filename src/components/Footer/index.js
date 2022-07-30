@@ -9,6 +9,8 @@ import "./footer.scss"
 function Footer() {
 
 const isDarkMode = useSelector((state) => state.settings.darkMode);
+
+
   return (
 
     <div className={isDarkMode ? 'footer' : 'footer light'}>
@@ -18,7 +20,7 @@ const isDarkMode = useSelector((state) => state.settings.darkMode);
         <a href="https://github.com/alerafart" className="footer--link"><img className="footer--img" src={github} alt="github icon" /></a>
         <a href="https://www.linkedin.com/in/rafart-alejandra/" className="footer--link"><img className="footer--img" src={linkedin} alt="github icon" /></a>
       
-      <p className="footer--small">Copyright 
+      <p className="footer--small">Copyright All Right Reserved 2022 <strong>Alejandra Rafart</strong>
       </p>
       <a className="home" href="./#root" >
         <HomeIcon className="home--icon"

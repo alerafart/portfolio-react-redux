@@ -5,26 +5,42 @@
   margin: auto;
   height: max-content;
   display: flex;
-  justify-content: center;
-  padding: 2%;
+  flex-direction: column;
+  //justify-content: center;
+  // padding: 2%;
   background-color: vars.$darkGrey;
+  //flex-wrap: nowrap;
 
   @media (max-width: 800px)
     {
       display: flex;
-      flex-wrap: wrap;
-      align-items: center;
+      //flex-wrap: wrap;
+      //align-items: center;
+      
     }
 
+    &__title {
+      @media (max-width:800px) {
+        justify-content: flex-start;
+      }
+    }
+  
   &__project {
     display: flex;
-    flex-wrap: wrap;
-    width: 33%;
-    flex-direction: column;
+    flex-wrap: nowrap;
+    
+    height: 100%;
+    flex-direction: row;
     justify-content: center;
-    align-items: center;
-    overflow-wrap: break-word;
-    word-wrap: break-word;
+    //align-items: center;
+    padding: 1%;
+    
+
+    @media (max-width: 800px)
+    {
+      margin: auto;
+      flex-direction: column;
+    }
 
     &--img {
       margin: 1rem;
@@ -41,14 +57,30 @@
 
     &__box {
       padding: 10px;
+      margin: 0.5rem;
+      height: 20rem;
+      width:32%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      
+      
+      @media (max-width: 800px)
+    {
+      width: 70%;
+      height: 15rem;
+      
+    }
 
       &--link {
         color: vars.$darkGrey;
         font-weight: bold;
-        padding: 10px;      
+        padding: 10px;  
+        overflow-wrap: break-word;    
         &:hover {
           zoom: 120%;
-          //transition: 1s;
+          
         }
       }
 

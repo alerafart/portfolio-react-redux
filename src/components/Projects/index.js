@@ -11,17 +11,20 @@ function Projects() {
   const isDarkMode = useSelector((state) => state.settings.darkMode);
   return (
     <>
-    <div id="projects" >
+    
+    
+      <div id="projects" className={isDarkMode ? 'projects' : 'projects light'}>
+        <h2 className={isDarkMode ? 'projects__title' : 'projects__title light'}>Projects</h2>
+          
+        <div className="projects__project">
 
-      <div className={isDarkMode ? 'projects' : 'projects light'}>
- 
           {projects.map((project) => (
-            <div className="projects__project" key={project.id}>
             
             <Box className="projects__project__box"
+            key={project.id}
               sx={{
-                width: '80%',
-                height: '100%',
+                //width: '30%',
+                //height: '300px',
                 backgroundColor: '#bdbdbd',
                 '&:hover': {
                   backgroundColor: '#aeea00',
@@ -42,12 +45,11 @@ function Projects() {
                 
                 <a href= {project.link} className="projects__project__box--link" target="_blank" rel="noreferrer" >www.{project.name}.alerafart.com</a>
             </Box>
-            </div>
             
           ))}
-          
+          </div>
         </div>
-    </div>
+    
     <div className={isDarkMode ? 'divider' : 'divider light'}></div>
     </>
   );

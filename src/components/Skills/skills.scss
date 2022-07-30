@@ -6,17 +6,19 @@
   height: auto;
   background-color: vars.$darkGrey;
   display: flex;
+  flex-direction: column;
   justify-content: space-around;
-  align-items: center;
-  
+  //align-items: center;
+
   &__icons {
     display: flex;
+    flex-direction: row;
     width: 100%;
     height: fit-content;
     flex-wrap: wrap;
     justify-content: space-around;
-    margin: 0.5rem;
-    padding: 2%;
+    //margin: 0.5rem;
+    padding: 1%;
     font-weight: bold;
     font-size: 1.3rem;
 
@@ -45,8 +47,8 @@
 }
 
 img {
-  width: 6rem;
-  height: 6rem;
+  width: 4rem;
+  height: 4rem;
 
    @media (max-width : 800px) {
     width: 4rem;
