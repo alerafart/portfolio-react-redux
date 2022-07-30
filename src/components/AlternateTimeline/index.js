@@ -22,8 +22,32 @@ function AlternateTimeline() {
 
   return (
     <>
+    
     <div id='timeline' className={isDarkMode ? 'timeline ' : 'timeline light'}>
+      
       <Timeline position="alternate" className={isDarkMode ? 'timeline ' : 'timeline light'}>        
+        <TimelineItem className={isDarkMode ? 'timeline__item ' : 'timeline__item light'}>
+          <TimelineOppositeContent className={isDarkMode ? 'timeline__item ' : 'timeline__item light'}
+              sx={{ m: 'auto 0' }}
+              variant="body2"
+              //color="text.secondary"
+            >
+            2022
+          </TimelineOppositeContent>
+          <TimelineSeparator>
+            <TimelineConnector />
+            <TimelineDot color="primary">
+                <LaptopMacIcon />
+              </TimelineDot>
+              <TimelineConnector />
+          </TimelineSeparator>
+          <TimelineContent className={isDarkMode ? 'timeline__item ' : 'timeline__item light'} sx={{ py: '12px', px: 2 }}>
+            <Typography variant="h6" component="span" >
+              Certification Opquast
+            </Typography>
+            <Typography className={isDarkMode ? 'timeline__item ' : 'timeline__item light'}>Bonnes pratiques et Qualité web</Typography>
+          </TimelineContent>
+        </TimelineItem>
         <TimelineItem onScroll={Animation} className={isDarkMode ? 'timeline__item ' : 'timeline__item light'}>
           <TimelineOppositeContent className={isDarkMode ? 'timeline__item ' : 'timeline__item light'}
             sx={{ m: 'auto 0' }}
@@ -44,7 +68,7 @@ function AlternateTimeline() {
             <Typography variant="h6" component="span" >
               Titre Professionnel Développeur Web et Web Mobile
             </Typography>
-            {/* <Typography >Because this is the life you love!</Typography> */}
+            <Typography >Niveau V - Bac+2</Typography>
           </TimelineContent>
         </TimelineItem>
 
@@ -67,7 +91,7 @@ function AlternateTimeline() {
             <Typography variant="h6" component="span" >
               Formation Développeur Web et Web Mobile
             </Typography>
-            {/* <Typography className={isDarkMode ? 'timeline__item ' : 'timeline__item light'}>Because it&apos;s awesome!</Typography> */}
+            <Typography className={isDarkMode ? 'timeline__item ' : 'timeline__item light'}>Ecole O'clock</Typography>
           </TimelineContent>
         </TimelineItem>
 
@@ -91,7 +115,7 @@ function AlternateTimeline() {
             <Typography variant="h6" component="span">
               Photographe responsable studio E-Commerce
             </Typography>
-            {/* <Typography>Because you need strength</Typography> */}
+            <Typography>Groupe Otelo - Service Marketing</Typography>
           </TimelineContent>
         </TimelineItem>
 
@@ -114,7 +138,7 @@ function AlternateTimeline() {
             <Typography variant="h6" component="span">
               Diplôme d'architecte mention en Urbanisme
             </Typography>
-            {/* <Typography>Because it&apos;s awesome!</Typography> */}
+            <Typography>Niveau I - Bac+5</Typography>
           </TimelineContent>
         </TimelineItem>
 
@@ -135,9 +159,9 @@ function AlternateTimeline() {
           </TimelineSeparator>
           <TimelineContent className={isDarkMode ? 'timeline__item ' : 'timeline__item light'} sx={{ py: '12px', px: 2 }}>
             <Typography variant="h6" component="span">
-              Etudes en Architecture
+              Formation Architecture Master II
             </Typography>
-          {/*   <Typography>Because it&apos;s awesome!</Typography> */}
+            <Typography>Universidad Mayor - Santiago du Chili</Typography>
           </TimelineContent>
         </TimelineItem>
       </Timeline>

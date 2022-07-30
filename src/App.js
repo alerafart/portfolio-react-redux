@@ -31,7 +31,7 @@ function App() {
         <Projects />
         <Contact />
         <AlternateTimeline />
-        <Timeline />
+        {/* <Timeline /> */}
         <Footer />
       
     </div>

@@ -12,6 +12,8 @@ import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
 import Modal from '@mui/material/Modal';
 import CloseIcon from '@mui/icons-material/Close';
+import { red } from "@mui/material/colors";
+import { borderRadius } from "@mui/system";
 
 function Me() {
 
@@ -24,7 +26,7 @@ const style = {
   top: '50%',
   left: '50%',
   transform: 'translate(-50%, -50%)',
-  width: '80%',
+  //width: '70%',
   bgcolor: '#aeea00',
   // border: '2px solid #000',
   boxShadow: 24,
@@ -60,7 +62,7 @@ const style = {
         <h1 className=" me--about--title"
         //</section>className={isDarkMode ? 'me--about--title' : 'me--about--title light'} 
 
-        >Développeuse Web Passionnée</h1>
+        >Développeuse Web & Mobile</h1>
 
         <Modal
           open={open}
@@ -73,7 +75,7 @@ const style = {
             <Button className="modal_box--close"
             onClick={handleClose}
             >
-              <CloseIcon sx= {{color:'#102027', fontSize: 50}}></CloseIcon>
+              <CloseIcon sx= {{color:'#aeea00', fontSize: 50, bgcolor:'#102027', borderRadius:'50%'}}></CloseIcon>
             </Button>
             <Typography className="modal_box--title" id="modal-modal-title" variant="h6" component="h2">
               Un peu plus sur moi...

@@ -20,6 +20,7 @@ const projects =  [
           "languages": "React, Redux, Sass",
           "link": "http://www.meetdev.alerafart.com/",
           "img": "http://www.meetdev.alerafart.com/static/media/rocket.038bac4ae2b0c287f145.png"
-        }
+        },
+        
       ]
       export default projects
