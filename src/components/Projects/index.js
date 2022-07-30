@@ -12,9 +12,9 @@ function Projects() {
   return (
     <>
     <div id="projects" >
-
+    
       <div className={isDarkMode ? 'projects' : 'projects light'}>
- 
+        {/* <h2 className={isDarkMode ? 'projects__title' : 'projects__title light'}>Projects</h2> */}
           {projects.map((project) => (
             <div className="projects__project" key={project.id}>
             
