@@ -1,6 +1,6 @@
 
 import { useSelector } from 'react-redux';
-
+import portfolio from './portfolio_alex.png'
 //librairies
 import Box from '@mui/material/Box';
 import projects from "./projects.js";
@@ -8,10 +8,10 @@ import projects from "./projects.js";
 import "./projects.scss"
 
 function Projects() {
+  console.log({portfolio});
   const isDarkMode = useSelector((state) => state.settings.darkMode);
   return (
     <>
-    
     
       <div id="projects" className={isDarkMode ? 'projects' : 'projects light'}>
         <h2 className={isDarkMode ? 'projects__title' : 'projects__title light'}>Projects</h2>
@@ -33,6 +33,7 @@ function Projects() {
               }}>      
                 <img 
                   src= {project.img}
+                  //src={portfolio}
                   alt= {project.name}
                   className="projects__project--img"
                 />
@@ -43,7 +44,7 @@ function Projects() {
                   {project.languages}
                 </p>
                 
-                <a href= {project.link} className="projects__project__box--link" target="_blank" rel="noreferrer" >www.{project.name}.alerafart.com</a>
+                <a href= {project.link} className="projects__project__box--link" target="_blank" rel="noreferrer" >{project.name}.alerafart.com</a>
             </Box>
             
           ))}

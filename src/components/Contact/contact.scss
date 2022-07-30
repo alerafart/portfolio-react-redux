@@ -16,7 +16,13 @@
     width: 70%;
     align-self: center;
     display: flex;
-    // border: 1px solid rgb(235, 8, 8);
+
+    @media (max-width:800px) {
+      width: 85%;
+    }
+    @media (max-width:400px) {
+      width: 100%;
+    }
     
     //text area
     &__field {
@@ -39,26 +45,15 @@
       margin: auto;
       padding: 1rem;
        
-
       &--alert {
         display: flex;
         justify-content: center;
-        // border:1px solid red;
       }
-     /* &--text {
-      border:1px solid red;
-      } */
+    
     }
   }
 }
 
-/* .MuiAlert-message {
-  border:1px solid red;
-}
-.MuiAlert-icon {
-  border:1px solid red;
-  margin:0;
-}  */
 .light {
   transition: 0.2s;
   color: vars.$darkGrey;

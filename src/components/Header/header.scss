@@ -25,12 +25,10 @@
       left: 0px;	
 	    transition: .5s ease-in-out;
      }
-    
     } 
 }
 
 .header {
-  
   &__themeSwitch {
     display:flex;
     margin-left: 1rem;
@@ -40,7 +38,7 @@
     @media (max-width: 800px) {
       position: fixed;
       top:35px;
-      left: 5.5rem;
+      left: 4rem;
       }
 
       @media (max-width:500px) {
@@ -105,7 +103,6 @@
           background-color: none;
           display: none;
         } */
-
       }
     }
   }
