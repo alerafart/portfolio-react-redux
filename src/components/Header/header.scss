@@ -12,19 +12,20 @@
   border: 1px solid grey;
   
   @media (max-width: 800px) {
-    left: -170px;
+    left: 0px;
     margin: 0;
     opacity: 80%;
     text-align: left;
     width: max-content;
     border-top-right-radius: 1rem;
     border-bottom-right-radius: 1rem;
+    
+    &.header--open {
+      left:-185px;
+      padding-right: 1rem;
+    }
     text-align: left;
     
-     &:hover {
-      left: 0px;	
-	    transition: .5s ease-in-out;
-     }
     } 
 }
 
@@ -85,7 +86,8 @@
         color: vars.$darkGrey;
         font-weight: bold;
         text-transform: uppercase;
-        padding: 1rem;
+        padding: 2rem 0;
+        
         transition-timing-function: ease-in;
   /* Quick on the way out */
         transition: 0.2s;
