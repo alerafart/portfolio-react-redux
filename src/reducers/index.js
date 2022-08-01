@@ -9,7 +9,7 @@ const initialState = {
 
   settings: {
     darkMode: true,
-    toggleOpen: true,
+    toggleOpen: false,
   },
 
   contactForm: {

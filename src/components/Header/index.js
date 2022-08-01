@@ -28,7 +28,7 @@ function Header() {
   return (
     <div >
       <AppBar enableColorOnDark //position="fixed" 
-      id="header" className={isDarkMode ? 'header' : 'header light'} //className = {isDarkMode ? 'header' : 'header light'} {...isToggleOpen ? '' : 'hide'}
+      id="header" className={isToggleOpen ? 'header' : 'header--open'} //className = {isDarkMode ? 'header' : 'header light'} {...isToggleOpen ? '' : 'hide'}
       sx={{
             //backgroundColor: 'primary.main',
             //'&:hover': {
@@ -60,10 +60,10 @@ function Header() {
             <a className="header__nav--link" href="./#timeline">Parcours</a>
             <a className="header__nav--link" href="./#contact">Contact</a>
           
-            <a className={isToggleOpen ? 'header__nav--link--mobile' : 'header__nav--link--mobile hide'} href="./#skills" >Skills</a>
-            <a className={isToggleOpen ? 'header__nav--link--mobile' : 'header__nav--link--mobile hide'} href="./#projects">Projets</a>
-            <a className={isToggleOpen ? 'header__nav--link--mobile' : 'header__nav--link--mobile hide'} href="./#timeline">Parcours</a>
-            <a className={isToggleOpen ? 'header__nav--link--mobile' : 'header__nav--link--mobile hide'} href="./#contact">Contact</a>
+            <a className='header__nav--link--mobile' href="./#skills" >Skills</a>
+            <a className='header__nav--link--mobile'  href="./#projects">Projets</a>
+            <a className='header__nav--link--mobile'  href="./#timeline">Parcours</a>
+            <a className='header__nav--link--mobile'  href="./#contact">Contact</a>
         </nav>
       </AppBar>
     </div>
