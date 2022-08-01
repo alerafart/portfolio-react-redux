@@ -3,6 +3,7 @@ import { useSelector } from 'react-redux';
 import linkedin from './linkedin.png';
 import github from './github.png';
 import HomeIcon from '@mui/icons-material/Home';
+import ForwardIcon from '@mui/icons-material/Forward';
 // styles
 import "./footer.scss"
 
@@ -23,7 +24,7 @@ const isDarkMode = useSelector((state) => state.settings.darkMode);
       <p className="footer--small">Copyright All Right Reserved 2022 <strong>Alejandra Rafart</strong>
       </p>
       <a className="home" href="./#root" >
-        <HomeIcon className="home--icon"
+        <ForwardIcon className="home--icon"
         sx={{ color:'#aeea00', fontSize: 50 }} />
       </a>
     </div>
