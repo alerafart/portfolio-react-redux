@@ -25,7 +25,7 @@ const style = {
   bgcolor: '#aeea00',
   // border: '2px solid #000',
   boxShadow: 24,
-  p: 4,
+  p: 3,
 };
 
   const isDarkMode = useSelector((state) => state.settings.darkMode);

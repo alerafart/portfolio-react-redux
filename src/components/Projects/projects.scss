@@ -6,17 +6,11 @@
   height: max-content;
   display: flex;
   flex-direction: column;
-  //justify-content: center;
-  // padding: 2%;
   background-color: vars.$darkGrey;
-  //flex-wrap: nowrap;
 
   @media (max-width: 800px)
     {
       display: flex;
-      //flex-wrap: wrap;
-      //align-items: center;
-      
     }
 
     &__title {
@@ -63,7 +57,7 @@
       @media (max-width: 800px)
     {
       width: 70%;
-      height: 15rem; 
+      //height: 15rem; 
     }
 
       &--link {

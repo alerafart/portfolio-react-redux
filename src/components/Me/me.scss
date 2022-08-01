@@ -139,6 +139,10 @@
       color: vars.$darkGrey;
       background-color: vars.$lightGrey;
       
+      &.light {
+        background-color: vars.$darkGrey;
+        color: vars.$lightGrey;
+      }
       @media (max-width: 800px) {
         background-color: vars.$lightGrey;
       }
@@ -169,6 +173,7 @@ justify-content:flex-end;
   
   @media (max-width: 800px) {
     width: 80%;
+    padding: 20px;
     
   }
   
@@ -181,10 +186,16 @@ justify-content:flex-end;
   font-size: 2rem;
   font-weight: bold;
   color: vars.$darkGrey;
+  @media (max-width:800px){
+    font-size: 1.5rem ;
+  }
 }
 #modal-modal-description{
+
+  //background-color: vars.$lightGrey;
   @media (max-width: 800px) {
     overflow-y: scroll;
+    height: 25rem;
   }
   
 }

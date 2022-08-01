@@ -11,7 +11,7 @@ import FormControlLabel from '@mui/material/FormControlLabel';
 import "./header.scss"
 
 function Header() {
-  const isDarkMode = useSelector((state) => state.settings.darkMode);
+  //const isDarkMode = useSelector((state) => state.settings.darkMode);
 
   const dispatch = useDispatch();
   function handleDarkModeClick() {
