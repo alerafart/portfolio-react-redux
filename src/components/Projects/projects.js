@@ -3,7 +3,7 @@ const projects =  [
         {
           "id": 1,
           "name": "Portfolio",
-          "languages": "React, Redux, Sass",
+          "languages": "React, Redux, Sass, MaterialUI",
           link: "https://www.alerafart.com",
           "img": "/static/media/portfolio_alex.133f293c0bcece654318.png"
         },
