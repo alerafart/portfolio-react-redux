@@ -39,17 +39,18 @@ function Contact() {
     console.log("submit fired");
     const firstname = contactForm.firstName;
     const lastname = contactForm.lastName;
-    
-    const email = contactForm.email;
+    const email = isValidEmail(contactForm.email); //boolean
     const subject = contactForm.subject;
     const message = contactForm.message;
     //validEmail(email);
-     if (contactForm.firstName && contactForm.lastName && contactForm.email && contactForm.message) {
-      //if (firstname && lastname && email && message) {
+     // if (contactForm.firstName && contactForm.lastName && contactForm.email && contactForm.message) {
+      if (firstname && lastname && email && message) {
       const validEmail = isValidEmail(contactForm.email) ;
+      //if valid email proceed to try and send email
       if(validEmail) {
-        
-        console.log(isValidEmail);
+        console.log(email);
+        console.log(validEmail);
+        console.log('form ok');
           /* const serviceId = `${process.env.REACT_APP_SERVICE_ID}`;
           const templateId = `${process.env.REACT_APP_TEMPLATE_ID}`;
           const userId = `${process.env.REACT_APP_USER_ID}`;
@@ -57,12 +58,13 @@ function Contact() {
           const templateParams = {
               firstname,
               lastname,
-              email,
+              //validEmail,
+              //email,
               subject,
               message
           };
           console.log(templateParams);
-
+          console.log('form correctly filled');
           /* const emailSucces = emailjs.send(serviceId, templateId, templateParams, userId)
               .then(response => console.log(response))
               .then(error => console.log(error));
@@ -70,9 +72,14 @@ function Contact() {
               if (emailSucces) {
                 dispatch(confirmMail());
               } */
-            }
-      } else {
-          alert('Please fill in all fields.');
+          }
+      } //else if( email.length !== 0 && !email) {
+        else if(!email) {
+        alert('invalid email.');
+        //console.log(isValidEmail);       
+      }
+      else{
+        alert('Please fill in all fields');
       }
       
   }
@@ -97,7 +104,7 @@ function Contact() {
               required
               id="filled-required"
               name="firstName"
-              value = {contactForm.firstname || ''}
+              value = {contactForm.firstName || ''}
               label="Prénom"
               placeholder="Prénom"
               autoComplete="off"

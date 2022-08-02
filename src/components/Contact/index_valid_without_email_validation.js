@@ -16,10 +16,10 @@ function Contact() {
   const Alert = React.forwardRef(function Alert(props, ref) {
     return <MuiAlert elevation={6} ref={ref} variant="filled" {...props}/>;
   });
-  const isValidEmail = email => {
+  /* const isValidEmail = email => {
     const regex = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
     return regex.test(String(email).toLowerCase());
-  };
+  }; */
 
   const contactForm = useSelector((state)=> state.contactForm);
   const isDarkMode = useSelector((state)=> state.settings.darkMode);
@@ -39,21 +39,18 @@ function Contact() {
     console.log("submit fired");
     const firstname = contactForm.firstName;
     const lastname = contactForm.lastName;
-    
+    // const validEmail = isValidEmail(contactForm.email) ;
     const email = contactForm.email;
     const subject = contactForm.subject;
     const message = contactForm.message;
-    //validEmail(email);
-     if (contactForm.firstName && contactForm.lastName && contactForm.email && contactForm.message) {
-      //if (firstname && lastname && email && message) {
-      const validEmail = isValidEmail(contactForm.email) ;
-      if(validEmail) {
+    
+    // if (contactForm.firstName && contactForm.lastName && validEmail && contactForm.message) {
+      if (firstname && lastname && email && message) {
         
-        console.log(isValidEmail);
-          /* const serviceId = `${process.env.REACT_APP_SERVICE_ID}`;
+          const serviceId = `${process.env.REACT_APP_SERVICE_ID}`;
           const templateId = `${process.env.REACT_APP_TEMPLATE_ID}`;
           const userId = `${process.env.REACT_APP_USER_ID}`;
- */
+
           const templateParams = {
               firstname,
               lastname,
@@ -63,14 +60,14 @@ function Contact() {
           };
           console.log(templateParams);
 
-          /* const emailSucces = emailjs.send(serviceId, templateId, templateParams, userId)
+          const emailSucces = emailjs.send(serviceId, templateId, templateParams, userId)
               .then(response => console.log(response))
               .then(error => console.log(error));
               
               if (emailSucces) {
                 dispatch(confirmMail());
-              } */
-            }
+              }
+              
       } else {
           alert('Please fill in all fields.');
       }
@@ -84,7 +81,6 @@ function Contact() {
       <Box className={isDarkMode ? 'contact' : 'contact light'}
         component="form"
         
-        //action="mailto:maalejandrarafart@gmail.com"
         onSubmit={handleSubmit}
         sx={{
           '& .MuiTextField-root': { m: 1, mb: 1 },
@@ -97,7 +93,7 @@ function Contact() {
               required
               id="filled-required"
               name="firstName"
-              value = {contactForm.firstname || ''}
+              value = {contactForm.firstName || ''}
               label="Prénom"
               placeholder="Prénom"
               autoComplete="off"
