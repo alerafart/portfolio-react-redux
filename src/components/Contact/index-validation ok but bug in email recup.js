@@ -39,8 +39,7 @@ function Contact() {
     console.log("submit fired");
     const firstname = contactForm.firstName;
     const lastname = contactForm.lastName;
-    let email = isValidEmail(contactForm.email); //boolean
-    const phone = contactForm.phone;
+    const email = isValidEmail(contactForm.email); //boolean
     const subject = contactForm.subject;
     const message = contactForm.message;
     //validEmail(email);
@@ -49,33 +48,30 @@ function Contact() {
       const validEmail = isValidEmail(contactForm.email) ;
       //if valid email proceed to try and send email
       if(validEmail) {
-        email = contactForm.email;
-        
         console.log(email);
         console.log(validEmail);
         console.log('form ok');
-          const serviceId = `${process.env.REACT_APP_SERVICE_ID}`;
+          /* const serviceId = `${process.env.REACT_APP_SERVICE_ID}`;
           const templateId = `${process.env.REACT_APP_TEMPLATE_ID}`;
           const userId = `${process.env.REACT_APP_USER_ID}`;
-
+ */
           const templateParams = {
               firstname,
               lastname,
               //validEmail,
-              email,
-              phone,
+              //email,
               subject,
               message
           };
           console.log(templateParams);
           console.log('form correctly filled');
-          const emailSucces = emailjs.send(serviceId, templateId, templateParams, userId)
+          /* const emailSucces = emailjs.send(serviceId, templateId, templateParams, userId)
               .then(response => console.log(response))
               .then(error => console.log(error));
               
               if (emailSucces) {
                 dispatch(confirmMail());
-              }
+              } */
           }
       } //else if( email.length !== 0 && !email) {
         else if(!email) {
