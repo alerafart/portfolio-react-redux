@@ -136,14 +136,14 @@
     &--resume {
       padding: 5%;
       color: vars.$darkGrey;
-      background-color: vars.$lightGrey;
+      background-color: white;
       
       &.light {
-        background-color: vars.$darkGrey;
+        background-color: black;
         color: vars.$lightGrey;
       }
       @media (max-width: 800px) {
-        background-color: vars.$lightGrey;
+        background-color: white;
       }
     }
   }
