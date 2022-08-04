@@ -3,6 +3,7 @@ import { useSelector } from 'react-redux';
 //librairies
 import Box from '@mui/material/Box';
 import projects from "./projects.js";
+import portfolio from "./portfolio_alex.png";
 // styles
 import "./projects.scss"
 
@@ -43,9 +44,11 @@ function Projects() {
                 </p>
                 
                 <a href= {project.link} className="projects__project__box--link" target="_blank" rel="noreferrer" >{project.name}.alerafart.com</a>
-            </Box>
-            
+            </Box>            
           ))}
+
+          {/* <img src='/src/components/Projects/portfolio_alex.png' alt='fff'/>
+          <img src={portfolio} alt='fff'/> */}
           </div>
         </div>
     

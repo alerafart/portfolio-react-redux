@@ -11,6 +11,7 @@ import MenuIcon from '@mui/icons-material/Menu';
 import CloseIcon from '@mui/icons-material/Close';
 
 import "./header.scss"
+import { Opacity } from "@mui/icons-material";
 
 function Header() {
   const isDarkMode = useSelector((state) => state.settings.darkMode);

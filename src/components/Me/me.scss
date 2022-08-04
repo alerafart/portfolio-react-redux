@@ -173,7 +173,6 @@ justify-content:flex-end;
   @media (max-width: 800px) {
     width: 80%;
     padding: 20px;
-    
   }
   
   &--close {  
@@ -191,7 +190,6 @@ justify-content:flex-end;
 }
 #modal-modal-description{
 
-  //background-color: vars.$lightGrey;
   @media (max-width: 800px) {
     overflow-y: scroll;
     height: 25rem;
