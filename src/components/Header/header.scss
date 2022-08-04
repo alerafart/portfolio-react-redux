@@ -39,11 +39,12 @@
     @media (max-width: 800px) {
       position: fixed;
       top:35px;
-      left: 4rem;
+      right: 3.2rem;
       }
 
       @media (max-width:500px) {
-        left: 3.1rem;
+        //left: 3.1rem;
+        right: 2rem;
       }
   }
   &__nav {
@@ -144,7 +145,7 @@
 
   //rotation sur le bouton
   // .toggle.toggle--open
-  &.toggle--open {
+  /* &.toggle--open {
     transform: rotate(45deg);
-  }
+  } */
 }

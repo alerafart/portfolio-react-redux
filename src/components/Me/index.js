@@ -53,7 +53,7 @@ const style = {
       >
         {/* <img className={isDarkMode ? 'me--about--pic ' : 'me--about--pic light'} src= {dev_web} alt='dev_web_pic' /> */}
         
-        <h1 className=" me--about--title"
+        <h1 className="me--about--title"
         //</section>className={isDarkMode ? 'me--about--title' : 'me--about--title light'} 
 
         >Développeuse Web & Mobile</h1>

@@ -1,6 +1,5 @@
 
 import { useSelector } from 'react-redux';
-import portfolio from './portfolio_alex.png'
 //librairies
 import Box from '@mui/material/Box';
 import projects from "./projects.js";
@@ -8,7 +7,6 @@ import projects from "./projects.js";
 import "./projects.scss"
 
 function Projects() {
-  console.log({portfolio});
   const isDarkMode = useSelector((state) => state.settings.darkMode);
   return (
     <>

@@ -2,7 +2,7 @@ import React from "react";
 import { useSelector } from 'react-redux';
 import linkedin from './linkedin.png';
 import github from './github.png';
-import HomeIcon from '@mui/icons-material/Home';
+// import HomeIcon from '@mui/icons-material/Home';
 import ForwardIcon from '@mui/icons-material/Forward';
 // styles
 import "./footer.scss"

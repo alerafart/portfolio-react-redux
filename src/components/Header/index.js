@@ -7,6 +7,8 @@ import AppBar from '@mui/material/AppBar';
 import MaterialUISwitch from './MaterialUISwitch';
 import FormGroup from '@mui/material/FormGroup';
 import FormControlLabel from '@mui/material/FormControlLabel';
+import MenuIcon from '@mui/icons-material/Menu';
+import CloseIcon from '@mui/icons-material/Close';
 
 import "./header.scss"
 
@@ -51,7 +53,14 @@ function Header() {
                 type="button"
                 onClick={handleToggle}
               >
-                +
+              {
+                isToggleOpen && (<CloseIcon />)
+              }
+              
+              {
+                !isToggleOpen && (<MenuIcon />)
+              }
+                
               </button>
           </div>
         
