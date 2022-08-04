@@ -13,7 +13,7 @@ import CloseIcon from '@mui/icons-material/Close';
 import "./header.scss"
 
 function Header() {
-  //const isDarkMode = useSelector((state) => state.settings.darkMode);
+  const isDarkMode = useSelector((state) => state.settings.darkMode);
 
   const dispatch = useDispatch();
   function handleDarkModeClick() {
@@ -40,7 +40,7 @@ function Header() {
       >
         <nav className="header__nav">
           <div className="header__nav--buttons">
-              <FormGroup className="header__themeSwitch">
+              <FormGroup className={isDarkMode ? 'header__themeSwitch' : 'header__themeSwitch light'} >
                 <FormControlLabel
                   control={<MaterialUISwitch sx={{ m: 0.5 }} defaultChecked />}
                   onClick={() => {
@@ -49,7 +49,7 @@ function Header() {
                 />
               </FormGroup>
               <button                  
-                className={isToggleOpen ? 'toggle toggle--open' : 'toggle'}
+                className={isDarkMode ? 'toggle' : 'toggle light'} 
                 type="button"
                 onClick={handleToggle}
               >

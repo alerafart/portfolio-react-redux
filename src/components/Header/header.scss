@@ -36,6 +36,10 @@
     background-color: vars.$lightGrey;
     border-radius: 2rem;
 
+    &.light {
+      background-color: vars.$middleGreen;
+      // border: 1px solid black;    
+    }
     @media (max-width: 800px) {
       position: fixed;
       top:35px;
@@ -124,7 +128,7 @@
     position: fixed;
     top:30px;
     left: -0.8rem;
-    opacity: 150%;
+    // opacity: 100%;
     margin-left: 5%;
     display: block;
     width: 1.5em;
@@ -134,6 +138,11 @@
     background-color: white;
     font-size: 1.5em;
     color: vars.$darkGrey;
+
+    &.light {
+      background-color: vars.$middleGreen;
+      color: vars.$darkGrey;
+    }
   }
   
   // au hover on inverse les couleurs
