@@ -61,7 +61,6 @@ function Contact() {
           const templateParams = {
               firstname,
               lastname,
-              //validEmail,
               email,
               phone,
               subject,
@@ -85,7 +84,6 @@ function Contact() {
       else{
         alert('Please fill in all fields');
       }
-      
   }
 
   return (
@@ -95,7 +93,6 @@ function Contact() {
       <Box className={isDarkMode ? 'contact' : 'contact light'}
         component="form"
         
-        //action="mailto:maalejandrarafart@gmail.com"
         onSubmit={handleSubmit}
         sx={{
           '& .MuiTextField-root': { m: 1, mb: 1 },

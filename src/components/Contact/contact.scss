@@ -10,6 +10,9 @@
   justify-content: center;
   display: flex;
   flex-direction: column;
+  @media (max-width:400px) {
+    width: 100%;
+  }
   
   &__message {
     padding: 0.5rem;
@@ -27,11 +30,12 @@
     //text area
     &__field {
       background-color: rgb(240, 236, 236);
+      border-radius: 1rem;
       border: vars.$darkGrey;
       width: 100%;
       padding: 0;
       margin: auto;
-      
+
       :focus {
         background-color:#fff;
       }
@@ -49,7 +53,6 @@
         display: flex;
         justify-content: center;
       }
-    
     }
   }
 }
@@ -66,12 +69,17 @@
 
 #submit {
   margin: auto;
-  width: 50%;
+  width: 30%;
+  border-radius: 1rem;
   color: vars.$darkGrey;
   background-color: vars.$middleGreen;
   font-weight: bolder;
   font-size: 1.1rem;
 
+  @media (max-width:800px) {
+    width: 50%;
+    min-width: 85px;
+  }
   &:hover {
     zoom: 120%;
   }

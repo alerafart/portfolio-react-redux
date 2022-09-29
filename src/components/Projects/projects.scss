@@ -23,12 +23,12 @@
     display: flex;
     flex-wrap: wrap;
     height: 100%;
-    width: 90%;
+    width: 87%;
     flex-direction: row;
     justify-content: center;
     align-self: center;
     padding: 1%;
-
+    
     @media (max-width: 800px)
     {
       margin: auto;
