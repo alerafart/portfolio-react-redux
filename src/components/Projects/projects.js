@@ -20,6 +20,13 @@ const projects =  [
           "languages": "Front: React, Redux, Sass, Axios. Back: PHP, Lumen Laravel",
           "link": "http://www.meetdev.alerafart.com/",
           "img": "http://www.meetdev.alerafart.com/static/media/rocket.038bac4ae2b0c287f145.png"
+        },
+        {
+          "id": 4,
+          "name": "Kurku_App",
+          "languages": "Front: React, NextJs, Sass.",
+          "link": "https://kurku-app1.vercel.app/",
+          "img": "https://kurku-app1.vercel.app/images/kurku_logo_2.jpeg"
         }
         
       ]
