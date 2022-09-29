@@ -43,7 +43,9 @@ function Projects() {
                   {project.languages}
                 </p>
                 
-                <a href= {project.link} className="projects__project__box--link" target="_blank" rel="noreferrer" >{project.name}.alerafart.com</a>
+                <a href= {project.link} className="projects__project__box--link" target="_blank" rel="noreferrer" >
+                {project.linkName}
+                </a>
             </Box>            
           ))}
 

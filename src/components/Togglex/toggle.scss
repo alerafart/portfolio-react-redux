@@ -1,0 +1,26 @@
+@use 'src/styles/vars';
+
+.toggle {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  border: 3px solid black;
+  background-color: white;
+  font-size: 2.4rem;
+  color: vars.$mainColor;
+  // on veut remonter le bouton pour qu'il soit sur le Header
+  //margin-top: -25px;
+
+  // au hover on inverse les couleurs
+  &:hover {
+    border: 3px solid white;
+    color: white;
+    background-color:vars.$mainColor;
+  }
+
+  // on applique une rotation sur le bouton si les devises sont visibles
+  // .toggle.toggle--open
+  &.toggle--open {
+    transform: rotate(90deg);
+  }
+}
