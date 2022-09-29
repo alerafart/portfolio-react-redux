@@ -42,7 +42,7 @@ function Header() {
         <nav className="header__nav">
           <div className="header__nav--buttons">
               <FormGroup className={isDarkMode ? 'header__themeSwitch' : 'header__themeSwitch light'} >
-                <FormControlLabel
+                <FormControlLabel id="labelThemeSwitch"
                   control={<MaterialUISwitch sx={{ m: 0.5 }} defaultChecked />}
                   onClick={() => {
                     handleDarkModeClick();

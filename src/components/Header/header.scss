@@ -35,10 +35,9 @@
     margin-left: 1rem;
     background-color: vars.$lightGrey;
     border-radius: 2rem;
-
+    
     &.light {
       background-color: vars.$middleGreen;
-      // border: 1px solid black;    
     }
     @media (max-width: 800px) {
       position: fixed;
@@ -47,7 +46,6 @@
       }
 
       @media (max-width:500px) {
-        //left: 3.1rem;
         right: 2rem;
       }
   }
@@ -100,16 +98,6 @@
         &.light {
           color: vars.$darkGrey;
         }
-  /* Hide thing by pushing it outside by default */
-  //transform: translateX(130%);
-
-        //transition: all 0.3s ease-in;
-      
-        /* &.hide {
-          transition: all 0.3s ease-in;
-          background-color: none;
-          display: none;
-        } */
       }
     }
   }
@@ -128,7 +116,6 @@
     position: fixed;
     top:30px;
     left: -0.8rem;
-    //opacity: 1;
     margin-left: 5%;
     display: block;
     width: 1.5em;
@@ -152,9 +139,11 @@
     color:vars.$lightGreen;
   }
 
-  //rotation sur le bouton
-  // .toggle.toggle--open
-  /* &.toggle--open {
-    transform: rotate(45deg);
-  } */
+}
+.MuiSwitch-root {
+  display: flex;
+  color: red;
+}
+#labelThemeSwitch {
+  margin: 0;
 }
