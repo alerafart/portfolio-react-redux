@@ -3,7 +3,6 @@ import { useSelector } from 'react-redux';
 //librairies
 import Box from '@mui/material/Box';
 import projects from "./projects.js";
-import portfolio from "./portfolio_alex.png";
 // styles
 import "./projects.scss"
 
@@ -14,31 +13,24 @@ function Projects() {
     
       <div id="projects" className={isDarkMode ? 'projects' : 'projects light'}>
         <h2 className={isDarkMode ? 'projects__title' : 'projects__title light'}>Projects</h2>
-          
         <div className="projects__project">
-
           {projects.map((project) => (
-            
             <Box className="projects__project__box"
             key={project.id}
               sx={{
-                //width: '30%',
-                //height: '300px',
                 backgroundColor: '#bdbdbd',
                 '&:hover': {
                   backgroundColor: '#aeea00',
-                  //opacity: [0.9, 0.8, 0.7],
                 },
               }}>      
                 <img 
                   src= {project.img}
-                  //src={portfolio}
                   alt= {project.name}
                   className="projects__project--img"
                 />
-                <p >  
+                <h3 className="projects__project--h3">  
                   {project.name}
-                </p>
+                </h3>
                 <p >  
                   {project.languages}
                 </p>
