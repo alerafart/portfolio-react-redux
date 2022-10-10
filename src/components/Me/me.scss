@@ -29,7 +29,6 @@
         font-size: 3rem;
         font-weight: bold;
         margin-top: 15px;
-        text-transform: uppercase;
         color:vars.$middleGreen;
         display: flex;
 
@@ -118,7 +117,6 @@
     &--button {
       bottom: 60px;
       text-align: right;
-      width: max-content;
       font-weight: bolder;
       text-shadow: 5px 5px 10px black, 0 0 1em black, 0 0 0.2em black;
 
@@ -135,6 +133,7 @@
       padding: 5%;
       color: vars.$darkGrey;
       background-color: white;
+      line-height: 2rem;
       
       &.light {
         background-color: black;
@@ -152,6 +151,7 @@ display: flex;
 width: 90%;
 height: 1rem;
 justify-content:flex-end;
+
   
 &.light {
     color: vars.$darkGrey;

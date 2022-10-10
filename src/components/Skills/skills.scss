@@ -32,13 +32,11 @@
     width: 7rem;
     padding: 0.5rem;
     color: vars.$lightGrey;
-
     
       &:hover {
         background-color: vars.$middleGreen;;
         color: vars.$darkGrey;
         zoom: 105%;
-        
         }
     }
   }
@@ -61,6 +59,7 @@ img {
 
 p {
   margin: 2px 0 ;
+  font-size: max(1.1rem, 1vw);
 }
 
 .light {

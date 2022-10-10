@@ -10,7 +10,7 @@ const skills =  [
         },
         
         {
-          "name": "JavaScript",
+          "name": "JavaScript ",
           "class": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg"
         },
         
@@ -56,6 +56,11 @@ const skills =  [
         {
           "name": "Linux",
           "class": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linux/linux-original.svg"
-        }
+        },
+        // {
+        //   "name": "NextJs",
+        //   "class": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-original.svg"
+        // }
+        
       ]
       export default skills

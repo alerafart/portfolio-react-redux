@@ -36,9 +36,9 @@ function AlternateTimeline() {
           </TimelineOppositeContent>
           <TimelineSeparator>
             <TimelineConnector />
-            <TimelineDot color="primary">
-                <LaptopMacIcon />
-              </TimelineDot>
+            <TimelineDot color="success">
+              <EmojiEventsRoundedIcon />
+            </TimelineDot>
               <TimelineConnector />
           </TimelineSeparator>
           <TimelineContent className={isDarkMode ? 'timeline__item ' : 'timeline__item light'} sx={{ py: '12px', px: 2 }}>
@@ -82,10 +82,10 @@ function AlternateTimeline() {
           </TimelineOppositeContent>
           <TimelineSeparator>
             <TimelineConnector />
-            <TimelineDot color="primary">
-                <LaptopMacIcon />
+              <TimelineDot color="primary">
+                <SchoolRoundedIcon />
               </TimelineDot>
-              <TimelineConnector />
+            <TimelineConnector />
           </TimelineSeparator>
           <TimelineContent className={isDarkMode ? 'timeline__item ' : 'timeline__item light'} sx={{ py: '12px', px: 2 }}>
             <Typography variant="h6" component="span" >
@@ -100,7 +100,6 @@ function AlternateTimeline() {
             sx={{ m: 'auto 0' }}
             align="right"
             variant="body2"
-            // color="text.secondary"
             >
             2008-2022
           </TimelineOppositeContent>
@@ -146,7 +145,6 @@ function AlternateTimeline() {
           <TimelineOppositeContent
             sx={{ m: 'auto 0' }}
             variant="body2"
-            // color="text.secondary"
           >
             1999-2006
           </TimelineOppositeContent>
