@@ -29,7 +29,7 @@ const projects =  [
         },
         {
           "id": 4,
-          "name": "Kurku_App EN COURS",
+          "name": "Kurku_App * En cours *",
           "languages": "React, NextJs, Sass and Vercel",
           "link": "https://kurku-app1.vercel.app/",
           "img": "https://kurku-app1.vercel.app/images/kurku_logo_2.jpeg",

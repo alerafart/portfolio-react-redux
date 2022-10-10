@@ -50,8 +50,13 @@
     }
     &--h3 {
       font-size: 1.3rem;
-      margin-bottom: 1rem;
+      margin-bottom: 0.5rem;
+      text-decoration: underline;
       text-transform: uppercase;
+    }
+    &--p {
+      line-height: 1.2rem;
+      margin: 0.8rem;
     }
     &__box {
       margin: 0.5rem;
@@ -64,7 +69,7 @@
       align-items: center;
       @media (min-width: 1200px)
         {
-        max-width: 30%;
+        max-width: 40%;
         }
         @media (max-width: 800px)
         {
@@ -84,10 +89,7 @@
         width: 100%;
         padding: 10px;
         word-wrap: break-word;
-        @media (max-width: 800px)
-        {
-          // margin: 0 5px;
-        }
+
         &:hover {
           zoom: 120%;  
         }
