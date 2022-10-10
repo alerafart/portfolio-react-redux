@@ -18,8 +18,8 @@ const isDarkMode = useSelector((state) => state.settings.darkMode);
 
       <p>Mentions légales</p>
       <p className="footer--p">Développé par <strong>Alejandra Rafart</strong></p>
-        <a href="https://github.com/alerafart" className="footer--link"><img className="footer--img" src={github} alt="github icon" /></a>
-        <a href="https://www.linkedin.com/in/rafart-alejandra/" className="footer--link"><img className="footer--img" src={linkedin} alt="github icon" /></a>
+        <a href="https://github.com/alerafart" target='_blank' className="footer--link" rel="noreferrer"><img className="footer--img" src={github} alt="github icon" /></a>
+        <a href="https://www.linkedin.com/in/rafart-alejandra/" target='_blank' className="footer--link" rel="noreferrer"><img className="footer--img" src={linkedin} alt="github icon" /></a>
       
       <p className="footer--small">Copyright All Right Reserved 2022 <strong>Alejandra Rafart</strong>
       </p>
