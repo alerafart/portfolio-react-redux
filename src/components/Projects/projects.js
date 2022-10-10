@@ -7,7 +7,7 @@ const projects =  [
           "link": "https://www.alerafart.com",
           "linkName": "Vous êtes ici! www.alerafart.com",
           "img": "http://www.alerafart.com/static/media/portfolio_alex.133f293c0bcece654318.png",
-          "description": "Site pour montrer mes projets personelles en tant que développeuse web. Realisé from scratch avec utilisation des quelques composants de la bibliotèque Material UI."
+          "description": "Site portfolio avec mes projets personnels et mes coordonnés en tant que développeuse web. Réalisé from scratch avec l'utilisation de quelques composants de la bibliothèque Material UI."
         },
         {
           "id": 2,
