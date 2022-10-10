@@ -32,7 +32,7 @@ function Me() {
     <div className={isDarkMode ? 'me ' : 'me light'}>
       <section className={isDarkMode ? 'me__desc' : 'me__desc light'} >
         <p className={isDarkMode ? 'me__desc--name ' : 'me__desc--name light'}>
-          Bonjour! <br></br> Je m'apelle 
+          Bonjour! <br></br> Je m'appelle 
         </p>
         <p className={isDarkMode ? 'me__desc--name ' : 'me__desc--name light'}>
           ALEJANDRA
