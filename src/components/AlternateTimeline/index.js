@@ -9,7 +9,6 @@ import TimelineContent from '@mui/lab/TimelineContent';
 import TimelineOppositeContent from '@mui/lab/TimelineOppositeContent';
 import TimelineDot from '@mui/lab/TimelineDot';
 import WorkRoundedIcon from '@mui/icons-material/WorkRounded';
-import LaptopMacIcon from '@mui/icons-material/LaptopMac';
 import SchoolRoundedIcon from '@mui/icons-material/SchoolRounded';
 import Typography from '@mui/material/Typography';
 import EmojiEventsRoundedIcon from '@mui/icons-material/EmojiEventsRounded';
