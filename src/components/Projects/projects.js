@@ -35,6 +35,15 @@ const projects =  [
           "img": "https://kurku-app1.vercel.app/images/kurku_logo_2.jpeg",
           "linkName": "kurku-app1.vercel.app",
           "description": "Développement en cours. Site vitrine pour pour un client musicien qui développe une application de production musicale gérée par les mouvements via une caméra, bientôt disponible. En attente de finalisation des vidéos et contenu par le client, vidéos de présentation et tutoriels pour l'application."
+        },
+        {
+          "id": 5,
+          "name": "Space Tourism",
+          "languages": "React, Sass",
+          "link": "https://spacetourism-alerafart.vercel.app/",
+          "linkName": "www.spacetourism-alerafart.vercel.app",
+          "img": "https://res.cloudinary.com/dz209s6jk/image/upload/v1634565433/Challenges/tzty2khverirn4n0rj8t.jpg",
+          "description": "Site  réalisé à partir d'une maquette, participation à un challenge du site frontend mentor.io. A partir des maquettes en desktop et mobile il faut réaliser le projet de la façon la plus fidèle possible au modèle."
         }
         
       ]
