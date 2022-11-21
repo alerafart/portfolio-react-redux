@@ -11,7 +11,6 @@ import MenuIcon from '@mui/icons-material/Menu';
 import CloseIcon from '@mui/icons-material/Close';
 
 import "./header.scss"
-import { Opacity } from "@mui/icons-material";
 
 function Header() {
   const isDarkMode = useSelector((state) => state.settings.darkMode);
@@ -70,10 +69,10 @@ function Header() {
             <a className="header__nav--link" href="./#timeline">Parcours</a>
             <a className="header__nav--link" href="./#contact">Contact</a>
           
-            <a className='header__nav--link--mobile' href="./#skills" >Skills</a>
-            <a className='header__nav--link--mobile'  href="./#projects">Projets</a>
-            <a className='header__nav--link--mobile'  href="./#timeline">Parcours</a>
-            <a className='header__nav--link--mobile'  href="./#contact">Contact</a>
+            <a className='header__nav--link--mobile' href="./#skills" onClick={handleToggle}>Skills</a>
+            <a className='header__nav--link--mobile'  href="./#projects" onClick={handleToggle}>Projets</a>
+            <a className='header__nav--link--mobile'  href="./#timeline" onClick={handleToggle}>Parcours</a>
+            <a className='header__nav--link--mobile'  href="./#contact" onClick={handleToggle}>Contact</a>
         </nav>
       </AppBar>
     </div>

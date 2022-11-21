@@ -44,8 +44,9 @@ function Me() {
       >
         <h1 className="me--about--title">
           Développeuse Web & Mobile
+          <p>trilingue</p>
         </h1>
-
+        
         <Modal
           open={open}
           onClose={handleClose}
