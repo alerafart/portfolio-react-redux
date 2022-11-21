@@ -112,8 +112,18 @@
         color: vars.$darkGrey;
         background-color: transparent;
       }
+      & p {
+        margin-top: 1rem;
+        font-size: 1.8rem;
+        @media (max-width:800px) {
+          font-size: 1.4rem;
+        }
+        @media (max-width:400px) {
+          font-size: 1.2rem;
+        }
+      }
     }
-
+    
     &--button {
       bottom: 60px;
       text-align: right;
