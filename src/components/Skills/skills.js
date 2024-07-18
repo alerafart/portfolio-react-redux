@@ -13,11 +13,11 @@ const skills =  [
           "name": "JavaScript ",
           "class": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg"
         },
-        
         {
-          "name": "PHP",
-          "class": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/php/php-original.svg"
+          "name": "Vue JS ",
+          "class": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vuejs/vuejs-original.svg"
         },
+        
         
         {
           "name": "React",
@@ -37,9 +37,18 @@ const skills =  [
           "class": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/materialui/materialui-original.svg"
         },
         {
+          "name": "Tailwind",
+          "class": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-plain.svg"
+        },
+        {
           "name": "Bootstrap",
           "class": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bootstrap/bootstrap-original.svg"
         },
+        {
+          "name": "PHP",
+          "class": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/php/php-original.svg"
+        },
+        
         {
           "name": "MySql",
           "class": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg"
@@ -57,10 +66,10 @@ const skills =  [
           "name": "Linux",
           "class": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linux/linux-original.svg"
         },
-        // {
-        //   "name": "NextJs",
-        //   "class": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-original.svg"
-        // }
+        {
+           "name": "NextJs",
+          "class": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-original.svg"
+        }
         
       ]
       export default skills

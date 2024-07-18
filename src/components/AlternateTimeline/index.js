@@ -24,7 +24,56 @@ function AlternateTimeline() {
     <h2 className={isDarkMode ? 'contact' : 'contact light'}>Parcours</h2>
     <div id='timeline' className={isDarkMode ? 'timeline ' : 'timeline light'}>
       
-      <Timeline position="alternate" className={isDarkMode ? 'timeline ' : 'timeline light'}>        
+      <Timeline position="alternate" className={isDarkMode ? 'timeline ' : 'timeline light'}>  
+
+
+      <TimelineItem className={isDarkMode ? 'timeline__item ' : 'timeline__item light'}>
+          <TimelineOppositeContent className={isDarkMode ? 'timeline__item ' : 'timeline__item light'}
+            sx={{ m: 'auto 0' }}
+            align="right"
+            variant="body2"
+            >
+           Juilliet 2023 - Ce jour
+          </TimelineOppositeContent>
+          <TimelineSeparator>
+            <TimelineConnector />
+            <TimelineDot>
+              <WorkRoundedIcon sx={{color: '#000'}}/>
+            </TimelineDot>
+            <TimelineConnector />
+          </TimelineSeparator>
+          <TimelineContent className={isDarkMode ? 'timeline__item ' : 'timeline__item light'} sx={{ py: '12px', px: 2 }}>
+            <Typography variant="h6" component="span">
+            Développeuse Fullstack Javascript
+            </Typography>
+            <Typography>Eveasoft ESN </Typography>
+          </TimelineContent>
+        </TimelineItem>
+
+
+      <TimelineItem className={isDarkMode ? 'timeline__item ' : 'timeline__item light'}>
+          <TimelineOppositeContent className={isDarkMode ? 'timeline__item ' : 'timeline__item light'}
+            sx={{ m: 'auto 0' }}
+            align="right"
+            variant="body2"
+            >
+           Janvier 2023 - Juin 2023
+          </TimelineOppositeContent>
+          <TimelineSeparator>
+            <TimelineConnector />
+            <TimelineDot>
+              <WorkRoundedIcon sx={{color: '#000'}}/>
+            </TimelineDot>
+            <TimelineConnector />
+          </TimelineSeparator>
+          <TimelineContent className={isDarkMode ? 'timeline__item ' : 'timeline__item light'} sx={{ py: '12px', px: 2 }}>
+            <Typography variant="h6" component="span">
+              Développeuse Frontend Vue.js Stage
+            </Typography>
+            <Typography>Eveasoft ESN </Typography>
+          </TimelineContent>
+        </TimelineItem>
+
         <TimelineItem className={isDarkMode ? 'timeline__item ' : 'timeline__item light'}>
           <TimelineOppositeContent className={isDarkMode ? 'timeline__item ' : 'timeline__item light'}
               sx={{ m: 'auto 0' }}

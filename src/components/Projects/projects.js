@@ -23,17 +23,17 @@ const projects =  [
           "name": "MeetDev",
           "languages": "Front: React, Redux, Sass, Axios. Back: PHP, Lumen Laravel",
           "link": "http://www.meetdev.alerafart.com/",
-          "img": "http://www.meetdev.alerafart.com/static/media/rocket.038bac4ae2b0c287f145.png",
+          "img": "../../images/rocket.png",
           "linkName": "www.meetdev.alerafart.com",
           "description": "Site de mise  en relation des entreprises et des développeurs afin de leur permettre de trouver facilement un emploi, et pour l’entreprise d’avoir un vivier des développeurs accessible facilement pour leur zone géographique."
         },
         {
           "id": 4,
-          "name": "Kurku_App * En cours *",
+          "name": "Kurku_App About Page",
           "languages": "React, NextJs, Sass and Vercel",
-          "link": "https://kurku-app1.vercel.app/",
-          "img": "https://kurku-app1.vercel.app/images/kurku_logo_2.jpeg",
-          "linkName": "kurku-app1.vercel.app",
+          "link": "https://about.kurku.tech/",
+          "img": "../../images/kurku.png",
+          "linkName": "https://about.kurku.tech/",
           "description": "Développement en cours. Site vitrine pour pour un client musicien qui développe une application de production musicale gérée par les mouvements via une caméra, bientôt disponible. En attente de finalisation des vidéos et contenu par le client, vidéos de présentation et tutoriels pour l'application."
         },
         {
@@ -42,7 +42,7 @@ const projects =  [
           "languages": "React, Sass",
           "link": "https://spacetourism-alerafart.vercel.app/",
           "linkName": "www.spacetourism-alerafart.vercel.app",
-          "img": "https://res.cloudinary.com/dz209s6jk/image/upload/v1634565433/Challenges/tzty2khverirn4n0rj8t.jpg",
+          "img": "../../images/space_tourism.png",
           "description": "Site  réalisé à partir d'une maquette, participation à un challenge du site frontend mentor.io. A partir des maquettes en desktop et mobile il faut réaliser le projet de la façon la plus fidèle possible au modèle."
         }
         

@@ -17,7 +17,19 @@
           "name": "JavaScript",
           "class": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg"
         },
+        {
+          "name": "React",
+          "class": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg"
+        },
         
+        {
+          "name": "Redux",
+          "class": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/redux/redux-original.svg"
+        },
+        {
+          "name": "Vue JS",
+          "class": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vuejs/vuejs-original-wordmark.svg"
+        },
         {
           "name": "PHP",
           "class": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/php/php-original.svg"
@@ -28,15 +40,7 @@
           "class": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bootstrap/bootstrap-original.svg"
         },
         
-        {
-          "name": "React",
-          "class": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg"
-        },
-        
-        {
-          "name": "Redux",
-          "class": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/redux/redux-original.svg"
-        },
+       
         {
           "name": "MySql",
           "class": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg"
